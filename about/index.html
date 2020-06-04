@@ -17,10 +17,19 @@
   <meta name="description" content="鱼干的小小Blog">
   <meta name="author" content="鱼干">
   <meta name="keywords" content="">
-  <title>分类 - 彩虹|一直都在❤</title>
+  <title>关于 - 彩虹|一直都在❤</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -154,22 +163,50 @@
         <div class="py-5" id="board"
           >
           
+            <div class="about-avatar">
+              <img src="/img/picture_cr.jpg" srcset="/img/loading.gif"
+                   class="img-fluid" alt="avatar">
+            </div>
+          
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">鱼干</div>
+    <div class="about-intro">彩虹一直都在❤</div>
+    <div class="about-icons">
+      
+        
+        
+        
+        <a href="https://github.com" class="
+           hint--bottom hint--rounded"
+           aria-label=GitHub
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href="https://douban.com" class="
+           hint--bottom hint--rounded"
+           aria-label=豆瓣
+        >
+          <i class="iconfont icon-douban-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+    </div>
+  </div>
+</div>
+<div class="mt-5 markdown-body">
+  <p>Hey guys!Welcome to my Blog!</p>
 
-
-
-
-
-
-<div class="category-list">
-  
-  
-  
-  
 </div>
 
               </div>
@@ -261,7 +298,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "您成功抵达|分类|船舱&nbsp;",
+        "恭喜您已登上0526号贼船 xiu~ 彩虹飞船再次起航啦&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -275,6 +312,21 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
 
 
 
