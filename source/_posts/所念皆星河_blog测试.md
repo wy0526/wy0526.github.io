@@ -1,5 +1,5 @@
 ---
-title: 所念皆星河|Blog_test
+title: 所念皆星河_blog测试
 date: 2020-06-03 19:58:28
 tag: All I read are stars
 ---
