@@ -2,8 +2,8 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: 彩虹|伴你左右❤
+# Site 网站
+title: 小鱼の客栈
 subtitle: 'Rainbow0526'
 description: '鱼干的小小Blog'
 keywords:
@@ -11,7 +11,7 @@ author: 鱼干
 language: zh-CN
 timezone: ''
 
-# URL
+# URL 网址
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
 root: /
