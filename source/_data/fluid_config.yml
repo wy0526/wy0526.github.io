@@ -11,7 +11,7 @@
 # 全局
 # Site
 #---------------------------
-favicon: /img/picture_cr.jpg # 网站标签页的 icon
+favicon: /img/avatar01.png # 网站标签页的 icon
 
 apple_touch_icon: /img/favicon.png # 用于苹果设备的 icon
 
@@ -21,43 +21,44 @@ force_https: false  # 强制所有链接升级为 HTTPS（适用于图片等资�
 
 highlight: # 代码高亮
   enable: true
-  style: 'Agate'  # 高亮样式见：https://highlightjs.org/static/demo/  在页面挑选 style 填入
+  style: 'Solarized Light'  # 高亮样式见：https://highlightjs.org/static/demo/  在页面挑选 style 填入
   bg_color: true  # 是否根据 style 改变代码背景色，**如果 style 是深色背景别忘了开启此项**
   copy_btn: true  # 是否开启复制代码的按钮
 
 fun_features: # 一些好玩的功能
   typing: # 为 subtitle 添加打字机效果
     enable: true
-    typeSpeed: 70  # 打印速度，数字越大越慢
-    cursorChar: "☆" # 游标字符
+    typeSpeed: 100  # 打印速度，数字越大越慢
+    cursorChar: " " # 游标字符
     loop: false # 是否循环播放效果
   anchorjs: # 为文章内容中的标题添加锚图标
     enable: true
     element: h1,h2,h3,h4,h5,h6
     placement: left # icon放置的位置： left | right
     visible: hover # 默认悬浮显示，可选：hover（鼠标在元素上悬浮时显示） | always（一直显示） | touch（移动端触摸显示）
-    icon: "" # 可选：§ | # | ❡ 等，留空则为默认效果
+    icon: "§" # 可选：§ | # | ❡ 等，留空则为默认效果
   mouse_click:  # 鼠标点击动效
     enable: true
     style: love # 目前设置两个值：values（价值观词汇） | love（爱心）
 
 color:  # 主题颜色配置，不一定能每一处都生效，可能会被局部样式覆盖，这种情况建议用自定义 css 解决。配色可以在这获得启发： https://www.webdesignrankings.com/resources/lolcolors/
-  body_bg_color: "#eee"             # body 背景色
-  navbar_bg_color: "#2f4154"        # 顶部菜单背景色
-  navbar_text_color: "white"        # 顶部菜单字体色
-  text_color: "#3c4858"             # 全局字体色
-  sec_text_color: "#718096"         # 全局次级字体色（摘要、简介等位置）
-  post_text_color: "#2c3e50"        # 文章正文字体色
-  post_heading_color: "#1a202c"     # 文章标题标签字体色（h1 h2 h3...）
-  link_color: "#3c4858"             # 超链接字体色
-  link_hover_color: "#1abc9c"       # 超链接悬浮时字体色
-  link_hover_bg_color: "#f8f9fa"    # 超链接悬浮背景色
-  board_color: "#fff"               # 主面板背景色
+  body_bg_color: "#f9cdad"          # body 背景色                         每页底子
+  board_color: "#f8ecc9"            # 主面板背景色                        每页上层底子
+  navbar_bg_color: "#f9cdad"        # 顶部菜单背景色                      菜单
+  navbar_text_color: "#877782"      # 顶部菜单字体色                      菜单文字
+  text_color: "#445270"             # 全局字体色                          文章侧目录
+  sec_text_color: "#52616a"         # 全局次级字体色（摘要、简介等位置）  首页文字
+  post_text_color: "black"          # 文章正文字体色                      文章内容
+  post_heading_color: "#877782"     # 文章标题标签字体色（h1 h2 h3...）   文章标签
+  link_color: "#3c4858"             # 超链接字体色                          
+  link_hover_color: "#754F44"       # 超链接悬浮时字体色                  菜单文字悬浮
+  link_hover_bg_color: "#f9cdad"    # 超链接悬浮背景色
+  
 
 font:  # 主题字体配置
   font_size: 16px                   # 全局字号
   font_family:                      # 全局字体
-  code_font_size: 85%               # 代码的字号
+  code_font_size: 14px               # 代码的字号
 
 custom_js:   # 指定自定义 js 文件路径，路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js，支持列表
 custom_css:   # 指定自定义 css 文件路径，路径是相对 source 目录，如 /css/custom.css 同上，支持列表
@@ -104,16 +105,16 @@ version:  # 主题版本相关
 # Header
 #---------------------------
 navbar:
-  blog_title: 小鱼の客栈 # 导航栏左侧的标题，为空则按 hexo config.title 显示
+  blog_title: 鱼干の客栈 # 导航栏左侧的标题，为空则按 hexo config.title 显示
   ground_glass:  # 导航栏毛玻璃特效，实验性功能，可能会造成页面滚动掉帧和抖动，部分浏览器不支持会自动不生效
-    enable: true
+    enable: false
     px: 3  # 模糊像素，只能为数字，数字越大模糊度越高
-    alpha: 0.7   # 透明度，只能为数字，范围0~1，数字越大透明度越低，注意透明过度可能看不清菜单字体
+    alpha: 0   # 透明度，只能为数字，范围0~1，数字越大透明度越低，注意透明过度可能看不清菜单字体
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
-    - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    #- { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
     #- { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }  # 友链页，把前面#去掉即可展示
 
@@ -125,7 +126,7 @@ search: # 搜索栏，基于 hexo-generator-search 插件，若已安装其他�
   content: true
 
 scroll_down_arrow:  # 向下滚动的箭头
-  enable: true
+  enable: false
   banner_height_limit: 90  # 头图高度不小于指定比例，才显示箭头
   scroll_after_turning_page: true  # 翻页后自动滚动
 
@@ -144,7 +145,7 @@ footer:
     uv_format: "访客 {} "
 
   beian:  # The footer of China's website policy, other areas keep disable
-    enable: false
+    enable: true
     icp_text: 京ICP证123456号 # ICP证号
     police_text: 京公网安备12345678号 # 公安备案号，不填则只显示ICP
     police_code: 12345678 # 公安备案的编号，用于URL跳转查询
@@ -158,12 +159,12 @@ scroll_top_arrow:  # 向顶部滚动的箭头
 # Index Page
 #---------------------------
 index:
-  banner_img: /img/love.png  # 首页 Banner 头图，以下相同
+  banner_img: /img/backgroundArtical.jpg # 首页 Banner 头图，以下相同  /img/backgroundIndex.jpg
   banner_img_height: 100  # 头图高度，屏幕百分比，available: 0 - 100
   banner_mask_alpha: 0.3  # 头图黑色蒙版的透明度，available: 0 - 1.0， 0 是完全透明（无蒙版），1 是完全不透明
   post_default_img: '' # 默认的文章封面图，当没有指定 index_img 时会使用该图片，若都为空则不显示任何图片
   slogan:  # 首页副标题的独立设置
-    enable: true  # 为 false 则不显示任何内容
+    enable: false  # 为 false 则不显示任何内容
     text: '小鱼の客栈营业中'  # 为空则按 hexo config.subtitle 显示
   auto_excerpt:
     enable: true
@@ -176,8 +177,8 @@ index:
 # 通过 hexo new page 命令创建的页面
 # Custom Page
 page:
-  banner_img: /img/love.png
-  banner_img_height: 60  # available: 0 - 100
+  banner_img: /img/backgroundArtical.jpg
+  banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
 
 #---------------------------
@@ -185,7 +186,7 @@ page:
 # Post Page
 #---------------------------
 post:  # 部分配置同时控制自定义页面，注意备注
-  banner_img: /img/love.png
+  banner_img: /img/backgroundArtical.jpg
   banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   meta:  # 文章标题下方的信息
@@ -313,8 +314,8 @@ livere:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/love.png
-  banner_img_height: 60  # available: 0 - 100
+  banner_img: /img/backgroundArtical.jpg
+  banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle: 归档  # 打字机内容
 
@@ -323,8 +324,8 @@ archive:
 # Categories Page
 #---------------------------
 category:
-  banner_img: /img/love.png
-  banner_img_height: 60  # available: 0 - 100
+  banner_img: /img/backgroundArtical.jpg
+  banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  分类 # 打字机内容
   post_limit: 10  # 单个分类中折叠展示文章数的最大值，超过限制会显示 More
@@ -335,7 +336,7 @@ category:
 # Tags Page
 #---------------------------
 tag:
-  banner_img: /img/love.png
+  banner_img: /img/backgroundArtical.jpg
   banner_img_height: 80  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  标签 # 打字机内容
@@ -352,13 +353,13 @@ tag:
 # About Page
 #---------------------------
 about:  # 关于页需要手动创建，具体请见：https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E9%A1%B5
-  banner_img: /img/love.png
-  banner_img_height: 60  # available: 0 - 100
+  banner_img: /img/backgroundAbout.jpg
+  banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
-  subtitle: 恭喜您已登上0526号贼船_彩虹飞船再次起航_xiu~   # 打字机内容
-  avatar: /img/picture_cr.jpg # 头像
+  subtitle:   # 打字机内容
+  avatar: /img/avatar01.png # 头像
   name: 鱼干
-  introduce: '❤' # 支持 HTML
+  introduce: '坚持学习|实践出真知' # 支持 HTML
   icons: # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，class 代表图标的 css class
     - { class: 'iconfont icon-github-fill', link: 'https://github.com', tip: 'GitHub' }
     - { class: 'iconfont icon-douban-fill', link: 'https://douban.com', tip: '豆瓣' }
@@ -381,7 +382,7 @@ page404:
 # Links Page
 #---------------------------
 links:
-  banner_img: /img/love.png
+  banner_img: /img/backgroundIndex.jpg
   banner_img_height: 60  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  # 打字机内容
