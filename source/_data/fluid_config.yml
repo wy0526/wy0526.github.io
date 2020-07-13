@@ -17,7 +17,7 @@ apple_touch_icon: /img/favicon.png # 用于苹果设备的 icon
 
 title_join_string: ' | '  # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 
-force_https: false  # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
+force_https: true  # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 
 highlight: # 代码高亮
   enable: true
@@ -32,7 +32,7 @@ fun_features: # 一些好玩的功能
     cursorChar: " " # 游标字符
     loop: false # 是否循环播放效果
   anchorjs: # 为文章内容中的标题添加锚图标
-    enable: true
+    enable: false
     element: h1,h2,h3,h4,h5,h6
     placement: left # icon放置的位置： left | right
     visible: hover # 默认悬浮显示，可选：hover（鼠标在元素上悬浮时显示） | always（一直显示） | touch（移动端触摸显示）
@@ -56,8 +56,8 @@ color:  # 主题颜色配置，不一定能每一处都生效，可能会被局�
   
 
 font:  # 主题字体配置
-  font_size: 16px                   # 全局字号
-  font_family:                      # 全局字体
+  font_size: 16px                    # 全局字号
+  font_family: STXihei               # 全局字体  
   code_font_size: 14px               # 代码的字号
 
 custom_js:   # 指定自定义 js 文件路径，路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js，支持列表
@@ -112,11 +112,14 @@ navbar:
     alpha: 0   # 透明度，只能为数字，范围0~1，数字越大透明度越低，注意透明过度可能看不清菜单字体
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
     - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
-    - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
-    #- { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+    - { key: '时光轴', link: '/timeAxis/', icon: 'iconfont icon-pen' }
+    - { key: '碎碎念', link: '/mumbler/', icon: 'iconfont icon-comment' }
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
+    #- { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
     #- { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }  # 友链页，把前面#去掉即可展示
+    
 
 search: # 搜索栏，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件。
   enable: true
@@ -140,7 +143,7 @@ banner_parallax: true  # 头图滚动视差
 footer:
   statistics:  # 展示网站的 PV、UV 统计数
     enable: true
-    source: "busuanzi"  # 统计数据来源，可选：leancloud | busuanzi，使用 leancloud 需要在 web_analytics 中设置 api 参数，使用 busuanzi 注意可能间歇抽风
+    source: "leancloud"  # 统计数据来源，可选：leancloud | busuanzi，使用 leancloud 需要在 web_analytics 中设置 api 参数，使用 busuanzi 注意可能间歇抽风
     pv_format: "浏览 {} "  # 显示的文本，{}是数字的占位符（必须包含)，下同
     uv_format: "访客 {} "
 
@@ -166,16 +169,18 @@ index:
   slogan:  # 首页副标题的独立设置
     enable: false  # 为 false 则不显示任何内容
     text: '小鱼の客栈营业中'  # 为空则按 hexo config.subtitle 显示
-  auto_excerpt:
-    enable: true
-  post_url_target: _self  # available: _blank | _self
+  auto_excerpt:   #文章摘要   可excerpt指定
+    enable: false
+  post_url_target: _blank  # available: _blank | _self  （_blank：新标签页打开   _self：当前标签页打开）
   post_meta: # 是否显示文章信息（时间、分类、标签）
     date: true
     category: true
     tag: true
 
+#---------------------------
 # 通过 hexo new page 命令创建的页面
 # Custom Page
+#---------------------------
 page:
   banner_img: /img/backgroundArtical.jpg
   banner_img_height: 70  # available: 0 - 100
@@ -192,19 +197,19 @@ post:  # 部分配置同时控制自定义页面，注意备注
   meta:  # 文章标题下方的信息
     date:  # 文章日期
       enable: true
-      format: "LL a"  # 格式参照 ISO-8601 日期格式化，可参照 http://momentjs.cn/docs/#/parsing/string-format/
+      format: "LL "  # 格式参照 ISO-8601 日期格式化，可参照 http://momentjs.cn/docs/#/parsing/string-format/
     wordcount:  # 字数统计
       enable: true
-      format: "字数 {} "  # 显示的文本，{}是数字的占位符（必须包含)，下同
+      format: "即将有 {} 位文字酱陪伴你 "  # 显示的文本，{}是数字的占位符（必须包含)，下同
     min2read:  # 阅读时间
-      enable: false
-      format: "{} 分钟"
-      words: 100  # 每分钟阅读多少字，如果是技术文章，建议降低
+      enable: ture
+      format: "度过 {} 分钟"
+      words: 80  # 每分钟阅读多少字，如果是技术文章，建议降低
     views:  # 阅读次数
-      enable: false
+      enable: true
       source: "leancloud"  # 统计数据来源，可选：leancloud | busuanzi，使用 leancloud 需要在 web_analytics 中设置 api 参数，使用 busuanzi 注意可能间歇抽风
-      format: "{} 次"
-  updated:  # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
+      format: "并在这里留下第 {} 个脚印~ o(^▽^)o"
+  updated:   # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
     enable: false
     content: 本文最后更新于：  # 描述文字
     relative: false  # 是否使用相对时间表示，比如："3 天前"
@@ -328,7 +333,7 @@ category:
   banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:  分类 # 打字机内容
-  post_limit: 10  # 单个分类中折叠展示文章数的最大值，超过限制会显示 More
+  post_limit: 5  # 单个分类中折叠展示文章数的最大值，超过限制会显示 More
   order_by: '-length'  # 排序字段，前面带减号是倒序，不带减号是正序，可选项：name | length
 
 #---------------------------
@@ -358,11 +363,14 @@ about:  # 关于页需要手动创建，具体请见：https://hexo.fluid-dev.co
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle:   # 打字机内容
   avatar: /img/avatar01.png # 头像
-  name: 鱼干
-  introduce: '坚持学习|实践出真知' # 支持 HTML
+  name:     # 头像下的名字
+  introduce: 'Dong da ! Dong da ! YO~' # 支持 HTML
   icons: # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，class 代表图标的 css class
-    - { class: 'iconfont icon-github-fill', link: 'https://github.com', tip: 'GitHub' }
-    - { class: 'iconfont icon-douban-fill', link: 'https://douban.com', tip: '豆瓣' }
+    - { class: 'iconfont icon-github-fill', link: 'https://github.com/Rainbow0526', tip: '^∇^' }
+    - { class: 'iconfont icon-bilibili', link: 'https://space.bilibili.com/389706075', tip: 'OwO' }
+    - { class: 'iconfont icon-music', link: 'https://y.qq.com/portal/profile.html#stat=y_new.top.user_pic', tip: '=3=' }
+    - { class: 'iconfont icon-qq-fill', link: 'http://localhost:4000/about/', tip: '1578476712' }
+    #- { class: 'iconfont icon-douban-fill', link: 'https://douban.com', tip: 'QWQ' }
     #- { class: 'iconfont icon-wechat-fill', qrcode: '/img/favicon.png' }  # 添加 qrcode 后，点击不再跳转，而是悬浮二维码，需要指定 image
 
 
