@@ -15,7 +15,7 @@ categories: Hexo
 
 * 代码
 
-~~~
+~~~html
 <p class="note note-secondary"> 我是标签 QWQ </p>
 ~~~
 
@@ -43,14 +43,12 @@ categories: Hexo
 
 * 代码
 
-~~~
+~~~html
 <span class="label label-primary">我是行内的小小标签   OAO</span>
 ~~~
 
-~~~
-可选 Label：
-primary default info success warning danger
-~~~
+`可选 Label：
+primary default info success warning danger`
 
 * 可选便签
 
@@ -64,16 +62,15 @@ primary default info success warning danger
 
 * 代码
 
-~~~
+~~~html
 {% cb text, checked?, incline? %}
 ~~~
 
-~~~
 内容解释：
-text：显示的文字
-checked：默认是否已勾选，默认 false
-incline: 是否内联（可以理解为后面的文字是否换行），默认 false
-~~~
+
+* text：显示的文字
+* checked：默认是否已勾选，默认 false
+* incline: 是否内联（可以理解为后面的文字是否换行），默认 false
 
 ## 4、按钮
 
@@ -83,15 +80,15 @@ incline: 是否内联（可以理解为后面的文字是否换行），默认 f
 
 * 代码格式
 
-~~~
-<a class="btn" href="https://rainbow0526.github.io/" title="卡哇伊yiyyiyi~">点我可以前往博客首页~    / 3 /</a>
+~~~html
+<a class="btn" href="https://rainbow0526.github.io/" title="卡哇伊yiyyiyi~">前往博客首页</a>
 ~~~
 
 # 二、文章摘要
 
  [Front-matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 
 
-~~~
+~~~shell
  excerpt：摘要文字 
 ~~~
 
@@ -127,7 +124,7 @@ https://cdn.jsdelivr.net/gh/fluid-dev/hexo-theme-fluid@master/source/img/favicon
 
  [Front-matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 
 
-~~~
+~~~shell
 password: 131912
 ~~~
 
@@ -135,7 +132,7 @@ password: 131912
 
  [Front-matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 
 
-~~~
+~~~shell
 top: True
 ~~~
 
