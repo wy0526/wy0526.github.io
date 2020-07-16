@@ -614,7 +614,7 @@ JDBC本质：
 				5. 查询所有记录，将其封装为List
 				6. 查询所有记录，将其封装为Emp对象的List集合
 				7. 查询总记录数
-	
+
 
 ~~~javascript
 			import cn.itcast.domain.Emp;

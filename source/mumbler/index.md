@@ -9,6 +9,10 @@ password: 131912
 
 # 2020七月
 
+<span class="label label-primary">07-16	 0:27</span>
+
+祝自己20岁生日快乐！(/▽＼)￥(*￣▽￣*)￥平平淡淡的过了这一刻，白天会不会有除家人以外的人想起我的生日，祝我生日快乐呢？
+
 <span class="label label-primary">07-11</span>
 
 开始正式进入为期五十天的暑假。暑假目标：

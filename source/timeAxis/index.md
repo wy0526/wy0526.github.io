@@ -13,11 +13,11 @@ password: 131912
 # 2020七月
 
 ~~~
+2020-07-16  Servlet & HTTP
+
 2020-07-15	Tomcat
 
-2020-07-14	xml
-
-2020-07-14	BootStrap
+2020-07-14	BootStrap & xml
 
 2020-07-10	JavaScript
 
@@ -35,7 +35,7 @@ password: 131912
 
 2020-06-11	重装系统
 
-2020-06-09	Git&Github
+2020-06-09	Git & Github
 
 2020-06-04	安家(/≧▽≦)/
 ~~~
