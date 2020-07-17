@@ -22,6 +22,7 @@ categories: Java
 6. `alt`+`shift`+`上下箭头`移动当前代码行
 7. `alt`+`enter`代码抛异常
 8. `ctrl`+`alt`+`v`自动生成方法返回值
+9. `ctrl`+`alt`+`t`包裹代码
 
 # 四、名称要求
 
