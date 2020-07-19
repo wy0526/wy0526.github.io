@@ -3,7 +3,7 @@ date: 2020-07-16
 categories: Servlet
 ---
 
-# 一、认识Servlet
+# 一.认识Servlet
 
 ## 1、概念
 
@@ -160,7 +160,7 @@ urlpartten：Servlet访问路径
   2. `/xxx/xxx`多层路径，目录结构
   3. `*.do`扩展名匹配
 
-# 二、HTTP-请求消息
+# 二.HTTP-请求消息
 
 ## 1、概念
 
@@ -172,12 +172,13 @@ Hyper Text Transfer Protocol 超文本传输协议
   2. 默认端口号：80
   3. 基于请求/响应模型的：一次请求对应一次响应
   4. 无状态的：每次请求之间相互独立，不能交互数据
-
 * 历史版本：
   * 1.0：每一次请求响应都会建立新的连接
   * 1.1：复用连接
+* 请求消息：客户端发送给服务器端的数据
+* 响应消息：服务器端发送给客户端的数据
 
-## 2、请求消息数据格式
+## 2、数据格式
 
 ### 2.1请求行
 
@@ -231,6 +232,7 @@ Hyper Text Transfer Protocol 超文本传输协议
 
 ## 3、字符串格式
 
+~~~text
 POST /login.html	HTTP/1.1
 Host: localhost
 User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0
@@ -242,10 +244,13 @@ Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 
 username=zhangsan	
+~~~
 
-# 三、Request
 
-## 1、request对象和response对象的原理
+
+# 三.Request对象
+
+## 1、request & response对象的原理
 
 1. request和response对象是由服务器创建的。我们来使用它们
 2. request对象是来获取请求消息，response对象是来设置响应消息
@@ -351,7 +356,7 @@ Request请求转发&域对象：
 
      ` ServletContext getServletContext()`
 
-# 四、案例：用户登录
+# 四.案例：用户登录
 
 1. 用户登录案例需求
    * 编写login.html登录页面  username & password 两个输入框
@@ -625,8 +630,9 @@ Request请求转发&域对象：
    ~~~
 
    8. login.html中form表单的action路径的写法
-      * 虚拟目录 + Servlet的资源路径
-
+      
+   * 虚拟目录 + Servlet的资源路径
+     
    9. BeanUtils工具类，简化数据封装
 
       * 用于封装JavaBean的
@@ -649,10 +655,240 @@ Request请求转发&域对象：
 
       3. 方法：
            * `setProperty()`：设置属性值
-
            * `getProperty()`：获得属性值
-
            * `populate(Object obj , Map map)`：<u>将map集合的键值对信息，封装到对应的JavaBean对象中</u>
 
-# 五、HTTP-响应消息
+           > 前两种方法的参数都是属性而不是成员变量
 
+# 五.HTTP-响应消息
+
+## 1、数据格式
+
+### 2.1响应行
+
+* 组成：协议/版本   响应状态码   状态码描述
+* 响应状态码：服务器告诉客户端浏览器本次请求和响应的一个状态
+  1. 状态码都是3位数字 
+  2. 分类
+     * 1xx：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码
+     * 2xx：成功
+       * 代表：200
+     * 3xx：重定向
+       * 代表：302(重定向)，304(访问缓存)
+     * 4xx：客户端错误
+       * 代表
+         1. 404：请求路径没有对应的资源 
+         2. 405：请求方式没有对应的doXxx方法
+     * 5xx：服务器端错误。代表：500(服务器内部出现异常)
+
+重定向示意图：
+
+![](https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/25.png)
+
+访问缓存示意图：
+
+![](https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/26.png)
+
+### 2.2响应头
+
+* 格式：头名称： 值
+
+* 常见的响应头
+  1. Content-Type：服务器告诉客户端本次响应体数据格式以及编码格式
+  2. Content-disposition：服务器告诉客户端以什么格式打开响应体数据
+     * 值
+       1. in-line:默认值,在当前页面内打开
+       2. attachment ; filename=xxx：以附件形式打开响应体。文件下载
+
+### 2.3响应空行
+
+### 2.4响应体
+
+传输的数据
+
+## 2、字符串格式
+
+```text
+	HTTP/1.1 200 OK
+	Content-Type: text/html;charset=UTF-8
+	Content-Length: 101
+	Date: Wed, 06 Jun 2018 07:08:42 GMT
+
+	<html>
+	  <head>
+	    <title>$Title$</title>
+	  </head>
+	  <body>
+	  hello , response
+	  </body>
+	</html>
+```
+# 六.Response对象
+
+## 1、功能
+
+1. 设置响应行
+  * 格式：HTTP/1.1 200 ok
+  * 设置状态码：`setStatus(int sc) `
+2. 设置响应头：`setHeader(String name, String value) `
+	
+3. 设置响应体：
+  * 使用步骤：
+    1. 获取输出流
+      * 字符输出流：`PrintWriter getWriter()`
+      * 字节输出流：`ServletOutputStream getOutputStream()`
+    2. 使用输出流，将数据输出到客户端浏览器
+
+## 2、案例
+
+1. 完成重定向
+
+   * 重定向：资源跳转的方式
+   * 代码实现
+
+   ~~~
+   //1. 设置状态码为302
+   response.setStatus(302);
+   //2.设置响应头location
+   response.setHeader("location","/day15/responseDemo2");
+   //简单的重定向方法
+   response.sendRedirect("/day15/responseDemo2");
+   ~~~
+
+   * 重定向的特点:redirect
+     1. 地址栏发生变化
+     2. 重定向可以访问其他站点(服务器)的资源
+     3. 重定向是两次请求。不能使用request对象来共享数据
+   * 转发的特点：forward
+     1.  转发地址栏路径不变
+     2.  转发只能访问当前服务器下的资源
+     3. 转发是一次请求，可以使用request对象来共享数据
+
+   >  forward 和  redirect 区别即转发和重定向的区别
+
+   * 路径写法
+
+     1. 路径分类
+
+        1. 相对路径：通过相对路径不可以确定唯一资源，如：`./index.html`
+
+           * 不以`/`开头，以`.`开头路径
+
+           * 规则：找到当前资源和目标资源之间的相对位置关系
+             * `./`当前目录
+             *  `../`后退一级目录
+
+        2. 绝对路径：通过绝对路径可以确定唯一资源，如：`http://localhost/day15/responseDemo2/day15/responseDemo2`
+
+           * 以`/`开头的路径
+           * 规则：判断定义的路径是给谁用的？判断请求将来从哪儿发出
+             1. 给客户端浏览器使用：需要加虚拟目录(项目的访问路径
+                * 建议虚拟目录动态获取：`request.getContextPath()`
+                * ` <a> `、 `<form>`、 重定向...
+             2. 给服务器使用：不需要加虚拟目录
+                *  转发路径
+
+2. 服务器输出字符数据到浏览器
+
+   * 步骤
+
+     1. 获取字符输出流
+
+        `PrintWriter pw = response.getWriter();`
+
+     2. 输出数据
+
+        `pw.write("你好 response");`
+
+   * 注意
+
+     *  乱码问题
+
+       1. ` PrintWriter pw = response.getWriter();`获取的流的默认编码是ISO-8859-1
+       2. 设置该流的默认编码
+       3.  告诉浏览器响应体使用的编码
+
+     * 解决乱码
+
+       * 简单的形式设置编码：
+
+         在获取流之前设置`response.setContentType("text/html;charset=utf-8");`
+
+![](https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/27.png)
+
+3. 服务器输出字节数据到浏览器
+    * 步骤
+       1. 获取字节输出流
+
+         `ServletOutputSteam sos = response.getOutputStream();`
+
+       2. 输出数据
+
+         `sos.write("你好".getBytes());`
+
+    * 注意
+
+       * 也要在获取流之前设置`response.setContentType("text/html;charset=utf-8");`
+
+4. 验证码
+    1. 本质：图片
+    2. 目的：防止恶意表单注册
+
+# 七.ServletContext对象
+
+1. 概念：代表整个web应用，可以和程序的容器(服务器)来通信
+
+2. 获取
+
+   1. 通过request对象获取`request.getServletContext();`
+   2. 通过HttpServlet获取`this.getServletContext();`
+
+   > 这两种方法获取的对象是同一个，地址值相同
+
+3. 功能
+
+   1. 获取MIME类型
+      * MIME类型:在互联网通信过程中定义的一种文件数据类型
+        * 格式： 大类型/小类型   如：text/html、image/jpeg
+      * 获取：`String getMimeType(String file)`
+   2. 域对象：共享数据
+      * `setAttribute(String name,Object value)`
+      * `getAttribute(String name)`
+      * `removeAttribute(String name)`
+   3. 获取文件的真实(服务器)路径
+
+~~~java
+String getRealPath(String path)  
+String b = context.getRealPath("/b.txt");//web目录下资源访问
+System.out.println(b);
+
+String c = context.getRealPath("/WEB-INF/c.txt");//WEB-INF目录下的资源访问
+System.out.println(c);
+
+String a = context.getRealPath("/WEB-INF/classes/a.txt");//src目录下的资源访问
+System.out.println(a);
+~~~
+
+# 八、案例：文件下载
+
+* 文件下载需求
+  1. 页面显示超链接
+  2. 点击超链接后弹出下载提示框
+  3. 完成图片文件下载
+* 分析：
+  1. 超链接指向的资源如果能够被浏览器解析，则在浏览器中展示，如果不能解析，则弹出下载提示框。不满足需求
+  2. 任何资源都必须弹出下载提示框
+  3. 使用响应头设置资源的打开方式：`content-disposition:attachment;filename=xxx`
+* 步骤
+  1. 定义页面，编辑超链接href属性，指向Servlet，传递资源名称filename
+  2.  定义Servlet
+     * 获取文件名称
+     *  使用字节输入流加载文件进内存
+     * 指定response的响应头： `content-disposition:attachment;filename=xxx`
+     *  将数据写出到response输出流
+
+* 问题
+	* 中文文件问题
+		* 解决思路：
+			1. 获取客户端使用的浏览器版本信息
+			2. 根据不同的版本信息，设置filename的编码方式不同
