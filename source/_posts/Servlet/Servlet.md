@@ -869,7 +869,7 @@ String a = context.getRealPath("/WEB-INF/classes/a.txt");//src目录下的资源
 System.out.println(a);
 ~~~
 
-# 八、案例：文件下载
+# 八.案例：文件下载
 
 * 文件下载需求
   1. 页面显示超链接
