@@ -459,4 +459,10 @@ links:
       link: 'https://www.debuginn.cn',
       image: '/img/friendLink010.png'
     }
+    - {   
+      title: '十年之约',
+      intro: '一个人的寂寞|一群人的狂欢',
+      link: 'https://www.foreverblog.cn',
+      image: '/img/friendLink011.png'
+    }
     
