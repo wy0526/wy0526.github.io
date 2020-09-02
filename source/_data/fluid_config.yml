@@ -115,9 +115,10 @@ navbar:
     - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
     - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
     - { key: '时光轴', link: '/timeAxis/', icon: 'iconfont icon-pen' }
+    - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }  # 友链页，把前面#去掉即可展示
     - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
     #- { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
-    #- { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }  # 友链页，把前面#去掉即可展示
+    
     
 
 search: # 搜索栏，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件。
@@ -363,12 +364,12 @@ about:  # 关于页需要手动创建，具体请见：https://hexo.fluid-dev.co
   subtitle:   # 打字机内容
   avatar: /img/avatar01.png # 头像
   name:     # 头像下的名字
-  introduce: 'Dong da ! Dong da ! YO~' # 支持 HTML
+  introduce: #'Dong da ! Dong da ! YO~' # 支持 HTML
   icons: # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，class 代表图标的 css class
     - { class: 'iconfont icon-github-fill', link: 'https://github.com/Rainbow0526', tip: '^∇^' }
     - { class: 'iconfont icon-bilibili', link: 'https://space.bilibili.com/389706075', tip: 'OwO' }
-    - { class: 'iconfont icon-music', link: 'https://y.qq.com/portal/profile.html#stat=y_new.top.user_pic', tip: '=3=' }
     - { class: 'iconfont icon-qq-fill', link: 'http://localhost:4000/about/', tip: '1578476712' }
+    #- { class: 'iconfont icon-music', link: 'https://y.qq.com/portal/profile.html#stat=y_new.top.user_pic', tip: '=3=' }
     #- { class: 'iconfont icon-douban-fill', link: 'https://douban.com', tip: 'QWQ' }
     #- { class: 'iconfont icon-wechat-fill', qrcode: '/img/favicon.png' }  # 添加 qrcode 后，点击不再跳转，而是悬浮二维码，需要指定 image
 
@@ -389,26 +390,73 @@ page404:
 # Links Page
 #---------------------------
 links:
-  banner_img: /img/backgroundIndex.jpg
-  banner_img_height: 60  # available: 0 - 100
+  banner_img: /img/backgroundArtical.jpg
+  banner_img_height: 70  # available: 0 - 100
   banner_mask_alpha: 0.3  # available: 0 - 1.0
-  subtitle:  # 打字机内容
+  subtitle: '友链' # 打字机内容
   items:  # intro 与 image 可省略
-    - {
-      title: 'Fluid Docs',
-      intro: '主题使用指南',
-      link: 'https://hexo.fluid-dev.com/docs/',
-      image: '/img/favicon.png'
+      # 1行
+    - {   
+      title: '凡涛の小栈',
+      intro: '海岳尚可倾|口诺终不移',
+      link: 'https://www.isujin.cn',
+      image: '/img/friendLink001.jpg'
     }
-    - {
-      title: 'Fluid Repo',
-      intro: '主题 GitHub 仓库',
-      link: 'https://github.com/fluid-dev/hexo-theme-fluid',
-      image: '/img/favicon.png'
+    - {   
+      title: 'ANONYMOUS',
+      intro: '欢迎参观小灰灰的网站哟',
+      link: 'https://ishacker.net',
+      image: '/img/friendLink002.jpg'
     }
-    - {
-      title: 'Fluid Example',
-      intro: '主题操作示例',
-      link: 'https://hexo.fluid-dev.com/docs/example/',
-      image: '/img/favicon.png'
+    - {   
+      title: 'Hello Alili',
+      intro: '前端大爆炸！',
+      link: 'https://alili.tech',
+      image: '/img/friendLink003.png'
     }
+    # 2行
+    - {   
+      title: '华仔部落',
+      intro: '分享技术学习,个人生活经历,实用资源,实用技能的个人博客',
+      link: 'https://www.zjh336.cn',
+      image: '/img/friendLink004.png'
+    }
+    - {   
+      title: '糖醋鱼的小破站',
+      intro: '鱼生成长记 ',
+      link: 'https://expoli.tech',
+      image: '/img/friendLink005.png'
+    }
+    - {   
+      title: "Lzy Technology",
+      intro: '以IT科技为主|同时穿插一些个人的所思所想',
+      link: 'https://www.lzy20021010.com',
+      image: '/img/friendLink006.jpg'
+    }
+    # 3行
+    - {   
+      title: '计算姬',
+      intro: '自写PC样式主题',
+      link: 'https://taoxinhao.cn',
+      image: '/img/friendLink007.png'
+    }
+    - {   
+      title: '自由勇',
+      intro: '二十年开发经验的大佬',
+      link: 'http://www.auiou.com',
+      image: '/img/friendLink008.png'
+    }
+    - {   
+      title: 'LANGKYESIR',
+      intro: '自改博客园主题',
+      link: 'https://www.cnblogs.com/langkyeSir',
+      image: '/img/friendLink009.png'
+    }
+    # 4行
+    - {   
+      title: 'Debug客栈',
+      intro: '做一个爱分享的程序猿',
+      link: 'https://www.debuginn.cn',
+      image: '/img/friendLink010.png'
+    }
+    
