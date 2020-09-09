@@ -139,6 +139,7 @@ banner_parallax: true  # 头图滚动视差
 #---------------------------
 # 页脚
 # Footer
+# 附：页脚文字编辑 \themes\fluid\layout\_partial
 #---------------------------
 footer:
   statistics:  # 展示网站的 PV、UV 统计数
@@ -168,7 +169,7 @@ index:
   post_default_img: '' # 默认的文章封面图，当没有指定 index_img 时会使用该图片，若都为空则不显示任何图片
   slogan:  # 首页副标题的独立设置
     enable: false  # 为 false 则不显示任何内容
-    text: '小鱼の客栈营业中'  # 为空则按 hexo config.subtitle 显示
+    text:   # 为空则按 hexo config.subtitle 显示
   auto_excerpt:   #文章摘要   可excerpt指定
     enable: false
   post_url_target: _blank  # available: _blank | _self  （_blank：新标签页打开   _self：当前标签页打开）
@@ -395,18 +396,17 @@ links:
   banner_mask_alpha: 0.3  # available: 0 - 1.0
   subtitle: '友链' # 打字机内容
   items:  # intro 与 image 可省略
-      # 1行
     - {   
       title: '凡涛の小栈',
       intro: '海岳尚可倾|口诺终不移',
       link: 'https://www.isujin.cn',
-      image: '/img/friendLink001.jpg'
+      image: 'https://gravatar.yyer.net//avatar/a1b30d36cf26c64696b7f1355f90f4d5?s=80&r=G&d='
     }
     - {   
       title: 'ANONYMOUS',
       intro: '欢迎参观小灰灰的网站哟',
       link: 'https://ishacker.net',
-      image: '/img/friendLink002.jpg'
+      image: 'https://ishacker.net/img/avatar.jpg'
     }
     - {   
       title: 'Hello Alili',
@@ -414,26 +414,18 @@ links:
       link: 'https://alili.tech',
       image: '/img/friendLink003.png'
     }
-    # 2行
-    - {   
-      title: '华仔部落',
-      intro: '分享技术学习,个人生活经历,实用资源,实用技能的个人博客',
-      link: 'https://www.zjh336.cn',
-      image: '/img/friendLink004.png'
-    }
     - {   
       title: '糖醋鱼的小破站',
       intro: '鱼生成长记 ',
       link: 'https://expoli.tech',
-      image: '/img/friendLink005.png'
+      image: 'https://expoli.tech/favicon.png'
     }
     - {   
       title: "Lzy Technology",
       intro: '以IT科技为主|同时穿插一些个人的所思所想',
       link: 'https://www.lzy20021010.com',
-      image: '/img/friendLink006.jpg'
+      image: 'https://www.lzy20021010.com/usr/themes/handsome/usr/img/public/avatar.jpg'
     }
-    # 3行
     - {   
       title: '计算姬',
       intro: '自写PC样式主题',
@@ -444,7 +436,7 @@ links:
       title: '自由勇',
       intro: '二十年开发经验的大佬',
       link: 'http://www.auiou.com',
-      image: '/img/friendLink008.png'
+      image: 'http://st.auiou.com/f/2/000383.jpg'
     }
     - {   
       title: 'LANGKYESIR',
@@ -452,22 +444,21 @@ links:
       link: 'https://www.cnblogs.com/langkyeSir',
       image: '/img/friendLink009.png'
     }
-    # 4行
     - {   
       title: 'Debug客栈',
       intro: '做一个爱分享的程序猿',
       link: 'https://www.debuginn.cn',
-      image: '/img/friendLink010.png'
-    }
-    - {   
-      title: '十年之约',
-      intro: '一个人的寂寞|一群人的狂欢',
-      link: 'https://www.foreverblog.cn',
-      image: '/img/friendLink011.png'
+      image: 'https://secure.gravatar.com/avatar/52826f236c12da591d63363f999ea538'
     }
     - {   
       title: '森纯博客',
       intro: '记录生活和分享知识',
       link: 'https://isenchun.cn/',
       image: 'https://isenchun.cn/logo.png'
+    }
+    - {   
+      title: '陈陈菌博客',
+      intro: '侧重技术博',
+      link: 'https://blog.glumi.cn/',
+      image: 'https://blog.glumi.cn/favicon.ico'
     }
