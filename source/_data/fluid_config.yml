@@ -465,4 +465,9 @@ links:
       link: 'https://www.foreverblog.cn',
       image: '/img/friendLink011.png'
     }
-    
+    - {   
+      title: '森纯博客',
+      intro: '记录生活和分享知识',
+      link: 'https://isenchun.cn/',
+      image: 'https://isenchun.cn/logo.png'
+    }
