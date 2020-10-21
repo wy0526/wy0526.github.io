@@ -3,6 +3,8 @@ date: 2020-07-26
 categories: MVC开发模式、el表达式、jstl标签
 ---
 
+[框架参考链接](https://www.cnblogs.com/panda001/p/11029073.html)
+
 # 一、MVC开发模式
 
 1. jsp演变历史
@@ -166,17 +168,33 @@ categories: MVC开发模式、el表达式、jstl标签
 
 # 四、三层架构
 
-软件设计架构
+web开发领域设计架构
 
-1. 界面层（表示层）：用户看的界面。用户可以通过界面上的组件和服务器进行交互
-2. 业务逻辑层：处理业务逻辑的。登录、注册等，最终为了访问数据库
-3. 数据访问层：操作数据存储文件
+1. 界面层（表示层/web层）：用户看的界面；它主要完成三件事情：
+   * 从界面中取得数据跟后台服务器交互
+   * 跟后台交互后进行数据绑定
+   * 将绑定的数据呈现在页面中
+2. 业务逻辑层（service层）：处理业务逻辑：登录、注册等；组合DAO层的简单方法，形成复杂的功能；采用Spring框架
+3. 数据访问层（dao层）：操作数据存储文件，定义了对于数据库最基本的crud操作；采用MyBatis框架
 
 ![](https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/35.png)
 
-接下来学习的框架其实是对上述三层的简化。
+# 五、框架
 
-ssm：SpringMVC框架、MyBatis框架、Spring框架（javaee灵魂框架）
+针对上面架构的每一个层面，目前Web开发领域内都有一些优秀的框架
 
-# 五、案例:用户信息列表展示
+例如：
+
+* 表示层有Structs2、SpringMVC等
+* 持久层有Hibernate、Mybatis等
+* 业务层有Spring框架
+
+但是严格来说，Spring是一个整合框架，业务层面在每一个公司每一个项目都会根据自己的需求做不同的处理
+
+在项目的开发中，几种使用非常广泛的框架组合：
+
+* SSH：Struts 、Spring、Hibernate
+* SSM：SpringMVC框架、MyBatis框架、Spring框架（javaee灵魂框架）
+
+# 六、案例:用户信息列表展示
 
