@@ -462,3 +462,9 @@ links:
       link: 'https://blog.glumi.cn/',
       image: 'https://blog.glumi.cn/favicon.ico'
     }
+    - {   
+      title: '月上陌阡',
+      intro: '分享经历的互联网大佬',
+      link: 'https://blog.cnguu.cn/',
+      image: 'https://blog.cnguu.cn/20171231/logo48.png'
+    }
