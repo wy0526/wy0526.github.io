@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site 网站
-title: 鱼干の客栈
+title: 兔叽の客栈
 subtitle: ''
 description: ''
 keywords:
@@ -99,4 +99,4 @@ theme: fluid
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:Rainbow0526/Rainbow0526.github.io.git
+  repo: git@github.com:wy0526/wy0526.github.io.git
