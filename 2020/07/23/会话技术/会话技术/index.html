@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>会话技术/会话技术 | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-23 00:00">
+      2020年7月23日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 1.3k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一、会话技术"><a href="#一、会话技术" class="headerlink" title="一、会话技术"></a>一、会话技术</h1><ol>
+<li>会话：一次会话中包含多次请求和响应。<ul>
+<li>一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止</li>
+</ul>
+</li>
+<li>功能：在一次会话的范围内的多次请求间，共享数据</li>
+<li>方式：<ol>
+<li>客户端会话技术：Cookie</li>
+<li>服务器端会话技术：Session</li>
+</ol>
+</li>
+</ol>
+<h1 id="二、Cookie"><a href="#二、Cookie" class="headerlink" title="二、Cookie"></a>二、Cookie</h1><ol>
+<li>概念：客户端会话技术，将数据保存到客户端</li>
+<li>快速入门<ul>
+<li>使用步骤<ol>
+<li>创建Cookie对象，绑定数据<ul>
+<li><code>new Cookie(String name, String value)</code></li>
+</ul>
+</li>
+<li>发送Cookie对象<ul>
+<li><code>response.addCookie(Cookie cookie)</code></li>
+</ul>
+</li>
+<li>获取Cookie，拿到数据<ul>
+<li><code>Cookie[]  request.getCookies()</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>实现原理<ul>
+<li>基于响应头set-cookie和请求头cookie实现</li>
+</ul>
+</li>
+</ol>
+<p>Cookie原理：</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/28.png" srcset="/img/loading.gif" alt=""></p>
+<ol start="4">
+<li><p>cookie的细节</p>
+<ol>
+<li><p>一次可不可以发送多个cookie?</p>
+<ul>
+<li>可以</li>
+<li>可以创建多个Cookie对象，使用response调用多次addCookie方法发送cookie即可。</li>
+</ul>
+</li>
+<li><p>cookie在浏览器中保存多长时间？</p>
+<ol>
+<li><p>默认情况下，当浏览器关闭后，Cookie数据被销毁</p>
+</li>
+<li><p>持久化存储：</p>
+<ul>
+<li><p><code>setMaxAge(int seconds)</code></p>
+<ol>
+<li><p>正数：将Cookie数据写到硬盘的文件中。持久化存储。并指定cookie存活时间，时间到后，cookie文件自动失效</p>
+</li>
+<li><p>负数：默认情况</p>
+</li>
+<li><p>零：删除cookie信息</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>cookie能不能存中文？</p>
+<ul>
+<li>在tomcat 8 之前 cookie中不能直接存储中文数据。<ul>
+<li>需要将中文数据转码：一般采用URL编码(%E3)</li>
+</ul>
+</li>
+<li>在tomcat 8 之后，cookie支持中文数据。<ul>
+<li>特殊字符（如：空格）还是不支持，建议使用URL编码存储，URL解码解析</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>cookie共享问题？</p>
+<ol>
+<li>假设在一个tomcat服务器中，部署了多个web项目，那么在这些web项目中cookie能不能共享？<ul>
+<li>默认情况下cookie不能共享</li>
+<li><code>setPath(String path)</code>：设置cookie的获取范围。默认情况下，设置当前的虚拟目录<ul>
+<li>如果要共享，则可以将path设置为”/“</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>不同的tomcat服务器间cookie共享问题？<ul>
+<li><code>setDomain(String path)</code>：如果设置一级域名相同，那么多个服务器之间cookie可以共享<ul>
+<li>setDomain(“.baidu.com”)：那么tieba.baidu.com和news.baidu.com中cookie可以共享</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Cookie的特点和作用</p>
+<ol>
+<li>特点<ol>
+<li>cookie存储数据在客户端浏览器</li>
+<li>浏览器对于单个cookie 的大小有限制(4kb) 以及 对同一个域名下的总cookie数量也有限制(20个)</li>
+</ol>
+</li>
+<li>作用<ol>
+<li>cookie一般用于存出少量的不太敏感的数据</li>
+<li>在不登录的情况下，完成服务器对客户端的身份识别</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>案例：记住上一次访问时间</p>
+<ol>
+<li>需求<ol>
+<li>访问一个Servlet，如果是第一次访问，则提示：您好，欢迎您首次访问</li>
+<li>如果不是第一次访问，则提示：欢迎回来，您上次访问时间为:显示时间字符串</li>
+</ol>
+</li>
+<li>分析<ol>
+<li>可以采用Cookie来完成</li>
+<li>在服务器中的Servlet判断是否有一个名为lastTime的cookie<ul>
+<li>有：不是第一次访问<ol>
+<li>响应数据：欢迎回来，您上次访问时间为:2018年6月10日11:50:20</li>
+<li>写回Cookie：lastTime=2018年6月10日11:50:01</li>
+</ol>
+</li>
+<li>没有：是第一次访问<ol>
+<li>响应数据：您好，欢迎您首次访问</li>
+<li>写回Cookie：lastTime=2018年6月10日11:50:01</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/29.png" srcset="/img/loading.gif" alt=""></p>
+<h1 id="三、Session"><a href="#三、Session" class="headerlink" title="三、Session"></a>三、Session</h1><ol>
+<li>概念：服务器端会话技术，在一次会话的多次请求间共享数据，将数据保存在服务器端的对象中。HttpSession</li>
+<li>快速入门<ol>
+<li>获取HttpSession对象<ul>
+<li><code>HttpSession session = request.getSession();</code></li>
+</ul>
+</li>
+<li>使用HttpSession对象：<ul>
+<li><code>Object getAttribute(String name)</code></li>
+<li><code>void setAttribute(String name, Object value)</code></li>
+<li><code>void removeAttribute(String name)</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>原理<ul>
+<li>Session的实现是依赖于Cookie的。</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/31.png" srcset="/img/loading.gif" alt=""></p>
+<ol start="4">
+<li><p>细节</p>
+<ol>
+<li><p>当客户端关闭后，服务器不关闭，两次获取session是否为同一个？</p>
+<ul>
+<li><p>默认情况下。不是。</p>
+</li>
+<li><p>如果需要相同，则可以创建Cookie，键为 <code>JSESSIONID</code>，设置最大存活时间，让cookie持久化保存。</p>
+<div class="hljs"><pre><code class="hljs java">Cookie c = <span class="hljs-keyword">new</span> Cookie(<span class="hljs-string">"JSESSIONID"</span>,session.getId());
+c.setMaxAge(<span class="hljs-number">60</span>*<span class="hljs-number">60</span>);
+response.addCookie(c);</code></pre></div>
+</li>
+</ul>
+</li>
+<li><p>客户端不关闭，服务器关闭后，两次获取的session是同一个吗？</p>
+<ul>
+<li>不是同一个，但是要确保数据不丢失。tomcat自动完成以下工作<ul>
+<li>session的钝化：在服务器正常关闭之前，将session对象系列化到硬盘上</li>
+<li>session的活化：在服务器启动后，将session文件转化为内存中的session对象即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>session什么时候被销毁？</p>
+<ol>
+<li><p>服务器关闭</p>
+</li>
+<li><p>session对象调用<code>invalidate()</code></p>
+</li>
+<li><p>session默认失效时间 30分钟<br> 选择性配置修改    </p>
+ <div class="hljs"><pre><code class="hljs java">&lt;session-config&gt;
+     &lt;session-timeout&gt;30&lt;/session-timeout&gt;
+ &lt;/session-config&gt;</code></pre></div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>session的特点</p>
+<ol>
+<li>session用于存储一次会话的多次请求的数据，存在服务器端</li>
+<li>session可以存储任意类型，任意大小的数据</li>
+</ol>
+<blockquote>
+<p>session与Cookie的区别：</p>
+<ol>
+<li>session存储数据在服务器端，Cookie在客户端</li>
+<li>session没有数据大小限制，Cookie有</li>
+<li>session数据安全，Cookie相对于不安全</li>
+</ol>
+</blockquote>
+</li>
+<li><p>案例：验证码</p>
+<ol>
+<li>需求<ol>
+<li>访问带有验证码的登录页面login.jsp</li>
+<li>用户输入用户名，密码以及验证码<ul>
+<li>如果用户名和密码输入有误，跳转登录页面，提示:用户名或密码错误</li>
+<li>如果验证码输入有误，跳转登录页面，提示：验证码错误</li>
+<li>如果全部输入正确，则跳转到主页success.jsp，显示：用户名,欢迎您</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>分析</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/32.png" srcset="/img/loading.gif" alt=""></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF/">会话技术</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/07/23/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "会话技术/会话技术&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>MVC开发模式 &amp; el表达式 &amp; jstl标签/MVC开发模式 &amp; el表达式 &amp; jstl标签 | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-26 00:00">
+      2020年7月26日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 1.4k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <p><a href="https://www.cnblogs.com/panda001/p/11029073.html" target="_blank" rel="noopener">框架参考链接</a></p>
+<h1 id="一、MVC开发模式"><a href="#一、MVC开发模式" class="headerlink" title="一、MVC开发模式"></a>一、MVC开发模式</h1><ol>
+<li><p>jsp演变历史</p>
+<ol>
+<li>早期只有servlet，只能使用response输出标签数据，非常麻烦</li>
+<li>后来又jsp，简化了Servlet的开发，如果过度使用jsp，在jsp中即写大量的java代码，有写html表，造成难于维护，难于分工协作</li>
+<li>再后来，java的web开发，借鉴mvc开发模式，使得程序的设计更加合理性</li>
+</ol>
+</li>
+<li><p>MVC</p>
+<ol>
+<li>M：Model，模型➡JavaBean<ul>
+<li>完成具体的业务操作，如：查询数据库，封装对象</li>
+</ul>
+</li>
+<li>V：View，视图➡JSP<ul>
+<li>展示数据</li>
+</ul>
+</li>
+<li>C：Controller，控制器➡Servlet<ul>
+<li>获取用户的输入</li>
+<li>调用模型</li>
+<li>将数据交给视图进行展示</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>优缺点</p>
+<ol>
+<li><p>优点</p>
+<ol>
+<li><p>耦合性低，方便维护，可以利于分工协作</p>
+</li>
+<li><p>重用性高</p>
+</li>
+</ol>
+</li>
+<li><p>缺点：</p>
+<p>  使得项目架构变得复杂，对开发人员要求高</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/33.png" srcset="/img/loading.gif" alt=""></p>
+<h1 id="二、EL表达式"><a href="#二、EL表达式" class="headerlink" title="二、EL表达式"></a>二、EL表达式</h1><ol>
+<li><p>概念：Expression Language 表达式语言</p>
+</li>
+<li><p>作用：替换和简化jsp页面中java代码的编写</p>
+</li>
+<li><p>语法：<code>${表达式}</code></p>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>jsp默认支持el表达式的。如果要忽略el表达式<ol>
+<li>设置jsp中page指令中：<code>isELIgnored=&quot;true&quot;</code> 忽略当前jsp页面中所有的el表达式</li>
+<li><code>\${表达式}</code> ：忽略当前这个el表达式</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ol>
+<li><p>运算——运算符</p>
+<ol>
+<li>算数运算符： +、- 、* 、/(div) 、%(mod)</li>
+<li>比较运算符： &gt; 、&lt; 、&gt;=、 &lt;=、 ==、 !=</li>
+<li>逻辑运算符： &amp;&amp; (and)、 ||(or)、 !(not)</li>
+<li>空运算符： empty<ul>
+<li>功能：用于判断字符串、集合、数组对象是否为null或者长度是否为0</li>
+<li><code>${empty list}</code>：判断字符串、集合、数组对象是否 为 null或者长度为0</li>
+<li><code>${not empty str}</code>：表示判断字符串、集合、数组对象是否 不为 null 并且 长度&gt;0</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>获取值</p>
+<ol>
+<li><p>el表达式只能从域对象中获取值</p>
+</li>
+<li><p>语法</p>
+<ol>
+<li><p><code>${域名称.键名}</code>：从指定域中获取指定键的值</p>
+<ul>
+<li><p>域名称</p>
+<table>
+<thead>
+<tr>
+<th>域名称</th>
+<th>指定域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pageScope</td>
+<td>pageContext</td>
+</tr>
+<tr>
+<td>requestScope</td>
+<td>request</td>
+</tr>
+<tr>
+<td>sessionScope</td>
+<td>session</td>
+</tr>
+<tr>
+<td>applicationScope</td>
+<td>application（ServletContext）</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>举例：在request域中存储了name=张三，通过${requestScope.name}来获取指定域request中指定键name的值</p>
+</li>
+<li><p>如果指定的键不存在，显示的是空字符串</p>
+</li>
+</ul>
+</li>
+<li><p><code>${键名}</code>：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。</p>
+</li>
+<li><p>获取对象、List集合、Map集合的值</p>
+<ol>
+<li><p>对象</p>
+<ul>
+<li><p><code>${域名称.键名.属性名}</code></p>
+</li>
+<li><p>本质上会去调用对象的getter方法</p>
+</li>
+</ul>
+</li>
+<li><p>List集合</p>
+<ul>
+<li><code>${域名称.键名[索引]}</code></li>
+<li>索引不存在会报错</li>
+</ul>
+</li>
+<li><p>Map集合</p>
+<ul>
+<li><code>${域名称.键名.key名称}</code></li>
+<li><code>${域名称.键名[&quot;key名称&quot;]}</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>隐式对象</p>
+<ul>
+<li>el表达式中有11个隐式对象</li>
+<li>pageContext：获取jsp其他八个内置对象<ul>
+<li><code>${pageContext.request.contextPath}</code>：动态获取虚拟目录</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="三、JSTL标签"><a href="#三、JSTL标签" class="headerlink" title="三、JSTL标签"></a>三、JSTL标签</h1><ol>
+<li><p>概念：JavaServer Pages Tag Library  JSP，标准标签库。是由Apache组织提供的开源的免费的jsp标签。</p>
+</li>
+<li><p>作用：用于简化和替换jsp页面上的java代码</p>
+</li>
+<li><p>使用步骤</p>
+<ol>
+<li>导入jstl相关jar包</li>
+<li>引入标签库：taglib指令<code>&lt;%@ taglib %&gt;</code></li>
+<li>使用标签</li>
+</ol>
+</li>
+<li><p>常用的JSTL标签</p>
+<ol>
+<li><p>if：相当于java代码的if语句</p>
+<ol>
+<li><p>属性</p>
+<p>test为必须属性，接收boolean表达式</p>
+<ul>
+<li>如果表达式为true，则显示if标签体内容，如果为false，则不显示标签体内容</li>
+<li>一般情况下，test属性值会结合el表达式一起使用</li>
+</ul>
+</li>
+<li><p>注意</p>
+<p><code>&lt;c:if&gt;&lt;/c:if&gt;</code>标签没有else情况，想要else情况，则可以在定义一个<code>&lt;c:if&gt;&lt;/c:if&gt;</code>标签</p>
+</li>
+</ol>
+</li>
+<li><p>choose:相当于java代码的switch语句</p>
+<ol>
+<li>使用choose标签声明，相当于switch声明</li>
+<li>使用when标签做判断，相当于case</li>
+<li>使用otherwise标签做其他情况的声明，相当于default</li>
+</ol>
+</li>
+<li><p>foreach:相当于java代码的for语句</p>
+<ol>
+<li>完成重复操作<ul>
+<li>属性<ol>
+<li>begin：开始值</li>
+<li>end：结束值</li>
+<li>var：临时变量</li>
+<li>step：步长</li>
+<li>varStaus：循环状态对象（多数在遍历容器时使用）<ul>
+<li>index：容器中元素的索引，从0开始</li>
+<li>count：循环次数，从1开始</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>遍历容器<ul>
+<li>属性<ol>
+<li>items：容器对象</li>
+<li>var：容器中元素的临时变量</li>
+<li>varStaus：循环状态对象（多数在遍历容器时使用）<ul>
+<li>index：容器中元素的索引，从0开始</li>
+<li>count：循环次数，从1开始</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>练习</p>
+<ul>
+<li>需求：在request域中有一个存有User对象的List集合。需要使用jstl+el将list集合数据展示到jsp页面的表格table中</li>
+</ul>
+</li>
+</ol>
+<h1 id="四、三层架构"><a href="#四、三层架构" class="headerlink" title="四、三层架构"></a>四、三层架构</h1><p>web开发领域设计架构</p>
+<ol>
+<li>界面层（表示层/web层）：用户看的界面；它主要完成三件事情：<ul>
+<li>从界面中取得数据跟后台服务器交互</li>
+<li>跟后台交互后进行数据绑定</li>
+<li>将绑定的数据呈现在页面中</li>
+</ul>
+</li>
+<li>业务逻辑层（service层）：处理业务逻辑：登录、注册等；组合DAO层的简单方法，形成复杂的功能；采用Spring框架</li>
+<li>数据访问层（dao层）：操作数据存储文件，定义了对于数据库最基本的crud操作；采用MyBatis框架</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/35.png" srcset="/img/loading.gif" alt=""></p>
+<h1 id="五、框架"><a href="#五、框架" class="headerlink" title="五、框架"></a>五、框架</h1><p>针对上面架构的每一个层面，目前Web开发领域内都有一些优秀的框架</p>
+<p>例如：</p>
+<ul>
+<li>表示层有Structs2、SpringMVC等</li>
+<li>持久层有Hibernate、Mybatis等</li>
+<li>业务层有Spring框架</li>
+</ul>
+<p>但是严格来说，Spring是一个整合框架，业务层面在每一个公司每一个项目都会根据自己的需求做不同的处理</p>
+<p>在项目的开发中，几种使用非常广泛的框架组合：</p>
+<ul>
+<li>SSH：Struts 、Spring、Hibernate</li>
+<li>SSM：SpringMVC框架、MyBatis框架、Spring框架（javaee灵魂框架）</li>
+</ul>
+<h1 id="六、案例-用户信息列表展示"><a href="#六、案例-用户信息列表展示" class="headerlink" title="六、案例:用户信息列表展示"></a>六、案例:用户信息列表展示</h1>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%E3%80%81el%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81jstl%E6%A0%87%E7%AD%BE/">MVC开发模式、el表达式、jstl标签</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/07/26/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%20&amp;%20el%E8%A1%A8%E8%BE%BE%E5%BC%8F%20&amp;%20jstl%E6%A0%87%E7%AD%BE/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F%20&amp;%20el%E8%A1%A8%E8%BE%BE%E5%BC%8F%20&amp;%20jstl%E6%A0%87%E7%AD%BE/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "MVC开发模式 & el表达式 & jstl标签/MVC开发模式 & el表达式 & jstl标签&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

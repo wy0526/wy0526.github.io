@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>Maven/Maven | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-10 00:00">
+      2020年8月10日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 3.3k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h1><h2 id="1、Maven概述"><a href="#1、Maven概述" class="headerlink" title="1、Maven概述"></a>1、Maven概述</h2><ol>
+<li>Maven是一个项目的构建工具</li>
+<li>Maven作用<ul>
+<li>管理依赖<ol>
+<li>maven可以管理jar文件</li>
+<li>自动下载jar和他的文档，源代码</li>
+<li>管理jar直接的依赖，a. jar需要b.jar，maven会自动下载b. jar</li>
+<li>管理你需要的jar版本</li>
+<li>编译程序，把java编译为class</li>
+<li>测试你的代码是否正确</li>
+<li>打包文件，形成jar文件， 或者war文件</li>
+<li>部署项目</li>
+</ol>
+</li>
+<li>构建项目<ul>
+<li>构建是面向过程的，就是一些步骤，完成项目代码的编译，测试，运行，打包，部署等等</li>
+<li>maven支持的构建包括有<ol>
+<li>清理。把之前项目编译的东西删除掉，为新的编译代码做准备</li>
+<li>编译。把程序源代码编译为执行代码，java-class文件<br>批量的，maven可 以同时把成千上百的文件编译为class.<br>javac不-一样，javac一次编译一个文件</li>
+<li>测试。maven可 以执行测试程序代码，验证你的功能是否正确。<br>测试是批量的，maven同时执行多个测试代码，同时测试很多功能.</li>
+<li>报告。生成测试结果的文件，测试通过没有</li>
+<li>打包。把你的项目中所有的class文件，配置文件等所有资源放到一个压缩文件中，这个压缩文件就是项目的结果文件。通常 java程序，压缩文件是jar扩展名的。对于web应用，压缩文件扩展名是.war</li>
+<li>安装。 把5中生成的文件jar, war安装到本机仓库</li>
+<li>部署。把程序安装好可以执行</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用方式<ol>
+<li>独立使用maven：使用maven的各种命令，完成代码的编译，测试，打包等</li>
+<li>结合开发工具使用：一般在idea中使用maven，简单、快捷、不需要记命令</li>
+</ol>
+</li>
+</ol>
+<h2 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h2><ol>
+<li><p>从maven的官网下载maven的安装包apache- maven-3.3. 9-bin. zip</p>
+</li>
+<li><p>解压安装包，解压到一个目录，非中文目录</p>
+<ul>
+<li>bin：执行程序，主要是mvn. cmd</li>
+<li>conf ：maven 工具本身的配置文件settings . xml</li>
+</ul>
+</li>
+<li><p>配置环境变量</p>
+<ol>
+<li><p>在系统的环境变量中，指定一个<code>M2_HOME</code>的名称，它的值是maven工具安装目录，即bin之前的目录，如：</p>
+<div class="hljs"><pre><code class="hljs angelscript">M2_HOME
+D:\ComputerSoftware\apache-maven<span class="hljs-number">-3.6</span><span class="hljs-number">.3</span></code></pre></div>
+</li>
+<li><p>把M2_ HOME加入到path之中。在所有路径之前加入<code>%M2_HOME%\bin;</code></p>
+</li>
+</ol>
+</li>
+<li><p>验证：cmd命令行中，执行<code>mvn -v</code></p>
+<ul>
+<li><p>注意：需要配置<code>JAVA HOME</code>，指定jdk路径</p>
+</li>
+<li><p>验证成功显示</p>
+<div class="hljs"><pre><code class="hljs groovy"><span class="hljs-string">C:</span>\Users\<span class="hljs-number">15784</span>&gt;mvn -v
+Apache Maven <span class="hljs-number">3.6</span><span class="hljs-number">.3</span> (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven <span class="hljs-string">home:</span> <span class="hljs-string">D:</span>\ComputerSoftware\apache-maven<span class="hljs-number">-3.6</span><span class="hljs-number">.3</span>\bin\..
+Java <span class="hljs-string">version:</span> <span class="hljs-number">1.8</span><span class="hljs-number">.0</span>_251, <span class="hljs-string">vendor:</span> Oracle Corporation, 
+<span class="hljs-string">runtime:</span> <span class="hljs-string">D:</span>\ComputerSoftware\Java\jdk1<span class="hljs-number">.8</span><span class="hljs-number">.0</span>_251\jre
+Default <span class="hljs-string">locale:</span> zh_CN, platform <span class="hljs-string">encoding:</span> GBK
+OS <span class="hljs-string">name:</span> <span class="hljs-string">"windows 10"</span>, <span class="hljs-string">version:</span> <span class="hljs-string">"10.0"</span>, <span class="hljs-string">arch:</span> <span class="hljs-string">"amd64"</span>, <span class="hljs-string">family:</span> <span class="hljs-string">"windows"</span></code></pre></div>
+
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="二、核心概念"><a href="#二、核心概念" class="headerlink" title="二、核心概念"></a>二、核心概念</h1><ol>
+<li>POM：一个文件，名称是pom.xml，pom翻译过来叫做项目对象模型。maven把一一个项目当做一个模型使用。控制maven构建项目的过程，管理jar依赖<ul>
+<li>坐标：是一个唯一的字符串，用来表示资源的</li>
+<li>依赖管理：管理你的项目可以使用jar文件</li>
+</ul>
+</li>
+<li>约定的目录结构：maven项目的目录和文件的位置都是规定的</li>
+<li>仓库管理(了解)：你的资源存放的位置</li>
+<li>生命周期(了解)：maven工具构建项目的过程，就是生命周期</li>
+<li>插件和目标(了解) ：执行maven构建的时候用的工具是插件</li>
+<li>继承</li>
+<li>聚合</li>
+</ol>
+<h2 id="1、约定的目录结构"><a href="#1、约定的目录结构" class="headerlink" title="1、约定的目录结构"></a>1、约定的目录结构</h2><p>每一个maven项目在磁盘中都是一个文件夹，如：项目Hello</p>
+<div class="hljs"><pre><code class="hljs haml">Hello/
+    -<span class="ruby">---<span class="hljs-regexp">/src</span></span>
+<span class="ruby">    --------<span class="hljs-regexp">/main					   #放你主程序java代码和配置文件</span></span>
+<span class="ruby">    -----------------<span class="hljs-regexp">/java			   #你的程序包和包中的java文件</span></span>
+<span class="ruby">    -----------------<span class="hljs-regexp">/resources		   #你的java程序中要使用的配置文件</span></span>
+<span class="ruby">    --------<span class="hljs-regexp">/test					   #放测试程序代码和文件的(可以没有)</span></span>
+<span class="ruby">    -----------------<span class="hljs-regexp">/java			   #测试程序包和包中的java文件</span></span>
+<span class="ruby">    -----------------<span class="hljs-regexp">/resources	       #测试java程序中要使用的配置文件</span></span>
+<span class="ruby">    ----<span class="hljs-regexp">/pom. xml					   #maven的核心文件(maven项目必须有)</span></span></code></pre></div>
+
+<h2 id="2、仓库"><a href="#2、仓库" class="headerlink" title="2、仓库"></a>2、仓库</h2><ol>
+<li><p>手动创建一个maven工程</p>
+<ul>
+<li>创建好工程目录后，在cmd命令行中执行命令<code>mvn compile</code>会编译src/main目录下的所有java文件。编译前会下载一些jar文件（叫做插件，插件是完成某些功能），因为maven工具执行的操作需要很多插件( java类–jar文件)完成的。下载的东西存放到了默认仓库(本机仓库) ：C: \Users\ ( 登录操作系统的用户名) Adninistrator\ . m2\repository</li>
+<li>执行<code>mvn compile</code> 结果是在项目的根目录下生成target目录(结果目录)，maven编译的java程序，最后的class文件都放在target目录中</li>
+<li>自定义本机存放资源的目录位置<ol>
+<li>修改maven的配置文件，maven安装目录/conf/settings . xml，先备份settings . xml</li>
+<li>修改标签<code>&lt;localrepositoy&gt;</code>指定你的目录(不要使用中文目录)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>概念</p>
+<p>仓库是存放东西的，存放maven使用 的jar和我们项目使用的jar</p>
+<ul>
+<li>maven使用的插件( 各种jar)</li>
+<li>我项目使用的jar(第三方的工具)</li>
+</ul>
+</li>
+<li><p>分类</p>
+<ul>
+<li>本地仓库：就是你的个人计算机上的文件夹，存放各种jar</li>
+<li>远程仓库：在互联网上的，使用网络才能使用的仓库<ol>
+<li>中央仓库：最权威的，所有的开发人员都共享使用的一个集中的仓库,<br>中央仓库的地址： <a href="https://repo.maven.apache.org" target="_blank" rel="noopener">https://repo.maven.apache.org</a></li>
+<li>中央仓库的镜像：就是中央仓库的备份，在各大洲， 重要的城市都是镜像</li>
+<li>私服：在公司内部，在局域网中使用的，不是对外使用的</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>使用</p>
+<ul>
+<li>maven仓库的使用不需要人为参与，会自行进行下面的步骤</li>
+<li>开发人员需要使用mysql驱动 —&gt; maven首先查本地仓库 —&gt; 私服 —&gt; 镜像 —&gt; 中央仓库</li>
+</ul>
+</li>
+</ol>
+<h2 id="3、POM文件"><a href="#3、POM文件" class="headerlink" title="3、POM文件"></a>3、POM文件</h2><ol>
+<li><p>概念</p>
+<p>Project Object Model项目对象模型。Maven 把一个项目的结构和内容抽象成一个模型 ，在xml文件中进行声明，以方便进行构建和描述，pom.xml是Maven的灵魂。所以，maven环境搭建好之后，所有的学习和操作都是关于pom.xml的</p>
+</li>
+<li><p>文件内容</p>
+<ol>
+<li><p>坐标（gav）</p>
+<p>唯一值， 在互联网中唯一标识一个项目</p>
+<ul>
+<li>groupId：组织id，一般是公司域名的倒写。格式可以为:<ul>
+<li>域名倒写。 例如com.baidu</li>
+<li>域名倒写+项目名。例如com.baidu.appolo</li>
+</ul>
+</li>
+<li>artifactId：项目名称，也是模块名称，对应groupId中项目中的子项目</li>
+<li>version：项目的版本号。如果项目还在开发中，是不稳定版本，通常在版本后带-SNAPSHOT。version使用三位数字标识，例如1.1.0</li>
+</ul>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>公司域名的倒写<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>自定义项目名称<span class="hljs-tag">&lt;/<span class="hljs-name">arti</span> <span class="hljs-attr">factId</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>自定版本号<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></code></pre></div>
+</li>
+<li><p>打包：packaging</p>
+<p>项目打包的类型，可以使用jar、war、rar、ear、pom。默认是jar，web应用是war</p>
+</li>
+<li><p>依赖：dependencies和dependency</p>
+<ul>
+<li>相当于是java代码中import。例如，你的项目中要使用的各种资源说明，比我的项 目要使用mysql驱动</li>
+</ul>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--依赖java代码中 import --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>mysq1<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">arti</span> <span class="hljs-attr">factId</span>&gt;</span> mysq1 -connector- java<span class="hljs-tag">&lt;/<span class="hljs-name">arti</span> <span class="hljs-attr">factId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.1.9<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></code></pre></div>
+
+<ul>
+<li><p>依赖范围</p>
+<p>scope的值有complie（默认）、test、provided，用以表示jar包等依赖的适用范围</p>
+<ul>
+<li>complie：编译，测试，打包，部署</li>
+<li>test：测试</li>
+<li>provided：编译，测试</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性：properties</p>
+<ul>
+<li><p>定义一些配置属性。例如：project.build.sourceEncoding (项目构建源码编码方式)，可以设置为UTF-8， 防止中文乱码，也可定义相关构建版本号，便于日后统一 升级</p>
+</li>
+<li><p>自定义属性</p>
+<p>一般用于定义依赖的版本号</p>
+<ol>
+<li>在<code>&lt;properties&gt;</code>通过自定义标签声明变量（标签名就是变量名）</li>
+<li>在pom.xml文件中的其他位置，使用<code>${标签名}</code>使用变量的值</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>构建：build</p>
+<ul>
+<li><p>maven在进行项目的构建时，配置信息，例如，指定编译java代码使用的jdk版本</p>
+</li>
+<li><p>资源插件</p>
+<ol>
+<li>默认没有使用resources的时候，maven执行编译代码时，会 把src/main/resources目录中的文件拷贝到target/classes目录中。对于src/main/java 目录下的非java文件不处理，不拷贝到target/classes目录中。</li>
+<li>如果编译时，要将src/main/java 目录下的非java文件也拷贝到target/classes目录中，则可以在<code>&lt;build&gt;</code>中加入<code>&lt;resources&gt;</code></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/09.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="4、生命周期"><a href="#4、生命周期" class="headerlink" title="4、生命周期"></a>4、生命周期</h2><p>maven生命周期：maven构建项目的过程，清理，编译，测试，报告，打包，安装，部署</p>
+<h2 id="5、常用命令"><a href="#5、常用命令" class="headerlink" title="5、常用命令"></a>5、常用命令</h2><p>maven的命令：maven独立使用时，通过命令完成maven的生命周期的执行。maven可以使用命令，完成项目的清理，编译，测试等等</p>
+<ol>
+<li><p>单元测试</p>
+<ul>
+<li><p>用的是junit，junit是一个专门测试的框架(工具) 。junit测试的是类中的方法，每一个方法都是独立测试的。maven借助单元测试，批量的测试你类中的大量方法是否符合预期的</p>
+</li>
+<li><p>使用步骤</p>
+<ol>
+<li><p>加入依赖，在pom. xml加入单元测试依赖</p>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--单元测试--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">artifactid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.11<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></code></pre></div>
+</li>
+<li><p>在maven项目中的src/test/java目录下，创建测试程序。推荐的创建类和方法的提示：</p>
+<ol>
+<li>测试类的名称是Test +你要测试的类名</li>
+<li>测试的方法名称是:Test+方法名称</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>举例</p>
+<p>例如，你要测试的类是HelloMaven，则先创建测试类TestHelloMaven</p>
+<div class="hljs"><pre><code class="hljs aspectj"><span class="hljs-meta">@Test</span>
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">testAdd</span><span class="hljs-params">()</span> </span>&#123;
+	测试HelloMaven的add方法是否正确
+&#125;</code></pre></div>
+
+<p>其中testAdd叫做测试方法，它的定义规则如下：</p>
+<ol>
+<li>方法是public的，必须的</li>
+<li>方法没有返回值，必须的</li>
+<li>方法名称是自定义的，推荐是Test +方法名称</li>
+<li>在方法的上面加入<code>@Test</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>常用命令</p>
+<p>以下命令要在pom.xml所在目录下执行</p>
+<ul>
+<li><code>mvn clean</code>清理<ul>
+<li>作用：清理编译后的目录即target文件夹</li>
+</ul>
+</li>
+<li><code>mvn complie</code>编译<ul>
+<li>作用：只编译main目录，不编译test目录</li>
+<li>结果：.class文件存放在target/classes目录中</li>
+</ul>
+</li>
+<li><code>mvn test-complie</code>编译<ul>
+<li>作用：只编译test目录，不编译main目录</li>
+<li>结果：.class文件存放在target/test-classes目录中</li>
+</ul>
+</li>
+<li><code>mvn test</code>测试<ul>
+<li>作用：运行test目录进行测试</li>
+<li>过程：编译测试、测试</li>
+<li>结果：target/surefire-reports目录保存测试结果</li>
+</ul>
+</li>
+<li><code>mvn package</code>打包<ul>
+<li>作用：打包主程序</li>
+<li>过程：编译、编译测试、测试、打包</li>
+<li>结果：jar包（javase）或者war包（web）保存在target/<strong><em>artifactId+version</em></strong>  </li>
+</ul>
+</li>
+<li><code>mvn install</code>安装<ul>
+<li>作用：本地多个项目共用一个jar包</li>
+<li>过程：编译、编译测试、测试、打包、安装</li>
+<li>结果：包保存在本地仓库</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="6、插件"><a href="#6、插件" class="headerlink" title="6、插件"></a>6、插件</h2><p>maven的插件：maven命令执行时，真正完成功能的是插件，插件就是一些jar文件，一些类。在pom.xml文件中进行配置</p>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--build是控制配置maven构建项目的参数设置，设置jdk的版本--&gt;</span> .
+<span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- 配置插件--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p1ugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org . apache. maven. p1ugins<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 插件的名称 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>maven- compiler-plugin<span class="hljs-tag">&lt; /<span class="hljs-attr">artifactId</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 插件的版本 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.8.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 配置插件的信息 --&gt;</span>
+            <span class="hljs-tag">&lt; <span class="hljs-attr">configuration</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- 告诉maven我们的代码实在jdk1.8上编译的 --&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">source</span>&gt;</span>
+                <span class="hljs-comment">&lt;!-- 我们的程序应该运行在1.8的jdk上 --&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">target</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">target</span>&gt;</span>
+            <span class="hljs-tag">&lt;/ <span class="hljs-attr">configuration</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span></code></pre></div>
+
+<h1 id="三、在IDEA中的应用"><a href="#三、在IDEA中的应用" class="headerlink" title="三、在IDEA中的应用"></a>三、在IDEA中的应用</h1><h2 id="1、IDEA中设置Maven"><a href="#1、IDEA中设置Maven" class="headerlink" title="1、IDEA中设置Maven"></a>1、IDEA中设置Maven</h2><blockquote>
+<p>idea中内置了maven，一 般不使用内置的，因为用内置修改maven的设置不方便<br>使用自己安装的maven，需要覆盖idea中的默认的设置，让idea指 定maven安装位置等信息</p>
+</blockquote>
+<ol>
+<li><p>当前工程配置maven</p>
+<p>点击菜单栏<code>File</code> — <code>Settings</code> — <code>Build, Excution , Deployment</code> — <code>Build Tools</code><br> — <code>Maven</code>，配置下面的内容：</p>
+<ul>
+<li>Maven Home directory: maven的安装目录</li>
+<li>User settings File：maven安装目录下conf/setting.xml配置文件</li>
+<li>Local Repository：本机仓库的目录位置</li>
+</ul>
+<p>然后点击Maven下的<code>Runner</code>，配置下面的内容：</p>
+<ul>
+<li>VM Options：-DarchetypeCatalog=internal</li>
+<li>JRE：你项目的jdk</li>
+</ul>
+<blockquote>
+<p>-DarchetypeCatalog=internal：</p>
+<p>maven项目创建时，会联网下载模版文件，比较大，使用archetypeCatalog- internal，不用下载，创建maven项目速度快</p>
+</blockquote>
+</li>
+<li><p>新建工程配置maven</p>
+<p>点击菜单栏<code>File</code> — <code>New Projects Settings</code> — <code>Settings for New Projects</code> — <code>Build, Excution , Deployment</code> — <code>Build Tools</code>进行配置，配置内容和上述相同</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/07.png" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/08.png" srcset="/img/loading.gif" alt=""></p>
+<h2 id="2、IDEA使用模板创建项目"><a href="#2、IDEA使用模板创建项目" class="headerlink" title="2、IDEA使用模板创建项目"></a>2、IDEA使用模板创建项目</h2><ol>
+<li><p>普通的java项目</p>
+<ol>
+<li><p>创建步骤</p>
+<p>File —&gt; new module —&gt; maven项目 —&gt; <u>maven-archetype-quickstart</u> —&gt; 修改项目坐标（ 如果没有提前设置idea中新建项目的maven配置，则还需要设置maven的配置）</p>
+</li>
+<li><p>项目结构</p>
+<div class="hljs"><pre><code class="hljs mipsasm">├─src
+│  ├─main
+│  │  ├─<span class="hljs-keyword">java</span>
+<span class="hljs-keyword">│ </span> │  │  └─com
+│  │  │      └─<span class="hljs-keyword">bjpowernode</span>
+<span class="hljs-keyword">│ </span> │  │              HelloMaven.<span class="hljs-keyword">java</span>
+<span class="hljs-keyword">│ </span> │  │              
+│  │  └─resources
+│  └─test
+│      ├─<span class="hljs-keyword">java</span>
+<span class="hljs-keyword">│ </span>     │  └─com
+│      │      └─<span class="hljs-keyword">bjpowernode</span>
+<span class="hljs-keyword">│ </span>     │              TestHelloMaven.<span class="hljs-keyword">java</span>
+<span class="hljs-keyword">│ </span>     │              
+│      └─resources
+└─target</code></pre></div>
+</li>
+</ol>
+<ul>
+<li>在cmd窗口中执行<code>tree /f &gt;目录.txt</code>可以将文件结构输出到本文件夹下的目录.txt中</li>
+</ul>
+</li>
+<li><p>web工程</p>
+<ol>
+<li><p>创建步骤</p>
+<p>File —&gt; new module —&gt; maven项目 —&gt; <u>maven-archetype-webapp</u> —&gt; 修改项目坐标（ 如果没有提前设置idea中新建项目的maven配置，则还需要设置maven的配置）</p>
+</li>
+<li><p>项目结构</p>
+<div class="hljs"><pre><code class="hljs mipsasm">├─src
+│  ├─main
+│  │  ├─<span class="hljs-keyword">java</span>
+<span class="hljs-keyword">│ </span> │  │  └─com
+│  │  │      └─<span class="hljs-keyword">bjpowernode</span>
+<span class="hljs-keyword">│ </span> │  │          └─controller
+│  │  │                  HelloServlet.<span class="hljs-keyword">java</span>
+<span class="hljs-keyword">│ </span> │  │                  
+│  │  ├─resources
+│  │  └─webapp
+│  │      │  index.<span class="hljs-keyword">jsp</span>
+<span class="hljs-keyword">│ </span> │      │  main.<span class="hljs-keyword">jsp</span>
+<span class="hljs-keyword">│ </span> │      │  
+│  │      └─WEB-INF
+│  │              web.xml
+│  │              
+│  └─test
+│      ├─<span class="hljs-keyword">java</span>
+<span class="hljs-keyword">│ </span>     └─resources
+└─target</code></pre></div>
+
+</li>
+</ol>
+</li>
+</ol>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Maven/">Maven</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/08/10/Maven/Maven/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Maven/Maven&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

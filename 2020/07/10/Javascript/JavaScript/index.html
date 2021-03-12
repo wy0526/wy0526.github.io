@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>Javascript/JavaScript | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-10 00:00">
+      2020年7月10日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 3.3k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一、Javascript简介"><a href="#一、Javascript简介" class="headerlink" title="一、Javascript简介"></a>一、Javascript简介</h1><ul>
+<li><p>概念：    一门客户端脚本语言</p>
+<ul>
+<li>运行在客户端浏览器中的。每一个浏览器都有JavaScript的解析引擎</li>
+<li>脚本语言：不需要编译，直接就可以被浏览器解析执行了</li>
+</ul>
+</li>
+<li><p>功能：</p>
+<ul>
+<li>可以来增强用户和html页面的交互过程，可以来控制html元素，让页面有一些动态的效果，增强用户的体验。</li>
+</ul>
+</li>
+<li><p>JavaScript发展史：</p>
+<ol>
+<li>1992年，Nombase公司，开发出第一门客户端脚本语言，专门用于表单的校验。命名为 ： C–    ，后来更名为：ScriptEase</li>
+<li>1995年，Netscape(网景)公司，开发了一门客户端脚本语言：LiveScript。后来，请来SUN公司的专家，修改LiveScript，命名为JavaScript</li>
+<li>1996年，微软抄袭JavaScript开发出JScript语言</li>
+<li>1997年，ECMA(欧洲计算机制造商协会)，制定出客户端脚本语言的标准：ECMAScript，就是统一了所有客户端脚本语言的编码方式。</li>
+</ol>
+<ul>
+<li>JavaScript = ECMAScript + JavaScript自己特有的东西(BOM+DOM)</li>
+</ul>
+</li>
+</ul>
+<h1 id="二、ECMAScript"><a href="#二、ECMAScript" class="headerlink" title="二、ECMAScript"></a>二、ECMAScript</h1><p>ECMAScript：客户端脚本语言的标准</p>
+<h2 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1. 基本语法"></a>1. 基本语法</h2><ol>
+<li><p>与html结合方式</p>
+<ol>
+<li>内部JS<ul>
+<li>定义<code>&lt;script&gt;</code>，标签体内容就是js代码</li>
+</ul>
+</li>
+<li>外部JS<ul>
+<li>定义<code>&lt;script&gt;</code>，通过src属性引入外部的js文件</li>
+</ul>
+</li>
+<li>注意<ul>
+<li><code>&lt;script&gt;</code>可以定义在html页面的任何地方。但是定义的位置会影响执行顺序。</li>
+<li><code>&lt;script&gt;</code>可以定义多个</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>注释</p>
+<ul>
+<li>单行注释：//注释内容</li>
+<li>多行注释：/<em>注释内容</em>/</li>
+</ul>
+</li>
+<li><p>数据类型</p>
+<ol>
+<li>原始数据类型(基本数据类型)：<ul>
+<li>number：数字。 整数/小数/NaN(not a number 一个不是数字的数字类型)</li>
+<li>string：字符串。 字符串  “abc” “a” ‘abc’</li>
+<li>boolean: true和false</li>
+<li>null：一个对象为空的占位符</li>
+<li>undefined：未定义。如果一个变量没有给初始化值，则会被默认赋值为undefined</li>
+</ul>
+</li>
+<li>引用数据类型：对象</li>
+</ol>
+</li>
+<li><p>变量</p>
+<ul>
+<li>变量：一小块存储数据的内存空间</li>
+<li>Java语言是强类型语言，而JavaScript是弱类型语言<ul>
+<li>强类型：在开辟变量存储空间时，定义了空间将来存储的数据的数据类型。只能存储固定类型的数据</li>
+<li>弱类型：在开辟变量存储空间时，不定义空间将来的存储数据类型，可以存放任意类型的数据</li>
+</ul>
+</li>
+<li>语法<ul>
+<li><code>var 变量名 = 初始化值;</code></li>
+</ul>
+</li>
+<li>typeof运算符：获取变量的类型<ul>
+<li>注：null运算后得到的是object</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>运算符</p>
+<ol>
+<li><p>元运算符：只有一个运算数的运算符</p>
+<p><code>++，-- ， +(正号)</code></p>
+<ul>
+<li>++ –: 自增(自减)</li>
+<li>+(-)：正负号</li>
+<li>注意：在JS中，如果运算数不是运算符所要求的类型，那么js引擎会自动的将运算数进行类型转换<ul>
+<li>其他类型转number：<ul>
+<li>string转number：按照字面值转换。如果字面值不是数字，则转为NaN（不是数字的数字）</li>
+<li>boolean转number：true转为1，false转为0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>算数运算符</p>
+<p><code>+ - * / % ...</code></p>
+</li>
+<li><p>赋值运算符<br><code>= += -+....</code></p>
+</li>
+<li><p>比较运算符<br><code>&gt; &lt; &gt;= &lt;= == ===(全等于)</code></p>
+<ul>
+<li>比较方式<ul>
+<li>类型相同：直接比较<ul>
+<li>字符串：按照字典顺序比较。按位逐一比较，直到得出大小为止</li>
+</ul>
+</li>
+<li>类型不同：先进行类型转换，再比较<ul>
+<li>===：全等于。在比较之前，先判断类型，如果类型不一样，则直接返回false</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>逻辑运算符<br><code>&amp;&amp; || !</code></p>
+<ul>
+<li>其他类型转boolean：<ol>
+<li>number：0或NaN为假，其他为真</li>
+<li>string：除了空字符串(“”)，其他都是true</li>
+<li>null&amp;undefined:都是false</li>
+<li>对象：所有对象都为true</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>三元运算符</p>
+<p><code>? : 表达式</code></p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">var a</span> = 3;
+<span class="hljs-attribute">var b</span> = 4;
+<span class="hljs-attribute">var c</span> = a &gt; b ? 1:0;</code></pre></div>
+
+<ul>
+<li>语法<ul>
+<li>表达式? 值1:值2;</li>
+<li>判断表达式的值，如果是true则取值1，如果是false则取值2；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>流程控制语句</p>
+<ol>
+<li><p>if…else…</p>
+</li>
+<li><p>switch</p>
+<ul>
+<li><p>在java中，switch语句可以接受的数据类型： byte int shor char,枚举(1.5) ,String(1.7)</p>
+   <div class="hljs"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">switch</span><span class="hljs-params">(变量)</span></span>:
+case 值:</code></pre></div>
+</li>
+<li><p>在JS中,switch语句可以接受任意的原始数据类型</p>
+</li>
+</ul>
+</li>
+<li><p>while</p>
+</li>
+<li><p>do…while</p>
+</li>
+<li><p>for</p>
+</li>
+</ol>
+</li>
+<li><p>JS特殊语法</p>
+<ol>
+<li>语句以;结尾，如果一行只有一条语句则 ;可以省略 (不建议)</li>
+<li>变量的定义使用var关键字，也可以不使用<ul>
+<li>用： 定义的变量是局部变量</li>
+<li>不用：定义的变量是全局变量(不建议)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>练习：99乘法表</p>
+</li>
+</ol>
+</li>
+</ol>
+<div class="hljs"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>99乘法表<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>
+        td&#123;
+            border: 1px solid;
+        &#125;
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+
+<span class="javascript">        <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"&lt;table  align='center'&gt;"</span>);</span>
+
+<span class="actionscript">        <span class="hljs-comment">//1.完成基本的for循环嵌套，展示乘法表</span></span>
+<span class="actionscript">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">9</span> ; i++) &#123;</span>
+<span class="javascript">            <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"&lt;tr&gt;"</span>);</span>
+<span class="actionscript">            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">1</span>; j &lt;=i ; j++) &#123;</span>
+<span class="javascript">                <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"&lt;td&gt;"</span>);</span>
+
+<span class="actionscript">                <span class="hljs-comment">//输出  1 * 1 = 1</span></span>
+<span class="javascript">                <span class="hljs-built_in">document</span>.write(i + <span class="hljs-string">" * "</span> + j + <span class="hljs-string">" = "</span> + ( i*j) +<span class="hljs-string">"&amp;nbsp;&amp;nbsp;&amp;nbsp;"</span>);</span>
+
+<span class="javascript">                <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"&lt;/td&gt;"</span>);</span>
+            &#125;
+            /*//输出换行
+<span class="javascript">            <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"&lt;br&gt;"</span>);*<span class="hljs-regexp">/</span></span>
+
+<span class="javascript">            <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"&lt;/tr&gt;"</span>);</span>
+        &#125;
+
+<span class="actionscript">        <span class="hljs-comment">//2.完成表格嵌套</span></span>
+<span class="javascript">        <span class="hljs-built_in">document</span>.write(<span class="hljs-string">"&lt;/table&gt;"</span>);</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div>
+
+
+
+<h2 id="2-基本对象"><a href="#2-基本对象" class="headerlink" title="2.基本对象"></a>2.基本对象</h2><ol>
+<li><p>Function：函数(方法)对象</p>
+<ul>
+<li>创建</li>
+</ul>
+<div class="hljs"><pre><code class="hljs js"><span class="hljs-number">1.</span> <span class="hljs-keyword">var</span> fun = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Function</span>(形式参数列表,方法体);  <span class="hljs-comment">//忘掉吧</span>
+
+<span class="hljs-number">2.</span> 
+    <span class="hljs-function"><span class="hljs-keyword">function</span> 方法名称(<span class="hljs-params">形式参数列表</span>)</span>&#123;
+        方法体
+    &#125;
+
+<span class="hljs-number">3.</span> 
+    <span class="hljs-keyword">var</span> 方法名 = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">形式参数列表</span>)</span>&#123;
+    	方法体
+    &#125;</code></pre></div>
+
+<ul>
+<li><p>方法</p>
+</li>
+<li><p>属性</p>
+<p> length:代表形参的个数</p>
+</li>
+<li><p>特点</p>
+<ol>
+<li>方法定义是，形参的类型不用写,返回值类型也不写</li>
+<li>方法是一个对象，如果定义名称相同的方法，会覆盖</li>
+<li>在JS中，方法的调用只与方法的名称有关，和参数列表无关</li>
+<li>在方法声明中有一个隐藏的内置对象（数组），arguments,封装所有的实际参数</li>
+</ol>
+</li>
+<li><p>调用</p>
+<p><code>方法名称(实际参数列表);</code></p>
+</li>
+</ul>
+</li>
+<li><p>Array:数组对象</p>
+<ol>
+<li><p>创建：</p>
+<p><code>1. var arr = new Array(元素列表);</code></p>
+<p><code>2. var arr = new Array(默认长度);</code></p>
+<p><code>3. var arr = [元素列表];</code></p>
+</li>
+<li><p>方法</p>
+<ul>
+<li>join(参数):将数组中的元素按照指定的分隔符拼接为字符串</li>
+<li>push()    向数组的末尾添加一个或更多元素，并返回新的长度</li>
+</ul>
+</li>
+<li><p>属性</p>
+<ul>
+<li>length:数组的长度</li>
+</ul>
+</li>
+<li><p>特点</p>
+<ul>
+<li>JS中，数组元素的类型可变的</li>
+<li>JS中，数组长度可变的</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Boolean</p>
+</li>
+<li><p>Date：日期对象</p>
+<ol>
+<li><p>创建</p>
+<p><code>var date = new Date();</code></p>
+</li>
+<li><p>方法</p>
+<ul>
+<li>toLocaleString()：返回当前date对象对应的时间本地字符串格式</li>
+<li>getTime():获取毫秒值。返回当前如期对象描述的时间到1970年1月1日零点的毫秒值差</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Math：数学对象</p>
+<ol>
+<li>创建<ul>
+<li>特点：Math对象不用创建，直接使用<code>Math.方法名();</code></li>
+</ul>
+</li>
+<li>方法<ul>
+<li>random():返回 0 ~ 1 之间的随机数。 含0不含1</li>
+<li>ceil(x)：对数进行上舍入</li>
+<li>floor(x)：对数进行下舍入</li>
+<li>round(x)：把数四舍五入为最接近的整数</li>
+</ul>
+</li>
+<li>属性  PI</li>
+</ol>
+</li>
+<li><p>Number</p>
+</li>
+<li><p>String</p>
+</li>
+<li><p>RegExp：正则表达式对象</p>
+<ol>
+<li><p>正则表达式：定义字符串的组成规则。</p>
+<ul>
+<li><p>单个字符:[]</p>
+<p>如： [a] [ab] [a-zA-Z0-9_]</p>
+<ul>
+<li><p>特殊符号代表特殊含义的单个字符:</p>
+<p>\d:单个数字字符 [0-9]<br>\w:单个单词字符[a-zA-Z0-9_]</p>
+</li>
+</ul>
+</li>
+<li><p>量词符号</p>
+<ol>
+<li>?：表示出现0次或1</li>
+<li>*：表示出现0次或多次</li>
+<li>+：出现1次或多次</li>
+<li>{m,n}:表示 m&lt;= 数量 &lt;= n<ul>
+<li>m如果缺省： {,n}:最多n次</li>
+<li>n如果缺省：{m,} 最少m次</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>开始结束符号</p>
+<ul>
+<li>^:开始</li>
+<li>$:结束</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>正则对象</p>
+<ol>
+<li><p>创建</p>
+<p><code>1. var reg = new RegExp(&quot;正则表达式&quot;);</code></p>
+<p><code>2. var reg = /正则表达式/;</code></p>
+</li>
+<li><p>方法</p>
+<ul>
+<li>test(参数):验证指定的字符串是否符合正则定义的规范</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Global</p>
+<ol>
+<li>特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用<code>方法名();</code></li>
+<li>方法</li>
+</ol>
+<div class="hljs"><pre><code class="hljs js"><span class="hljs-built_in">encodeURI</span>():url编码
+<span class="hljs-built_in">decodeURI</span>():url解码
+
+<span class="hljs-built_in">encodeURIComponent</span>():url编码,编码的字符更多
+<span class="hljs-built_in">decodeURIComponent</span>():url解码
+
+<span class="hljs-built_in">parseInt</span>():将字符串转为数字。
+逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+
+<span class="hljs-built_in">isNaN</span>():判断一个值是否是<span class="hljs-literal">NaN</span>。
+<span class="hljs-literal">NaN</span>六亲不认，连自己都不认。<span class="hljs-literal">NaN</span>参与的==比较全部问<span class="hljs-literal">false</span>
+
+<span class="hljs-built_in">eval</span>():讲 JavaScript 字符串，并把它作为脚本代码来执行。</code></pre></div>
+
+
+
+</li>
+</ol>
+<h1 id="三、BOM"><a href="#三、BOM" class="headerlink" title="三、BOM"></a>三、BOM</h1><ol>
+<li><p>概念：Browser Object Model 浏览器对象模型</p>
+<ul>
+<li>将浏览器的各个组成部分封装成对象。</li>
+</ul>
+</li>
+<li><p>组成：</p>
+<ul>
+<li>Window：窗口对象</li>
+<li>Navigator：浏览器对象</li>
+<li>Screen：显示器屏幕对象</li>
+<li>History：历史记录对象</li>
+<li>Location：地址栏对象</li>
+</ul>
+</li>
+<li><p>Window：窗口对象</p>
+<ol>
+<li><p>创建</p>
+</li>
+<li><p>方法</p>
+<ol>
+<li><p>与弹出框有关的方法：</p>
+<div class="hljs"><pre><code class="hljs isbl"><span class="hljs-function"><span class="hljs-title">alert</span>()	显示带有一段消息和一个确认按钮的警告框</span>
+<span class="hljs-function"></span>
+<span class="hljs-function"><span class="hljs-title">confirm</span>()	显示带有一段消息以及确认按钮和取消按钮的对话框。</span>
+<span class="hljs-function">* 如果用户点击确定按钮，则方法返回<span class="hljs-variable"><span class="hljs-literal">true</span></span></span>
+<span class="hljs-function">* 如果用户点击取消按钮，则方法返回<span class="hljs-variable"><span class="hljs-literal">false</span></span></span>
+<span class="hljs-function"></span>
+<span class="hljs-function"><span class="hljs-title">prompt</span>()	显示可提示用户输入的对话框。</span>
+<span class="hljs-function">* 返回值：获取用户输入的值</span></code></pre></div>
+</li>
+<li><p>与打开关闭有关的方法：</p>
+<div class="hljs"><pre><code class="hljs gauss"><span class="hljs-built_in">close</span>()关闭浏览器窗口
+* 谁调用我 ，我关谁
+
+<span class="hljs-keyword">open</span>()	打开一个新的浏览器窗口
+* 返回新的<span class="hljs-built_in">Window</span>对象</code></pre></div>
+</li>
+<li><p>与定时器有关的方式</p>
+<div class="hljs"><pre><code class="hljs erlang"><span class="hljs-function"><span class="hljs-title">setTimeout</span><span class="hljs-params">()</span>	在指定的毫秒数后调用函数或计算表达式</span>
+<span class="hljs-function">*  参数</span>
+<span class="hljs-function">  1. <span class="hljs-title">js</span>代码或者方法对象</span>
+<span class="hljs-function">  2. 毫秒值</span>
+<span class="hljs-function">* 返回值：唯一标识，用于取消定时器</span>
+<span class="hljs-function"></span>
+<span class="hljs-function"><span class="hljs-title">clearTimeout</span><span class="hljs-params">()</span>取消由 <span class="hljs-title">setTimeout</span><span class="hljs-params">()</span> 方法设置的 <span class="hljs-title">timeout</span></span>
+<span class="hljs-function"></span>
+<span class="hljs-function"><span class="hljs-title">setInterval</span><span class="hljs-params">()</span>按照指定的周期（以毫秒计）来调用函数或计算表达式</span>
+<span class="hljs-function"></span>
+<span class="hljs-function"><span class="hljs-title">clearInterval</span><span class="hljs-params">()</span>取消由 <span class="hljs-title">setInterval</span><span class="hljs-params">()</span> 设置的 <span class="hljs-title">timeout</span></span></code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>属性：</p>
+<ol>
+<li>获取其他BOM对象：<br> history<br> location<br> Navigator<br> Screen:</li>
+<li>获取DOM对象<br> document</li>
+</ol>
+</li>
+<li><p>特点</p>
+<ul>
+<li>Window对象不需要创建可以直接使用 window使用<code>window.方法名();</code></li>
+<li>window引用可以省略<code>方法名();</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Location：地址栏对象</p>
+<ol>
+<li><p>创建(获取)：</p>
+<p><code>1.window.location</code></p>
+<p><code>2.location</code></p>
+</li>
+<li><p>方法：</p>
+<p><code>reload()</code>    重新加载当前文档。刷新</p>
+</li>
+<li><p>属性</p>
+<p>href设置或返回完整的 URL。</p>
+</li>
+</ol>
+</li>
+<li><p>History：历史记录对象</p>
+<ol>
+<li><p>创建(获取)：</p>
+<p> <code>1.window.history</code></p>
+<p> <code>2.history</code></p>
+</li>
+<li><p>方法：</p>
+<p> <code>back()</code>    加载 history 列表中的前一个 URL。</p>
+<p> <code>forward()</code>    加载 history 列表中的下一个 URL。</p>
+<p> <code>go(参数)</code>    加载 history 列表中的某个具体页面。</p>
+<ul>
+<li>参数：<ul>
+<li>正数：前进几个历史记录</li>
+<li>负数：后退几个历史记录</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性：</p>
+<ul>
+<li>length    返回当前窗口历史列表中的 URL 数量。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="四、DOM"><a href="#四、DOM" class="headerlink" title="四、DOM"></a>四、DOM</h1><ul>
+<li><p>概念： Document Object Model 文档对象模型</p>
+<ul>
+<li>将标记语言文档的各个组成部分，封装为对象。可以使用这些对象，对标记语言文档进行CRUD的动态操作</li>
+</ul>
+</li>
+<li><p>W3C DOM 标准被分为 3 个不同的部分：</p>
+<ul>
+<li><p>核心 DOM - 针对任何结构化文档的标准模型</p>
+<ul>
+<li><p>Document：文档对象</p>
+</li>
+<li><p>Element：元素对象</p>
+</li>
+<li><p>Attribute：属性对象</p>
+</li>
+<li><p>Text：文本对象</p>
+</li>
+<li><p>Comment:注释对象</p>
+</li>
+<li><p>Node：节点对象，其他5个的父对象</p>
+</li>
+</ul>
+</li>
+<li><p>XML DOM - 针对 XML 文档的标准模型</p>
+</li>
+<li><p>HTML DOM - 针对 HTML 文档的标准模型</p>
+</li>
+</ul>
+</li>
+<li><p>核心DOM模型：</p>
+<ul>
+<li><p>Document：文档对象</p>
+<ol>
+<li><p>创建(获取)：在html dom模型中可以使用window对象来获取</p>
+<ol>
+<li>window.document</li>
+<li>document</li>
+</ol>
+</li>
+<li><p>方法：</p>
+<ol>
+<li><p>获取Element对象：</p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">1.</span> getElementById()	： 根据id属性值获取元素对象。
+id属性值一般唯一
+<span class="hljs-number">2.</span> getElementsByTagName()：根据元素名称获取元素对象们。
+返回值是一个数组
+<span class="hljs-number">3.</span> getElementsByClassName():根据Class属性值获取元素对象们。
+返回值是一个数组
+<span class="hljs-number">4.</span> getElementsByName(): 根据name属性值获取元素对象们。返回值是一个数组</code></pre></div>
+</li>
+<li><p>创建其他DOM对象：</p>
+<div class="hljs"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">createAttribute</span><span class="hljs-params">(name)</span></span>
+<span class="hljs-function"><span class="hljs-title">createComment</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"><span class="hljs-title">createElement</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"><span class="hljs-title">createTextNode</span><span class="hljs-params">()</span></span></code></pre></div></li>
+</ol>
+</li>
+<li><p>属性</p>
+</li>
+</ol>
+</li>
+<li><p>Element：元素对象</p>
+<ol>
+<li><p>获取/创建：通过document来获取和创建</p>
+</li>
+<li><p>方法：</p>
+<p><code>removeAttribute()：删除属性</code></p>
+<p><code>setAttribute()：设置属性</code></p>
+</li>
+</ol>
+</li>
+<li><p>Node：节点对象，其他5个的父对象</p>
+<ul>
+<li><p>特点：所有dom对象都可以被认为是一个节点</p>
+</li>
+<li><p>方法：</p>
+<ul>
+<li>CRUD dom树：<div class="hljs"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">appendChild</span><span class="hljs-params">()</span></span>：向节点的子节点列表的结尾添加新的子节点。
+<span class="hljs-function"><span class="hljs-title">removeChild</span><span class="hljs-params">()</span></span>：删除（并返回）当前节点的指定子节点。
+<span class="hljs-function"><span class="hljs-title">replaceChild</span><span class="hljs-params">()</span></span>：用新节点替换一个子节点。</code></pre></div></li>
+</ul>
+</li>
+<li><p>属性：</p>
+<ul>
+<li>parentNode 返回节点的父节点。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>HTML DOM</p>
+<ol>
+<li><p>标签体的设置和获取：innerHTML</p>
+</li>
+<li><p>使用html元素对象的属性</p>
+</li>
+<li><p>控制元素样式</p>
+<ol>
+<li><p>使用元素的style属性来设置</p>
+ <div class="hljs"><pre><code class="hljs maxima">//修改样式方式<span class="hljs-number">1</span>
+div1.<span class="hljs-built_in">style</span>.<span class="hljs-built_in">border</span> = <span class="hljs-string">"1px solid red"</span>;
+div1.<span class="hljs-built_in">style</span>.<span class="hljs-built_in">width</span> = <span class="hljs-string">"200px"</span>;
+//<span class="hljs-built_in">font</span>-size--&gt; fontSize
+div1.<span class="hljs-built_in">style</span>.fontSize = <span class="hljs-string">"20px"</span>;</code></pre></div>
+</li>
+<li><p>提前定义好类选择器的样式，通过元素的className属性来设置其class属性值。</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<p>DOM树：</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_07/14.png" srcset="/img/loading.gif" alt=""></p>
+<h1 id="五、事件监听机制"><a href="#五、事件监听机制" class="headerlink" title="五、事件监听机制"></a>五、事件监听机制</h1><ul>
+<li><p>概念：某些组件被执行了某些操作后，触发某些代码的执行。    </p>
+<ul>
+<li>事件：某些操作。如： 单击，双击，键盘按下了，鼠标移动了</li>
+<li>事件源：组件。如： 按钮 文本输入框…</li>
+<li>监听器：代码。</li>
+<li>注册监听：将事件，事件源，监听器结合在一起。 当事件源上发生了某个事件，则触发执行某个监听器代码。</li>
+</ul>
+</li>
+<li><p>常见的事件：</p>
+<ol>
+<li><p>点击事件：</p>
+<ol>
+<li><code>onclick</code>：单击事件</li>
+<li><code>ondblclick</code>：双击事件</li>
+</ol>
+</li>
+<li><p>焦点事件</p>
+<ol>
+<li><code>onblur</code>：失去焦点</li>
+<li><code>onfocus</code>:元素获得焦点。</li>
+</ol>
+</li>
+<li><p>加载事件：</p>
+<ol>
+<li><code>onload</code>：一张页面或一幅图像完成加载。</li>
+</ol>
+</li>
+<li><p>鼠标事件：</p>
+<ol>
+<li><code>onmousedown</code>    鼠标按钮被按下。</li>
+<li><code>onmouseup</code>    鼠标按键被松开。</li>
+<li><code>onmousemove</code>    鼠标被移动。</li>
+<li><code>onmouseover</code>    鼠标移到某元素之上。</li>
+<li><code>onmouseout</code>    鼠标从某元素移开。</li>
+</ol>
+</li>
+<li><p>键盘事件：</p>
+<ol>
+<li><code>onkeydown</code>    某个键盘按键被按下。    </li>
+<li><code>onkeyup</code>        某个键盘按键被松开。</li>
+<li><code>onkeypress</code>    某个键盘按键被按下并松开。</li>
+</ol>
+</li>
+<li><p>选择和改变</p>
+<ol>
+<li><code>onchange</code>    域的内容被改变。</li>
+<li><code>onselect</code>    文本被选中。</li>
+</ol>
+</li>
+<li><p>表单事件：</p>
+<ol>
+<li><code>onsubmit</code>    确认按钮被点击。</li>
+<li><code>onreset</code>    重置按钮被点击。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/JavaScript/">JavaScript</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/07/10/Javascript/JavaScript/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Javascript/JavaScript&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

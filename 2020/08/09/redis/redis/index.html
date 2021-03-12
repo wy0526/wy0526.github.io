@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>redis/redis | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-09 00:00">
+      2020年8月9日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 3.3k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h1><ol>
+<li>redis是一款高性能的NOSQL系列的非关系型数据库</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/03.png" srcset="/img/loading.gif" alt=""></p>
+<ol start="2">
+<li><p>什么是NOSQL</p>
+<ul>
+<li>NoSQL(NoSQL = Not Only SQL)，意即“不仅仅是SQL”，是一项全新的数据库理念，泛指非关系型的数据库</li>
+<li>随着互联网web2.0网站的兴起，传统的关系数据库在应付web2.0网站，特别是超大规模和高并发的SNS类型的web2.0纯动态网站已经显得力不从心，暴露了很多难以克服的问题，而非关系型的数据库则由于其本身的特点得到了非常迅速的发展。NoSQL数据库的产生就是为了解决大规模数据集合多重数据种类带来的挑战，尤其是大数据应用难题</li>
+</ul>
+</li>
+<li><p>NOSQL和关系型数据库比较</p>
+<ul>
+<li><p>优点</p>
+<ol>
+<li>成本：nosql数据库简单易部署，基本都是开源软件，不需要像使用oracle那样花费大量成本购买使用，相比关系型数据库价格便宜</li>
+<li>查询速度：nosql数据库将数据存储于缓存之中，关系型数据库将数据存储在硬盘中，自然查询速度远不及nosql数据库</li>
+<li>存储数据的格式：nosql的存储格式是key,value形式、文档形式、图片形式等等，所以可以存储基础类型以及对象或者是集合等各种格式，而数据库则只支持基础类型</li>
+<li>扩展性：关系型数据库有类似join这样的多表查询机制的限制导致扩展很艰难</li>
+</ol>
+</li>
+<li><p>缺点</p>
+<ol>
+<li>维护的工具和资料有限，因为nosql是属于新的技术，不能和关系型数据库10几年的技术同日而语</li>
+<li>不提供对sql的支持，如果不支持sql这样的工业标准，将产生一定用户的学习和使用成本</li>
+<li>不提供关系型数据库对事务的处理</li>
+</ol>
+</li>
+<li><p>非关系型数据库的优势</p>
+<ol>
+<li>性能NOSQL是基于键值对的，可以想象成表中的主键和值的对应关系，而且不需要经过SQL层的解析，所以性能非常高</li>
+<li>可扩展性同样也是因为基于键值对，数据之间没有耦合性，所以非常容易水平扩展</li>
+</ol>
+</li>
+<li><p>关系型数据库的优势</p>
+<ol>
+<li>复杂查询可以用SQL语句方便的在一个表以及多个表之间做非常复杂的数据查询</li>
+<li>事务支持使得对于安全性能很高的数据访问要求得以实现。对于这两类数据库，对方的优势就是自己的弱势，反之亦然</li>
+</ol>
+</li>
+<li><p>总结</p>
+<p>关系型数据库与NoSQL数据库并非对立而是互补的关系，即通常情况下使用关系型数据库，在适合使用NoSQL的时候使用NoSQL数据库，让NoSQL数据库对关系型数据库的不足进行弥补。一般会将数据存储在关系型数据库中，在nosql数据库中备份存储关系型数据库的数据</p>
+</li>
+</ul>
+</li>
+<li><p>主流的NOSQL产品</p>
+<ul>
+<li>键值(Key-Value)存储数据库<ul>
+<li>相关产品： Tokyo Cabinet/Tyrant、Redis、Voldemort、Berkeley DB</li>
+<li>典型应用： 内容缓存，主要用于处理大量数据的高访问负载</li>
+<li>数据模型： 一系列键值对</li>
+<li>优势： 快速查询</li>
+<li>劣势： 存储的数据缺少结构化</li>
+</ul>
+</li>
+<li>列存储数据库<ul>
+<li>相关产品：Cassandra, HBase, Riak</li>
+<li>典型应用：分布式的文件系统</li>
+<li>数据模型：以列簇式存储，将同一列数据存在一起</li>
+<li>优势：查找速度快，可扩展性强，更容易进行分布式扩展</li>
+<li>劣势：功能相对局限</li>
+</ul>
+</li>
+<li>文档型数据库<ul>
+<li>相关产品：CouchDB、MongoDB</li>
+<li>典型应用：Web应用（与Key-Value类似，Value是结构化的）</li>
+<li>数据模型： 一系列键值对</li>
+<li>优势：数据结构要求不严格</li>
+<li>劣势： 查询性能不高，而且缺乏统一的查询语法</li>
+</ul>
+</li>
+<li>图形(Graph)数据库<ul>
+<li>相关数据库：Neo4J、InfoGrid、Infinite Graph</li>
+<li>典型应用：社交网络</li>
+<li>数据模型：图结构</li>
+<li>优势：利用图结构相关算法</li>
+<li>劣势：需要对整个图做计算才能得出结果，不容易做分布式的集群方案</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>什么是Redis</p>
+<ul>
+<li>Redis是用C语言开发的一个开源的高性能键值对（key-value）数据库，官方提供测试数据，50个并发执行100000个请求,读的速度是110000次/s,写的速度是81000次/s ，且Redis通过提供多种键值数据类型来适应不同场景下的存储需求，目前为止Redis支持的键值数据类型如下：<ul>
+<li>字符串类型 string</li>
+<li>哈希类型 hash</li>
+<li>列表类型 list</li>
+<li>集合类型 set</li>
+<li>有序集合类型 sortedset</li>
+</ul>
+</li>
+<li>redis的应用场景<ul>
+<li>缓存（数据查询、短连接、新闻内容、商品内容等等）</li>
+<li>聊天室的在线好友列表</li>
+<li>任务队列。（秒杀、抢购、12306等等）</li>
+<li>应用排行榜</li>
+<li>网站访问统计</li>
+<li>数据过期处理（可以精确到毫秒</li>
+<li>分布式集群架构中的session分离</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="二、下载安装"><a href="#二、下载安装" class="headerlink" title="二、下载安装"></a>二、下载安装</h1><ol>
+<li>官网：<a href="https://redis.io" target="_blank" rel="noopener">https://redis.io</a></li>
+<li>中文网：<a href="http://www.redis.net.cn/" target="_blank" rel="noopener">http://www.redis.net.cn/</a></li>
+<li>解压直接可以使用<ul>
+<li>redis.windows.conf：配置文件</li>
+<li>redis-cli.exe：redis的客户端</li>
+<li>redis-server.exe：redis服务器端</li>
+</ul>
+</li>
+</ol>
+<h1 id="三、命令操作"><a href="#三、命令操作" class="headerlink" title="三、命令操作"></a>三、命令操作</h1><ol>
+<li>redis的数据结构<ul>
+<li>redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构</li>
+<li>value的数据结构<ol>
+<li>字符串类型 string</li>
+<li>哈希类型 hash ： map格式 </li>
+<li>列表类型 list ： linkedlist格式。支持重复元素</li>
+<li>集合类型 set  ： 不允许重复元素</li>
+<li>有序集合类型 sortedset：不允许重复元素，且元素有顺序</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/04.png" srcset="/img/loading.gif" alt=""></p>
+<ol start="2">
+<li><p>字符串类型 string</p>
+<ol>
+<li><p>存储： <code>set key value</code></p>
+<div class="hljs"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1:6379</span>&gt; set username zhangsan
+OK</code></pre></div>
+</li>
+<li><p>获取： <code>get key</code></p>
+<div class="hljs"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1:6379</span>&gt; get username
+<span class="hljs-string">"zhangsan"</span></code></pre></div>
+</li>
+<li><p>删除： <code>del key</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; del age
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>哈希类型 hash</p>
+<ol>
+<li><p>存储： <code>hset key field value</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; hset myhash username lisi
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span>
+<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; hset myhash password <span class="hljs-number">123</span>
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span></code></pre></div>
+</li>
+<li><p>获取</p>
+<ul>
+<li><p><code>hget key field</code></p>
+<div class="hljs"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1:6379</span>&gt; hget myhash username
+<span class="hljs-string">"lisi"</span></code></pre></div>
+</li>
+<li><p><code>hgetall key</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; hgetall myhash
+<span class="hljs-number">1</span>) <span class="hljs-string">"username"</span>
+<span class="hljs-number">2</span>) <span class="hljs-string">"lisi"</span>
+<span class="hljs-number">3</span>) <span class="hljs-string">"password"</span>
+<span class="hljs-number">4</span>) <span class="hljs-string">"123"</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li><p>删除：<code>hdel key field</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; hdel myhash username
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>列表类型 list:可以添加一个元素到列表的头部（左边）或者尾部（右边）</p>
+<ol>
+<li><p>添加</p>
+<ol>
+<li><p><code>lpush key value</code>: 将元素加入列表左表</p>
+</li>
+<li><p><code>rpush key value</code>：将元素加入列表右边</p>
+  <div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; lpush myList a
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span>
+<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; lpush myList b
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">2</span>
+<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; rpush myList c
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">3</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>获取：<code>lrange key start end</code> ：范围获取</p>
+<div class="hljs"><pre><code class="hljs tcl"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; <span class="hljs-keyword">lrange</span> myList <span class="hljs-number">0</span> <span class="hljs-number">-1</span>
+<span class="hljs-number">1</span>) <span class="hljs-string">"b"</span>
+<span class="hljs-number">2</span>) <span class="hljs-string">"a"</span>
+<span class="hljs-number">3</span>) <span class="hljs-string">"c"</span></code></pre></div>
+</li>
+<li><p>删除</p>
+<ul>
+<li><code>lpop key</code>： 删除列表最左边的元素，并将元素返回</li>
+<li><code>rpop key</code>： 删除列表最右边的元素，并将元素返回</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/05.png" srcset="/img/loading.gif" alt=""></p>
+<ol start="5">
+<li><p>集合类型 set ： 不允许重复元素</p>
+<ol>
+<li><p>存储：<code>sadd key value</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; sadd myset a
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span>
+<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; sadd myset a
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">0</span></code></pre></div>
+</li>
+<li><p>获取：<code>smembers key</code>获取set集合中所有元素</p>
+<div class="hljs"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1:6379</span>&gt; smembers myset
+<span class="hljs-number">1</span>) <span class="hljs-string">"a"</span></code></pre></div>
+</li>
+<li><p>删除：<code>srem key value</code>删除set集合中的某个元素    </p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; srem myset a
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>有序集合类型 sortedset：不允许重复元素，且元素有顺序.每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序</p>
+<ol>
+<li><p>存储：<code>zadd key score value</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; zadd mysort <span class="hljs-number">60</span> zhangsan
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span>
+<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; zadd mysort <span class="hljs-number">50</span> lisi
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span>
+<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; zadd mysort <span class="hljs-number">80</span> wangwu
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span></code></pre></div>
+</li>
+<li><p>获取：<code>zrange key start end [withscores]</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; zrange mysort <span class="hljs-number">0</span> <span class="hljs-number">-1</span>
+<span class="hljs-number">1</span>) <span class="hljs-string">"lisi"</span>
+<span class="hljs-number">2</span>) <span class="hljs-string">"zhangsan"</span>
+<span class="hljs-number">3</span>) <span class="hljs-string">"wangwu"</span>
+
+<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; zrange mysort <span class="hljs-number">0</span> <span class="hljs-number">-1</span> withscores
+<span class="hljs-number">1</span>) <span class="hljs-string">"zhangsan"</span>
+<span class="hljs-number">2</span>) <span class="hljs-string">"60"</span>
+<span class="hljs-number">3</span>) <span class="hljs-string">"wangwu"</span>
+<span class="hljs-number">4</span>) <span class="hljs-string">"80"</span>
+<span class="hljs-number">5</span>) <span class="hljs-string">"lisi"</span>
+<span class="hljs-number">6</span>) <span class="hljs-string">"500"</span></code></pre></div>
+</li>
+<li><p>删除：<code>zrem key value</code></p>
+<div class="hljs"><pre><code class="hljs angelscript"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6379</span>&gt; zrem mysort lisi
+(<span class="hljs-built_in">int</span>eger) <span class="hljs-number">1</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>通用命令</p>
+<ol>
+<li><code>keys *</code> : 查询所有的键</li>
+<li><code>type key</code>： 获取键对应的value的类型</li>
+<li><code>del key</code>：删除指定的key value</li>
+</ol>
+</li>
+</ol>
+<h1 id="四、持久化"><a href="#四、持久化" class="headerlink" title="四、持久化"></a>四、持久化</h1><ol>
+<li><p>redis是一个内存数据库，当redis服务器重启，获取电脑重启，数据会丢失，我们可以将redis内存中的数据持久化保存到硬盘的文件中</p>
+</li>
+<li><p>redis持久化机制</p>
+<ol>
+<li><p>RDB：默认方式，不需要进行配置，默认就使用这种机制。在一定的间隔时间中，检测key的变化情况，然后持久化数据</p>
+<ol>
+<li><p>编辑redis.windwos.conf文件</p>
+<div class="hljs"><pre><code class="hljs lsl">#   after <span class="hljs-number">900</span> sec (<span class="hljs-number">15</span> min) if at least <span class="hljs-number">1</span> <span class="hljs-type">key</span> <span class="hljs-section">changed</span>
+save <span class="hljs-number">900</span> <span class="hljs-number">1</span>
+#   after <span class="hljs-number">300</span> sec (<span class="hljs-number">5</span> min) if at least <span class="hljs-number">10</span> keys <span class="hljs-section">changed</span>
+save <span class="hljs-number">300</span> <span class="hljs-number">10</span>
+#   after <span class="hljs-number">60</span> sec if at least <span class="hljs-number">10000</span> keys <span class="hljs-section">changed</span>
+save <span class="hljs-number">60</span> <span class="hljs-number">10000</span></code></pre></div>
+</li>
+<li><p>重新启动redis服务器，并且在cmd指定配置文件名称D:\JavaWeb2018\day23_redis\资料\redis\windows-64\redis-2.8.9&gt;redis-server.exe redis.windows.conf    </p>
+</li>
+</ol>
+</li>
+<li><p>AOF：日志记录的方式，可以记录每一条命令的操作。可以每一次命令操作后，持久化数据</p>
+<ol>
+<li><p>编辑redis.windwos.conf文件</p>
+<p>首先，appendonly no（关闭AOF） –&gt; appendonly yes （开启AOF）</p>
+<div class="hljs"><pre><code class="hljs vala"><span class="hljs-meta"># appendfsync always ： 每一次操作都进行持久化</span>
+appendfsync everysec ： 每隔一秒进行一次持久化
+<span class="hljs-meta"># appendfsync no	 ： 不进行持久化</span></code></pre></div>
+</li>
+<li><p>重新启动redis服务器，并且在cmd指定配置文件名称</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="五、Jedis"><a href="#五、Jedis" class="headerlink" title="五、Jedis"></a>五、Jedis</h1><ol>
+<li><p>Jedis: 一款java操作redis数据库的工具</p>
+</li>
+<li><p>使用步骤</p>
+<ol>
+<li><p>下载jedis的jar包</p>
+</li>
+<li><p>使用</p>
+<ul>
+<li>快速入门</li>
+</ul>
+<div class="hljs"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-comment">//1.获取连接</span>
+    Jedis jedis = <span class="hljs-keyword">new</span> Jedis(<span class="hljs-string">"localhost"</span>,<span class="hljs-number">6379</span>);
+    <span class="hljs-comment">//2.操作0</span>
+    jedis.<span class="hljs-built_in">set</span>(<span class="hljs-string">"username"</span>,<span class="hljs-string">"zhangsan"</span>);
+    <span class="hljs-comment">//3.关闭连接</span>
+    jedis.<span class="hljs-built_in">close</span>();
+&#125;</code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>Jedis操作各种redis中的数据结构</p>
+<ol>
+<li><p>字符串类型 string</p>
+<ul>
+<li>set</li>
+<li>get</li>
+</ul>
+<div class="hljs"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test02</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-comment">//1.获取连接</span>
+    Jedis jedis = <span class="hljs-keyword">new</span> Jedis(); <span class="hljs-comment">//如果使用空参构造，默认值 "localhost",6379端口</span>
+    <span class="hljs-comment">//2.操作</span>
+    <span class="hljs-comment">//存储</span>
+    jedis.<span class="hljs-built_in">set</span>(<span class="hljs-string">"username"</span>,<span class="hljs-string">"zhangsan"</span>);
+    <span class="hljs-comment">//获取</span>
+    <span class="hljs-keyword">String</span> username = jedis.<span class="hljs-built_in">get</span>(<span class="hljs-string">"username"</span>);
+    System.out.<span class="hljs-built_in">println</span>(username);
+      
+    <span class="hljs-comment">//可以使用setex()方法存储可以指定过期时间的 key value</span>
+    jedis.setex(<span class="hljs-string">"activecode"</span>,<span class="hljs-number">20</span>,<span class="hljs-string">"hehe"</span>);
+    <span class="hljs-comment">//3.关闭连接</span>
+    jedis.<span class="hljs-built_in">close</span>();
+&#125;</code></pre></div>
+</li>
+<li><p>哈希类型 hash ： map格式 </p>
+<ul>
+<li>hset</li>
+<li>hget</li>
+<li>hgetAll</li>
+</ul>
+<div class="hljs"><pre><code class="hljs processing"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> test03()&#123;
+    <span class="hljs-comment">//1.获取连接</span>
+    Jedis jedis = <span class="hljs-keyword">new</span> Jedis(); <span class="hljs-comment">//如果使用空参构造，默认值 "localhost",6379端口</span>
+    <span class="hljs-comment">//2.操作</span>
+    <span class="hljs-comment">//存储hash</span>
+    jedis.hset(<span class="hljs-string">"user"</span>,<span class="hljs-string">"name"</span>,<span class="hljs-string">"lisi"</span>);
+    jedis.hset(<span class="hljs-string">"user"</span>,<span class="hljs-string">"age"</span>,<span class="hljs-string">"24"</span>);
+    jedis.hset(<span class="hljs-string">"user"</span>,<span class="hljs-string">"gender"</span>,<span class="hljs-string">"male"</span>);
+    <span class="hljs-comment">//获取hash</span>
+    <span class="hljs-keyword">String</span> name = jedis.hget(<span class="hljs-string">"user"</span>,<span class="hljs-string">"name"</span>);
+    System.out.<span class="hljs-built_in">println</span>(name);
+    <span class="hljs-comment">//获取hash的所有map中的数据</span>
+    Map&lt;<span class="hljs-keyword">String</span> ,<span class="hljs-keyword">String</span>&gt; user = jedis.hgetAll(<span class="hljs-string">"user"</span>);
+    <span class="hljs-comment">//keyset</span>
+    Set&lt;<span class="hljs-keyword">String</span>&gt; keyset = user.keySet();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">String</span> <span class="hljs-built_in">key</span> : keyset)&#123;
+        <span class="hljs-comment">//获取value</span>
+        <span class="hljs-keyword">String</span> value = user.<span class="hljs-built_in">get</span>(<span class="hljs-built_in">key</span>);
+        System.out.<span class="hljs-built_in">println</span>(<span class="hljs-built_in">key</span> + <span class="hljs-string">":"</span> + value);
+    &#125;
+      
+    <span class="hljs-comment">//3.关闭连接</span>
+    jedis.close();
+&#125;</code></pre></div>
+</li>
+<li><p>列表类型 list ： linkedlist格式。支持重复元素</p>
+<ul>
+<li>lpush / rpush</li>
+<li>lpop / rpop</li>
+<li>lrange start end : 范围获取</li>
+</ul>
+<div class="hljs"><pre><code class="hljs tcl">public void test04()&#123;
+    //<span class="hljs-number">1.</span>获取连接
+    Jedis jedis = new Jedis(); //如果使用空参构造，默认值 <span class="hljs-string">"localhost"</span>,<span class="hljs-number">6379</span>端口
+    //<span class="hljs-number">2.</span>操作
+    //存储<span class="hljs-keyword">list</span>
+    jedis.lpush(<span class="hljs-string">"mylist"</span>,<span class="hljs-string">"a"</span>,<span class="hljs-string">"b"</span>,<span class="hljs-string">"c"</span>); //从左边存
+    jedis.rpush(<span class="hljs-string">"mylist"</span>,<span class="hljs-string">"a"</span>,<span class="hljs-string">"b"</span>,<span class="hljs-string">"c"</span>); //从右边存
+    //List范围获取
+    List&lt;String&gt; mylist = jedis.<span class="hljs-keyword">lrange</span>(<span class="hljs-string">"mylist"</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>);
+    System.out.println(mylist);
+    //<span class="hljs-keyword">list</span>弹出
+    String element1 = jedis.lpop(<span class="hljs-string">"mylist"</span>);
+    System.out.println(element1);
+    String element2 = jedis.rpop(<span class="hljs-string">"mylist"</span>);
+    System.out.println(element2);
+      
+    List&lt;String&gt; mylist2 = jedis.<span class="hljs-keyword">lrange</span>(<span class="hljs-string">"mylist"</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>);
+    System.out.println(mylist2);
+      
+    //<span class="hljs-number">3.</span>关闭连接
+    jedis.<span class="hljs-keyword">close</span>();
+&#125;</code></pre></div>
+</li>
+<li><p>集合类型 set  ： 不允许重复元素</p>
+<ul>
+<li>sadd</li>
+<li>smembers:获取所有元素</li>
+</ul>
+<div class="hljs"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test05</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-comment">//1.获取连接</span>
+    Jedis jedis = <span class="hljs-keyword">new</span> Jedis(); <span class="hljs-comment">//如果使用空参构造，默认值 "localhost",6379端口</span>
+    <span class="hljs-comment">//2.操作</span>
+    <span class="hljs-comment">//存储set</span>
+    jedis.sadd(<span class="hljs-string">"myset"</span>,<span class="hljs-string">"java"</span>,<span class="hljs-string">"php"</span>,<span class="hljs-string">"c++"</span>);
+    Set&lt;<span class="hljs-keyword">String</span>&gt; myset = jedis.smembers(<span class="hljs-string">"myset"</span>);
+    System.out.<span class="hljs-built_in">println</span>(myset);
+      
+      
+    <span class="hljs-comment">//3.关闭连接</span>
+    jedis.<span class="hljs-built_in">close</span>();
+&#125;</code></pre></div>
+</li>
+<li><p>有序集合类型 sortedset：不允许重复元素，且元素有顺序</p>
+<ul>
+<li>zadd</li>
+<li>zrange</li>
+</ul>
+<div class="hljs"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test06</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-comment">//1.获取连接</span>
+    Jedis jedis = <span class="hljs-keyword">new</span> Jedis(); <span class="hljs-comment">//如果使用空参构造，默认值 "localhost",6379端口</span>
+    <span class="hljs-comment">//2.操作</span>
+    jedis.zadd(<span class="hljs-string">"mysortedset"</span>,<span class="hljs-number">20</span>,<span class="hljs-string">"孙悟空"</span>);
+    jedis.zadd(<span class="hljs-string">"mysortedset"</span>,<span class="hljs-number">15</span>,<span class="hljs-string">"猪八戒"</span>);
+    jedis.zadd(<span class="hljs-string">"mysortedset"</span>,<span class="hljs-number">18</span>,<span class="hljs-string">"沙悟净"</span>);
+      
+    Set&lt;<span class="hljs-keyword">String</span>&gt; mysortedset = jedis.zrange(<span class="hljs-string">"mysortedset"</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-1</span>);
+    System.out.<span class="hljs-built_in">println</span>(mysortedset);
+      
+      
+    <span class="hljs-comment">//3.关闭连接</span>
+    jedis.<span class="hljs-built_in">close</span>();
+&#125;</code></pre></div>
+</li>
+</ol>
+</li>
+<li><p>Jedis连接池：JedisPool</p>
+<ul>
+<li>使用<ol>
+<li>创建JedisPool连接池对象</li>
+<li>调用方法 getResource()方法获取Jedis连接</li>
+</ol>
+</li>
+<li>实现</li>
+</ul>
+<div class="hljs"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test07</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-comment">//0.创建一个配置对象</span>
+    JedisPoolConfig <span class="hljs-built_in">config</span> = <span class="hljs-keyword">new</span> JedisPoolConfig();
+    <span class="hljs-built_in">config</span>.setMaxTotal(<span class="hljs-number">50</span>);
+    <span class="hljs-built_in">config</span>.setMaxIdle(<span class="hljs-number">10</span>);
+   
+    <span class="hljs-comment">//1.创建Jedis连接池对象</span>
+    JedisPool jedisPool = <span class="hljs-keyword">new</span> JedisPool();
+    <span class="hljs-comment">//2.获取连接</span>
+    Jedis jedis = jedisPool.getResource();
+    <span class="hljs-comment">//3.使用</span>
+    jedis.<span class="hljs-built_in">set</span>(<span class="hljs-string">"hehe"</span>,<span class="hljs-string">"hihi"</span>);
+    <span class="hljs-comment">//4.关闭 归还到连接池中</span>
+    jedis.<span class="hljs-built_in">close</span>();
+&#125;</code></pre></div>
+
+<ul>
+<li>连接池工具类</li>
+</ul>
+<div class="hljs"><pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * JedisPool工具类</span>
+<span class="hljs-comment"> * 加载配置文件，配置连接池的参数</span>
+<span class="hljs-comment"> * 提供获取连接的方法</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JedisPoolUtils</span> </span>&#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> JedisPool jedisPool;
+
+    <span class="hljs-keyword">static</span> &#123;
+        
+        <span class="hljs-comment">//读取配置文件</span>
+        InputStream is = JedisPoolUtils<span class="hljs-class">.<span class="hljs-keyword">class</span>.<span class="hljs-title">getClassLoader</span>()</span>
+                .getResourceAsStream("jedis.properties");
+        
+        <span class="hljs-comment">//创建Properties对象</span>
+        Properties pro = <span class="hljs-keyword">new</span> Properties();
+        
+        <span class="hljs-comment">//关联文件</span>
+        <span class="hljs-keyword">try</span> &#123;
+            pro.load(is);
+        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;
+            e.printStackTrace();
+        &#125;
+        
+        <span class="hljs-comment">//获取数据，设置到JedisPoolConfig中</span>
+        JedisPoolConfig config = <span class="hljs-keyword">new</span> JedisPoolConfig();
+        config.setMaxTotal(Integer.parseInt(pro.getProperty(<span class="hljs-string">"maxTotal"</span>)));
+        config.setMaxIdle(Integer.parseInt(pro.getProperty(<span class="hljs-string">"maxIdle"</span>)));
+        
+        <span class="hljs-comment">//初始化JedisPool</span>
+        jedisPool = <span class="hljs-keyword">new</span> JedisPool
+           (config,pro.getProperty(<span class="hljs-string">"host"</span>), Integer.parseInt(pro.getProperty(<span class="hljs-string">"port"</span>)));
+    &#125;
+    
+    <span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 获取连接方法</span>
+<span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span>
+<span class="hljs-comment">     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Jedis <span class="hljs-title">getJedis</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">return</span> jedisPool.getResource();
+    &#125;
+&#125;</code></pre></div>
+
+</li>
+</ol>
+<h1 id="六、案例"><a href="#六、案例" class="headerlink" title="六、案例"></a>六、案例</h1><p>案例需求</p>
+<ol>
+<li>提供index.html页面，页面中有一个省份 下拉列表</li>
+<li>当 页面加载完成后 发送ajax请求，加载所有省份</li>
+</ol>
+<ul>
+<li>注意：使用redis缓存一些不经常发生变化的数据。<ul>
+<li>数据库的数据一旦发生改变，则需要更新缓存<ul>
+<li>数据库的表执行 增删改的相关操作，需要将redis缓存数据情况，再次存入</li>
+<li>在service对应的增删改方法中，将redis数据删除。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/06.png" srcset="/img/loading.gif" alt=""></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/redis/">redis</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/08/09/redis/redis/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "redis/redis&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

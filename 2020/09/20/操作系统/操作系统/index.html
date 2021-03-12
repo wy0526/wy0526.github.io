@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>操作系统/操作系统 | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-09-20 00:00">
+      2020年9月20日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 3.2k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一、操作系统简介"><a href="#一、操作系统简介" class="headerlink" title="一、操作系统简介"></a>一、操作系统简介</h1><ol>
+<li><p>功能</p>
+<ol>
+<li><p>对上/用户角度：控制软件</p>
+<ul>
+<li>管理应用程序</li>
+<li>为应用程序提供服务：声卡、显卡</li>
+<li>杀死应用程序</li>
+</ul>
+</li>
+<li><p>对下：资源管理</p>
+<ul>
+<li><p>cpu、内存</p>
+</li>
+<li><p>管理外设、分配资源</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>操作系统位于硬件之上、应用程序之下</p>
+</li>
+<li><p>操作系统的界面属于外壳shell，主要研究内核kernel</p>
+</li>
+<li><p>操作系统内部组件包括</p>
+<ul>
+<li>cpu调度器</li>
+<li>物理内存管理</li>
+<li>虚拟内存管理</li>
+<li>文件系统管理</li>
+<li>中断处理与设备驱动</li>
+</ul>
+</li>
+<li><p>特征</p>
+<ul>
+<li>并发：同时存在多个运行的程序</li>
+<li>共享：应用程序“同时”访问内存、cpu</li>
+<li>虚拟：多道程序设计技术</li>
+<li>异步：程序执行走走停停</li>
+</ul>
+</li>
+<li><p>实例</p>
+<ol>
+<li>UNIX家族</li>
+<li>Linux家族<ul>
+<li>redhat、ubuntu</li>
+<li>移动终端、服务器大多数是linux</li>
+</ul>
+</li>
+<li>Windows家族</li>
+</ol>
+</li>
+<li><p>结构</p>
+<ul>
+<li>微内核</li>
+<li>外核</li>
+<li>虚拟机</li>
+</ul>
+</li>
+</ol>
+<h1 id="二、启动"><a href="#二、启动" class="headerlink" title="二、启动"></a>二、启动</h1><ul>
+<li><p>OS起始存放在硬盘DISK</p>
+</li>
+<li><p>基本I/O处理系统BIOS先检测各种外设，加载bootloader</p>
+</li>
+<li><p>Bootloader加载OS进内存，让cpu可以执行操作系统</p>
+</li>
+</ul>
+<h1 id="三、中断、异常和系统调用"><a href="#三、中断、异常和系统调用" class="headerlink" title="三、中断、异常和系统调用"></a>三、中断、异常和系统调用</h1><ol>
+<li><p>定义</p>
+<ul>
+<li>系统调用(来源于应用程序)<br>应用程序主动向操作系统发出服务请求</li>
+<li>异常(来源于不良的应用程序)<br>非法指令或者其他坏的处理状态(如:内存出错)</li>
+<li>中断(来源于外设)<br>来自不同的硬件设备的计时器和网络的中断</li>
+</ul>
+</li>
+<li><p>处理时间</p>
+<ul>
+<li>中断：异步</li>
+<li>异常：同步</li>
+<li>系统调用：异步或同步</li>
+</ul>
+</li>
+<li><p>响应</p>
+<ul>
+<li>中断：持续，对用户应用程序是透明的</li>
+<li>异常:杀死或者重新执行意想不到的应用程序指令</li>
+<li>系统调用:等待和持续</li>
+</ul>
+</li>
+<li><p>中断处理机制</p>
+<ul>
+<li>硬件<ol>
+<li>设置中断标记[CPU初始化]</li>
+<li>将内部、外部事件设置中断标记</li>
+<li>中断事件的ID</li>
+</ol>
+</li>
+<li>软件<ol>
+<li>保存当前处理状态</li>
+<li>中断服务程序处理</li>
+<li>清除中断标记</li>
+<li>恢复之前保存的处理状态</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>异常处理机制：异常编号</p>
+<ol>
+<li>保存现场</li>
+<li>异常处理</li>
+<li>杀死产生了异常的程序</li>
+<li>重新执行异常指令</li>
+<li>恢复现场</li>
+</ol>
+</li>
+<li><p>系统调用</p>
+<ul>
+<li>Win32 API用于 Windows</li>
+<li>POSIX API用于POSIX-based systems<br>(包括UNIX，LINUX，Mac OSX的所有版本)</li>
+<li>Java API 用于JAVA虚拟机(JVM)</li>
+</ul>
+</li>
+<li><p>跨越操作系统边界的开销</p>
+<ul>
+<li>在执行时间上的开销超过程序调用</li>
+<li>开销<ul>
+<li>建立中断/异常/系统调用号与对应服务<br>例程映射关系的初始化开销</li>
+<li>建立内核堆栈</li>
+<li>验证参数</li>
+<li>内核态映射到用户态的地址空间<br>更新页面映射权限</li>
+<li>内核态独立地址空间<br>TLB</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="四、内存"><a href="#四、内存" class="headerlink" title="四、内存"></a>四、内存</h1><h2 id="4-1计算机体系结构"><a href="#4-1计算机体系结构" class="headerlink" title="4.1计算机体系结构"></a>4.1计算机体系结构</h2><ul>
+<li><p>CPU：程序执行控制</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_09/007.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li><p>内存：存放代码和数据</p>
+</li>
+<li><p>设备：硬盘、键盘、鼠标等外设</p>
+</li>
+</ul>
+<blockquote>
+<p>cpu——&gt;缓存（速度快、容量小）——&gt;主存</p>
+</blockquote>
+<h2 id="4-2地址空间和地址生成"><a href="#4-2地址空间和地址生成" class="headerlink" title="4.2地址空间和地址生成"></a>4.2地址空间和地址生成</h2><ol>
+<li>地址空间定义<ul>
+<li>物理地址空间：硬件支持的地址空间</li>
+<li>逻辑地址空间：一个运行的程序所拥有的内存范围</li>
+</ul>
+</li>
+<li>逻辑地址生成<ul>
+<li>C语言：编译、汇编、链接、载入（程序重定位，经过这步程序从磁盘到内存中）</li>
+<li>编译：将基于符号的地址变为逻辑地址</li>
+<li>操作系统：逻辑地址、物理地址之间的映射</li>
+</ul>
+</li>
+<li>物理地址生成<ul>
+<li>cpu<ul>
+<li>运算器需要在逻辑地址的内存内容</li>
+<li>内存管理单元MMU寻找在逻辑地址和物理地址之间的映射</li>
+<li>控制器从总线发送在物理地址的内存内容的请求</li>
+</ul>
+</li>
+<li>内存<ul>
+<li>内存发送物理地址内存的内容给CPU</li>
+</ul>
+</li>
+<li>操作系统<ul>
+<li>建立逻辑地址和物理地址之间的映射</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-3连续内存分配"><a href="#4-3连续内存分配" class="headerlink" title="4.3连续内存分配"></a>4.3连续内存分配</h2><ol>
+<li><p>内存碎片问题</p>
+<ul>
+<li>空闲内存不能被利用</li>
+<li>外部碎片</li>
+<li>内部碎片</li>
+</ul>
+</li>
+<li><p>分区的动态分配</p>
+<ol>
+<li>什么时候需要内存分配<ul>
+<li>当一个程序准许运行在内存中时，分配一个连续的区间</li>
+<li>分配一个连续的内存区间给运行的程序以访问数据</li>
+</ul>
+</li>
+<li>分配策略<ul>
+<li>首次适配</li>
+<li>最优适配</li>
+<li>最差适配</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>碎片整理</p>
+<ul>
+<li>压缩式碎片整理：把运行程序在内存中移动</li>
+<li>交换式碎片整理：主存——&gt;磁盘（虚拟内存）</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-4非连续内存分配"><a href="#4-4非连续内存分配" class="headerlink" title="4.4非连续内存分配"></a>4.4非连续内存分配</h2><ol>
+<li><p>分段</p>
+<ul>
+<li><p>作用：更好的分离和共享</p>
+</li>
+<li><p>实现：逻辑地址空间分散到多个物理地址空间</p>
+</li>
+<li><p>分段寻址方案——段访问机制</p>
+<ul>
+<li><p>段号、段内偏移</p>
+</li>
+<li><p>操作系统设置段表</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分页</p>
+<ul>
+<li>实现<ul>
+<li>划分物理内存至固定大小的帧Frame</li>
+<li>划分逻辑地址空间至相同大小的页Page</li>
+</ul>
+</li>
+<li>帧Frame<ul>
+<li>帧号、帧内偏移</li>
+<li>可以得出物理地址</li>
+</ul>
+</li>
+<li>页page<ul>
+<li>页号、页内偏移</li>
+<li>可以得出逻辑地址</li>
+</ul>
+</li>
+<li>页寻址方案——页寻址机制<ul>
+<li>页号、页表基址</li>
+<li>操作系统建立页表 </li>
+<li>页表保存了逻辑地址–物理地址之间的映射关系</li>
+<li>CPU——&gt;逻辑地址——&gt;页表——&gt;物理地址——&gt;物理内存空间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>页表</p>
+<ol>
+<li>页表结构<ul>
+<li>每个运行的程序都有一个页表</li>
+</ul>
+</li>
+<li>地址转换的实例</li>
+<li>TLB<ul>
+<li>关联内存实现、具备快速访问性能，缓存及其访问的页帧转换表项、节省空间</li>
+<li>如果TLB命中，物理页号可以很快被获取</li>
+<li>未命中，对应的表项被更新到TLB中</li>
+</ul>
+</li>
+<li>二级页表<ul>
+<li>pageNumber分为两块p1、p2</li>
+<li>节省空间、开销大、时间换空间</li>
+</ul>
+</li>
+<li>多级页表</li>
+<li>反向页表<ul>
+<li>基于页寄存器的方案</li>
+<li>基于关联内存的方案</li>
+<li>基于哈希查找的方案</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="五、虚拟内存"><a href="#五、虚拟内存" class="headerlink" title="五、虚拟内存"></a>五、虚拟内存</h1><h2 id="5-1起因"><a href="#5-1起因" class="headerlink" title="5.1起因"></a>5.1起因</h2><p>内存相对于寄存器速度慢，所以内存和寄存器之间有cache</p>
+<p>硬盘比内存容量大，但是速度慢</p>
+<p>磁带比硬盘容量还大</p>
+<p>计算机系统中，尤其是多道程序运行下内存不够用</p>
+<ul>
+<li>手动的覆盖</li>
+<li>自动地交换</li>
+<li>自动的虚拟存储技术</li>
+</ul>
+<h2 id="5-2覆盖技术"><a href="#5-2覆盖技术" class="headerlink" title="5.2覆盖技术"></a>5.2覆盖技术</h2><ol>
+<li><p>目标</p>
+<p>较小的可用内存中运行较大的程序。常用于多道程序系统，与分区存储管理配合使用</p>
+</li>
+<li><p>原理</p>
+<ul>
+<li>程序划分为独立程序模块</li>
+<li>共享内存、分时执行</li>
+<li>常用功能常驻内存、不常用功能放于外存</li>
+</ul>
+</li>
+<li><p>缺点：覆盖模块从外存装入内存，实际上是以时间延长换取空间节省</p>
+</li>
+</ol>
+<h2 id="5-3交换技术"><a href="#5-3交换技术" class="headerlink" title="5.3交换技术"></a>5.3交换技术</h2><ol>
+<li><p>目标</p>
+<p>多道程序在内存中时，让正在运行的程序或需要运行的程序获得更多的内存资源</p>
+</li>
+<li><p>方法</p>
+<ul>
+<li>暂时不能运行的程序送到外存</li>
+</ul>
+</li>
+<li><p>存在的问题</p>
+<ul>
+<li>交换时机的确定：只当内存空间不够或者有不够的危险时</li>
+<li>交换区的大小：足够存放进程的所有内存映像的拷贝；能对这些内存映像直接存取</li>
+<li>程序换入时的重定位：动态地址映射</li>
+</ul>
+</li>
+<li><p>覆盖发生在一个程序里，程序员需要手动指定逻辑关系；交换发生在程序之间，由操作系统内部完成，不需要程序员设置</p>
+</li>
+</ol>
+<h2 id="5-4虚存技术"><a href="#5-4虚存技术" class="headerlink" title="5.4虚存技术"></a>5.4虚存技术</h2><ol>
+<li>目标<ul>
+<li>覆盖技术做的更好：由操作系统自动完成</li>
+<li>交换技术做的更好：只对进程的部分内容在内存和外存之间进行交换 </li>
+</ul>
+</li>
+<li>程序的局部性原理<ul>
+<li>时间局部性：连续两次访问集中在一个较短时期</li>
+<li>空间局部性：访问的数据在较近的区域</li>
+</ul>
+</li>
+<li>基本概念<ul>
+<li>可以在页式或段式内存管理的基础上实现<ul>
+<li>需要执行的部分页面或者段装入到内存</li>
+<li>执行过程中，将尚未在内存但是须执行的程序调入到内存</li>
+<li>内存中暂时不使用的页面或段保存在外存</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基本特征<ul>
+<li>大的用户空间：物理内存和外存相结合</li>
+<li>部分交换：部分虚拟地址空间进行的</li>
+<li>不连续性：物理内存分配的不连续，虚拟地址空间使用的不连续</li>
+</ul>
+</li>
+<li>实现——虚拟页式内存管理<ul>
+<li>页表<ul>
+<li>完成逻辑页到物理页帧的映射</li>
+</ul>
+</li>
+<li>虚拟页式存储管理技术<ul>
+<li>在页式存储管理的基础上增加请求调页和页面置换功能</li>
+<li>运行过程中程序或者要访问的数据不在内存中，则向系统发出缺页中断请求，系统在处理这个中断时，将外存中相应页面调入内存，使得程序继续运行</li>
+</ul>
+</li>
+<li>页表表项<ul>
+<li>驻留位：表示该页是在内存还是外存</li>
+<li>保护位：表示允许对该页做何种类型的访问</li>
+<li>修改位：该页在内存中是否被修改过（决定是否把它的内容写回外存）</li>
+<li>访问位：该页面被访问过则设置此位（用于页面置换算法）</li>
+</ul>
+</li>
+<li>缺页中断</li>
+<li>后备存储<ul>
+<li>一个虚拟地址空间的页面可以被映射到一个文件（在二级存储中）的某个位置</li>
+<li>代码段：映射到可执行二进制文件</li>
+<li>动态加载的共享库程序段：映射到动态调用的库文件</li>
+<li>其他段：可能被映射到交换文件</li>
+</ul>
+</li>
+<li>虚拟内存性能</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-5页面置换算法"><a href="#5-5页面置换算法" class="headerlink" title="5.5页面置换算法"></a>5.5页面置换算法</h2><ol>
+<li><p>功能</p>
+<p>当缺页中断发生，需要调入新的页面而内存已满时，选择内存中哪个物理页面被置换</p>
+</li>
+<li><p>目标</p>
+<p>尽可能地减少页面的换进换出次数（即缺页中断的次数）</p>
+</li>
+<li><p>页面锁定</p>
+</li>
+<li><p>最优页面置换算法（局部页面置换算法1）</p>
+<ol>
+<li>基本思路<ul>
+<li>距离下一次访问等待时间最长的逻辑页面作为置换的页面</li>
+</ul>
+</li>
+<li>理想情况，可作为其他算法的性能评价的依据 </li>
+</ol>
+</li>
+<li><p>先进先出算法FIFO（局部页面置换算法2）</p>
+<ol>
+<li>基本思路<ul>
+<li>选择在内存中驻留时间最长的页面并淘汰之</li>
+<li>当发生一个缺页中断时，把链首页面淘汰出去，把新的页面添加到链表的末尾</li>
+</ul>
+</li>
+<li>性能较差，并且有belady现象0</li>
+</ol>
+</li>
+<li><p>最近最久未使用算法LRU（局部页面置换算法3）</p>
+<ol>
+<li>基本思路<ul>
+<li>选择最久未使用的那个页面，并淘汰之</li>
+</ul>
+</li>
+<li>最优页面置换算法的近似，基于程序的局部性原理</li>
+<li>LRU算法需要记录各个页面使用时间的先后顺序，开销比较大<ul>
+<li>实现方法<ol>
+<li>系统维护一个页面链表</li>
+<li>设置一个活动页面栈</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>时钟页面置换算法（局部页面置换算法4）</p>
+<ol>
+<li>基本思路<ul>
+<li>LRU的近似，FIFO的改进</li>
+<li>装入内存页面的页表项的访问位初始化为0，被访问置为1；各个页面组织成环形链表，指针指向最老页面</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>二次机会法</p>
+<ol>
+<li><p>修改clock算法，使它允许脏页总是在一次时钟头扫描中保留下来，同事使用脏位和使用位来指导置换</p>
+</li>
+<li><p>Enhanced Clock algorithm</p>
+<table>
+<thead>
+<tr>
+<th>used</th>
+<th>dirty</th>
+<th></th>
+<th>used</th>
+<th>dirty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>—&gt;</td>
+<td>replace   page</td>
+<td></td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>—&gt;</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>—&gt;</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>—&gt;</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+</li>
+<li><p>最不常用算法Least Frequently Used ，LFU（局部页面置换算法5）</p>
+<ol>
+<li><p>基本思路</p>
+<p>当一个缺页中断发生时，选择访问次数最少的那个页淘汰之</p>
+</li>
+<li><p>实现方法</p>
+<p>对每个页面设置一个访问计数器，每当一个页面被访问时，该页面的访问计数器加一。在发生缺页中断时，淘汰技术值最小的那个页面</p>
+</li>
+<li><p>LRU和LFU的区别</p>
+<p>LRU考察的是多久未访问，时间越短越好；而LFU考察的是访问的次数或频度，访问次数越多越好</p>
+</li>
+</ol>
+</li>
+<li><p>Belady现象、LRU、FIFO、Clock的比较</p>
+<ol>
+<li><p>Belady现象</p>
+<ul>
+<li><p>现象</p>
+<p>在采用FIFO算法时，有时会出现分配的物理页面数增加，缺页率反而提高的异常现象</p>
+</li>
+<li><p>原因</p>
+<p>FIFO算法的置换特征与进程访问内存的动态特征是矛盾的，与置换算法的目标是不一致的（即替换较少使用的页面），因此，被它置换出去的页面并不一定是进程不会访问的</p>
+</li>
+<li><p>LRU页面置换算法没有Belady现象</p>
+</li>
+</ul>
+</li>
+<li><p>LRU、FIFO、Clock的比较</p>
+<ul>
+<li>LRU、FIFO本质上都是先进先出的思路</li>
+<li>LRU时针对<strong>页面的最近访问时间</strong>来排序、开销大</li>
+<li>FIFO是针对<strong>页面进入内存的时间</strong>来排序、开销小</li>
+<li>如果一个页面进入内存后没有被访问，那么它的最近访问时间就是它进入内存的时间。即LRU退化为FIFO</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/09/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "操作系统/操作系统&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

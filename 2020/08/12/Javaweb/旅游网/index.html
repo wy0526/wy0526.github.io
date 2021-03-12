@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>Javaweb/旅游网 | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-12 00:00">
+      2020年8月12日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 4.5k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一、项目导入"><a href="#一、项目导入" class="headerlink" title="一、项目导入"></a>一、项目导入</h1><ol>
+<li>maven项目通过识别pom.xml来加载</li>
+<li>导入方法<ul>
+<li>方法一：点击右侧maven项目+号，选择pom文件，点击ok开始导入</li>
+<li>方法二：通过file中的Project Structure导入模块</li>
+</ul>
+</li>
+</ol>
+<h1 id="二、启动项目"><a href="#二、启动项目" class="headerlink" title="二、启动项目"></a>二、启动项目</h1><ol>
+<li><p>启动方法</p>
+<ul>
+<li>方法一：点击右侧maven项目中的tomcat:run启动</li>
+<li>方法二：添加配置，点击绿色三角启动项目</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/24.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li><p>报错</p>
+<ul>
+<li>错误1：‘build.plugins.plugin.version’ for org.apache.maven.plugins:maven- compiler-plugin is missing. @ line 122， column 21</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/10.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>解决：为插件添加版本信息</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/12.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>错误2：Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/11.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>解决：添加编码属性utf-8</li>
+</ul>
+</li>
+</ol>
+<h1 id="三、技术选型"><a href="#三、技术选型" class="headerlink" title="三、技术选型"></a>三、技术选型</h1><ol>
+<li><p>Web层</p>
+<ol>
+<li>Servlet：前端控制器</li>
+<li>html：视图</li>
+<li>Filter：过滤器</li>
+<li>BeanUtils：数据封装</li>
+<li>Jackson：json序列化工具</li>
+</ol>
+</li>
+<li><p>Service层</p>
+<ol>
+<li>Javamail：java发送邮件工具</li>
+<li>Redis：nosql内存数据库</li>
+<li>Jedis：java的redis客户端</li>
+</ol>
+</li>
+<li><p>Dao层</p>
+<ol>
+<li>Mysql：数据库</li>
+<li>Druid：数据库连接池</li>
+<li>JdbcTemplate：jdbc的工具</li>
+</ol>
+<hr>
+</li>
+</ol>
+<p>web层</p>
+<ul>
+<li>html：这里要求客户访问速度快，且前后端分离，所以用html而不用jsp；如果以后搞后台管理系统，如财务管理，给内部人员，看可以用jsp</li>
+<li>BeanUtils：前台要将数据传到servlet，如表单提交，则需要beanutils进行数据封装成对象</li>
+<li>Jackson：html作为表嵌层，只能用异步的方式来提交到服务器去和从服务器返回数据。一般用json进行异步交互，所以在servlet中需要将服务器响应给客户端的数据用序列化为json返回</li>
+</ul>
+<p>Dao层</p>
+<ul>
+<li>JdbcTemplate：用于连接数据库</li>
+</ul>
+<hr>
+<h1 id="四、创建数据库"><a href="#四、创建数据库" class="headerlink" title="四、创建数据库"></a>四、创建数据库</h1><p>在SQLyog中执行代码：</p>
+<div class="hljs"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建数据库</span>
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> travel;
+<span class="hljs-comment">-- 使用数据库</span>
+<span class="hljs-keyword">USE</span> travel;
+<span class="hljs-comment">--创建表</span>
+这里粘贴提供好的sql文件中的代码</code></pre></div>
+
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/25.png" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/26.png" srcset="/img/loading.gif" alt=""></p>
+<h1 id="五、注册功能"><a href="#五、注册功能" class="headerlink" title="五、注册功能"></a>五、注册功能</h1><p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/13.png" srcset="/img/loading.gif" alt=""></p>
+<h2 id="1、-表单校验"><a href="#1、-表单校验" class="headerlink" title="1、 表单校验"></a>1、 表单校验</h2><ol>
+<li><p>实现（register.html）</p>
+<ul>
+<li>form标签内加入action属性</li>
+</ul>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--注册表单--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"registerForm"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"user"</span>&gt;</span></code></pre></div>
+
+<ul>
+<li>导入jquery，js实现表单的校验</li>
+</ul>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--导入jquery--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/jquery-3.3.1.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+   
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+	/*
+	表单校验：
+	    1.用户名：单词字符，长度8到20位
+	    2.密码：单词字符，长度8到20位
+	    3.email：邮件格式
+	    4.姓名：非空
+	    5.手机号：数字，长度10位
+	    6.出生日期：非空
+	    7.验证码：非空
+	 */
+   
+<span class="actionscript">	<span class="hljs-comment">//1.校验用户名</span></span>
+<span class="actionscript">	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkUsername</span><span class="hljs-params">()</span> </span>&#123;</span>
+<span class="actionscript">		<span class="hljs-comment">//1.获取用户名值</span></span>
+<span class="javascript">		<span class="hljs-keyword">var</span> username = $(<span class="hljs-string">"#username"</span>).val();</span>
+<span class="actionscript">		<span class="hljs-comment">//2.定义正则</span></span>
+<span class="javascript">		<span class="hljs-keyword">var</span> reg_username = <span class="hljs-regexp">/^\w&#123;8,20&#125;$/</span>;</span>
+<span class="actionscript">		<span class="hljs-comment">//3.判断，给出提示信息</span></span>
+<span class="actionscript">		<span class="hljs-keyword">var</span> flag = reg_username.test(username);</span>
+		if(flag)&#123;
+<span class="actionscript">			<span class="hljs-comment">//用户名合法</span></span>
+<span class="javascript">                  $(<span class="hljs-string">"#username"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">""</span>);</span>
+<span class="actionscript">		&#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="actionscript">			<span class="hljs-comment">//用户名非法，加一个红色边框</span></span>
+<span class="javascript">                  $(<span class="hljs-string">"#username"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">"1px solid red"</span>);</span>
+		&#125;
+<span class="actionscript">		<span class="hljs-keyword">return</span> flag;</span>
+	&#125;
+<span class="actionscript">	<span class="hljs-comment">//2.校验密码</span></span>
+<span class="actionscript">	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkPassword</span><span class="hljs-params">()</span> </span>&#123;</span>
+<span class="actionscript">              <span class="hljs-comment">//1.获取用户名值</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> password = $(<span class="hljs-string">"#password"</span>).val();</span>
+<span class="actionscript">              <span class="hljs-comment">//2.定义正则</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> reg_password = <span class="hljs-regexp">/^\w&#123;8,20&#125;$/</span>;</span>
+<span class="actionscript">              <span class="hljs-comment">//3.判断，给出提示信息</span></span>
+<span class="actionscript">              <span class="hljs-keyword">var</span> flag = reg_password.test(password);</span>
+              if(flag)&#123;
+<span class="actionscript">                  <span class="hljs-comment">//用户名合法</span></span>
+<span class="javascript">                  $(<span class="hljs-string">"#password"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">""</span>);</span>
+<span class="actionscript">              &#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="actionscript">                  <span class="hljs-comment">//用户名非法，加一个红色边框</span></span>
+<span class="javascript">                  $(<span class="hljs-string">"#password"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">"1px solid red"</span>);</span>
+              &#125;
+<span class="actionscript">              <span class="hljs-keyword">return</span> flag;</span>
+	&#125;
+<span class="actionscript">	<span class="hljs-comment">//3.校验邮箱</span></span>
+<span class="actionscript">          <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkemail</span><span class="hljs-params">()</span></span>&#123;</span>
+<span class="actionscript">	    <span class="hljs-comment">//1.获取邮箱</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> email = $(<span class="hljs-string">"#email"</span>).val();</span>
+<span class="actionscript">              <span class="hljs-comment">//2.定义正则</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> reg_email = <span class="hljs-regexp">/^\w+@\w+\.\w+$/</span>;</span>
+<span class="actionscript">              <span class="hljs-comment">//3.判断</span></span>
+<span class="actionscript">              <span class="hljs-keyword">var</span> flag = reg_email.test(email);</span>
+              if (flag)&#123;
+<span class="javascript">                  $(<span class="hljs-string">"#email"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">""</span>)</span>
+<span class="actionscript">              &#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="javascript">                  $(<span class="hljs-string">"#email"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">"1px solid red"</span>);</span>
+              &#125;
+<span class="actionscript">              <span class="hljs-keyword">return</span> flag;</span>
+   
+          &#125;
+<span class="actionscript">          <span class="hljs-comment">//4.校验姓名：非空</span></span>
+<span class="actionscript">          <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkName</span><span class="hljs-params">()</span></span>&#123;</span>
+<span class="actionscript">	    <span class="hljs-comment">//1.获取姓名</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> name = $(<span class="hljs-string">"#name"</span>).val();</span>
+<span class="actionscript">              <span class="hljs-comment">//2.判断</span></span>
+<span class="actionscript">              <span class="hljs-keyword">if</span>(name == <span class="hljs-string">""</span>)&#123;</span>
+<span class="javascript">                  $(<span class="hljs-string">"#name"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">"1px solid red"</span>);</span>
+<span class="actionscript">                  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span>
+<span class="actionscript">              &#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="javascript">                  $(<span class="hljs-string">"#name"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">""</span>);</span>
+<span class="actionscript">                  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span>
+              &#125;
+          &#125;
+<span class="actionscript">          <span class="hljs-comment">//5.校验手机号：数字，长度10位</span></span>
+<span class="actionscript">          <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkTelephone</span><span class="hljs-params">()</span></span>&#123;</span>
+<span class="actionscript">	    <span class="hljs-comment">//1.获取手机号</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> telephone = $(<span class="hljs-string">"#telephone"</span>).val();</span>
+<span class="actionscript">              <span class="hljs-comment">//2.定义正则</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> reg_telephone = <span class="hljs-regexp">/^[0-9]&#123;10&#125;$/</span>;</span>
+<span class="actionscript">              <span class="hljs-comment">//3.判断</span></span>
+<span class="actionscript">              <span class="hljs-keyword">var</span> flag = reg_telephone.test(telephone);</span>
+              if (flag)&#123;
+<span class="javascript">                  $(<span class="hljs-string">"#telephone"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">""</span>);</span>
+<span class="actionscript">              &#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="javascript">                  $(<span class="hljs-string">"#telephone"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">"1px solid red"</span>);</span>
+              &#125;
+<span class="actionscript">              <span class="hljs-keyword">return</span> flag;</span>
+          &#125;
+<span class="actionscript">          <span class="hljs-comment">//6.校验出生日期：非空</span></span>
+<span class="actionscript">          <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkSex</span><span class="hljs-params">()</span></span>&#123;</span>
+<span class="actionscript">              <span class="hljs-comment">//1.获取姓名</span></span>
+<span class="javascript">              <span class="hljs-keyword">var</span> sex = $(<span class="hljs-string">"#sex"</span>).val();</span>
+<span class="actionscript">              <span class="hljs-comment">//2.判断</span></span>
+<span class="actionscript">              <span class="hljs-keyword">if</span>(sex == <span class="hljs-string">""</span>)&#123;</span>
+<span class="javascript">                  $(<span class="hljs-string">"#sex"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">"1px solid red"</span>);</span>
+<span class="actionscript">                  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span>
+<span class="actionscript">              &#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="javascript">                  $(<span class="hljs-string">"#sex"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">""</span>);</span>
+<span class="actionscript">                  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span>
+              &#125;
+          &#125;
+<span class="actionscript">          <span class="hljs-comment">//7.校验验证码：非空</span></span>
+<span class="actionscript">	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkCheck</span><span class="hljs-params">()</span></span>&#123;</span>
+<span class="actionscript">		<span class="hljs-comment">//1.获取姓名</span></span>
+<span class="javascript">		<span class="hljs-keyword">var</span> check = $(<span class="hljs-string">"#check"</span>).val();</span>
+<span class="actionscript">		<span class="hljs-comment">//2.判断</span></span>
+<span class="actionscript">		<span class="hljs-keyword">if</span>(check == <span class="hljs-string">""</span>)&#123;</span>
+<span class="javascript">			$(<span class="hljs-string">"#check"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">"1px solid red"</span>);</span>
+<span class="actionscript">			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span>
+<span class="actionscript">		&#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="javascript">			$(<span class="hljs-string">"#check"</span>).css(<span class="hljs-string">"border"</span>,<span class="hljs-string">""</span>);</span>
+<span class="actionscript">			<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span>
+		&#125;
+	&#125;
+	/*
+<span class="javascript">	$(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="actionscript">		<span class="hljs-comment">//当表单提交时，调用所有的校验方法</span></span>
+<span class="actionscript">		<span class="hljs-comment">//校验通过要转到新的页面</span></span>
+<span class="javascript">		$(<span class="hljs-string">"#registerForm"</span>).submit(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="actionscript">			<span class="hljs-keyword">return</span> checkUsername() &amp;&amp; checkPassword() &amp;&amp; checkemail();</span>
+<span class="actionscript">			<span class="hljs-comment">//如果这个方法没有返回值，或者返回为true，则表单提交，如果返回为false，则表单不提交</span></span>
+		&#125;)
+		&#125;);
+	*/
+<span class="javascript">	$(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="actionscript">		<span class="hljs-comment">//当表单提交时，调用所有的校验方法</span></span>
+<span class="actionscript">		<span class="hljs-comment">//校验通过要转到新的页面</span></span>
+<span class="javascript">		$(<span class="hljs-string">"#registerForm"</span>).submit(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="actionscript">			<span class="hljs-comment">//1.发送数据到服务器</span></span>
+   
+			if(checkUsername() &amp;&amp; checkPassword() &amp;&amp; checkemail())&#123;
+<span class="actionscript">				<span class="hljs-comment">//校验通过发送ajax请求，提交表单的数据 username=张三&amp;password=123</span></span>
+<span class="javascript">				$.post(<span class="hljs-string">"registUserServlet"</span>,$(<span class="hljs-keyword">this</span>).serialize(),<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>&#123;</span>
+   
+<span class="actionscript">					<span class="hljs-comment">//处理服务器响应的数据 data &#123;flag:true,errorMsg:"注册失败"&#125;</span></span>
+					if (data.flag)&#123;
+<span class="actionscript">						<span class="hljs-comment">//注册成功，跳转成功页面</span></span>
+<span class="actionscript">						location.href=<span class="hljs-string">"register_ok.html"</span>;</span>
+<span class="actionscript">					&#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="actionscript">						<span class="hljs-comment">//注册失败，给errorMsg添加提示信息</span></span>
+<span class="javascript">						$(<span class="hljs-string">"#errorMsg"</span>).html(data.errorMsg);</span>
+					&#125;
+   
+				&#125;)
+			&#125;
+<span class="actionscript">			<span class="hljs-comment">//2.跳转页面</span></span>
+<span class="actionscript">			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span>
+<span class="actionscript">			<span class="hljs-comment">//如果这个方法没有返回值，或者返回为true，则表单提交，如果返回为false，则表单不提交</span></span>
+		&#125;);
+<span class="actionscript">		<span class="hljs-comment">//当某一个组件失去焦点时，调用对应的校验方法</span></span>
+<span class="javascript">		$(<span class="hljs-string">"#username"</span>).blur(checkUsername);  <span class="hljs-comment">//注意：只有方法名，不含括号</span></span>
+<span class="javascript">              $(<span class="hljs-string">"#password"</span>).blur(checkPassword);</span>
+<span class="javascript">              $(<span class="hljs-string">"#email"</span>).blur(checkemail);</span>
+<span class="javascript">              $(<span class="hljs-string">"#name"</span>).blur(checkName);</span>
+<span class="javascript">              $(<span class="hljs-string">"#telephone"</span>).blur(checkTelephone);</span>
+<span class="javascript">              $(<span class="hljs-string">"#sex"</span>).blur(checkSex);</span>
+<span class="javascript">              $(<span class="hljs-string">"#check"</span>).blur(checkCheck);</span>
+	&#125;)
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>知识充能中……OWO</p>
+<ol>
+<li><p>JavaScript中的$函数</p>
+<ul>
+<li>通过ID获取Element，跟直接调用getElementById()效果是一样的</li>
+<li>例如：$(“#username”)得到的是页面id为”username”的元素Javascript RegExp对象（JavaScript正则对象）</li>
+</ul>
+</li>
+<li><p>Javascript RegExp对象（JavaScript正则对象）</p>
+<ul>
+<li><p><code>test()</code>方法用于检测一个字符串是否匹配某个模式，如果字符串中有匹配的值返回 true ，否则返回 false</p>
+<ul>
+<li>语法：RegExpObject.test(<em>string</em>)</li>
+<li>例如</li>
+</ul>
+<div class="hljs"><pre><code class="hljs arcade"><span class="hljs-comment">//1.获取用户名值</span>
+<span class="hljs-keyword">var</span> username = $(<span class="hljs-string">"username"</span>).val();
+<span class="hljs-comment">//2.定义正则</span>
+<span class="hljs-keyword">var</span> reg_username = <span class="hljs-regexp">/^\w&#123;8,20&#125;$/</span>;
+<span class="hljs-comment">//3.判断，给出提示信息</span>
+<span class="hljs-keyword">var</span> flag = reg_username.test(username);</code></pre></div>
+
+
+
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="2、异步ajax提交表单"><a href="#2、异步ajax提交表单" class="headerlink" title="2、异步ajax提交表单"></a>2、异步ajax提交表单</h2><ol>
+<li><p>异步ajax提交表单的原因</p>
+<p>为了获取服务器响应的数据。因为我们前台使用的是html作为视图层，不能够直接从servlet相关的域对象获取值，只能通过ajax获取响应数据</p>
+</li>
+<li><p>实现（register.html）</p>
+<div class="hljs"><pre><code class="hljs javascript">$(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
+				<span class="hljs-comment">//当表单提交时，调用所有的校验方法</span>
+				<span class="hljs-comment">//校验通过要转到新的页面</span>
+				$(<span class="hljs-string">"#registerForm"</span>).submit(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
+					<span class="hljs-comment">//1.发送数据到服务器</span>
+
+					<span class="hljs-keyword">if</span>(checkUsername() &amp;&amp; checkPassword() &amp;&amp; checkemail())&#123;
+						<span class="hljs-comment">//校验通过发送ajax请求，提交表单的数据 username=张三&amp;password=123</span>
+						$.post(<span class="hljs-string">"registUserServlet"</span>,$(<span class="hljs-keyword">this</span>).serialize(),<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>&#123;
+
+							<span class="hljs-comment">//处理服务器响应的数据 data &#123;flag:true,errorMsg:"注册失败"&#125;</span>
+							<span class="hljs-keyword">if</span> (data.flag)&#123;
+								<span class="hljs-comment">//注册成功，跳转成功页面</span>
+								location.href=<span class="hljs-string">"register_ok.html"</span>;
+							&#125;<span class="hljs-keyword">else</span> &#123;
+								<span class="hljs-comment">//注册失败，给errorMsg添加提示信息</span>
+								$(<span class="hljs-string">"#errorMsg"</span>).html(data.errorMsg);
+							&#125;
+
+						&#125;);
+					&#125;
+					<span class="hljs-comment">//2.跳转页面</span>
+					<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+					<span class="hljs-comment">//如果这个方法没有返回值，或者返回为true，则表单提交，如果返回为false，</span>
+					则表单不提交
+				&#125;);</code></pre></div>
+
+</li>
+</ol>
+<h2 id="3、servlet、service、dao"><a href="#3、servlet、service、dao" class="headerlink" title="3、servlet、service、dao"></a>3、servlet、service、dao</h2><ol>
+<li><p>其中实现的功能括有：验证码判断、前台数据处理、发送邮件、点击邮件内容激活功能</p>
+<ul>
+<li>用户点击邮箱激活其实就是修改用户表中的status为“Y”，分别编写servlet、service、Dao的代码</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/19.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li><p>实现</p>
+<ul>
+<li>RegistUserServlet</li>
+</ul>
+<div class="hljs"><pre><code class="hljs reasonml">@<span class="hljs-constructor">WebServlet(<span class="hljs-string">"/registUserServlet"</span>)</span>
+public <span class="hljs-keyword">class</span> RegistUserServlet extends HttpServlet &#123;
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Post(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span> 
+    										throws ServletException, IOException &#123;
+
+
+        <span class="hljs-comment">//验证校验</span>
+        String check = request.get<span class="hljs-constructor">Parameter(<span class="hljs-string">"check"</span>)</span>;
+        <span class="hljs-comment">//从sesion中获取验证码</span>
+        HttpSession session = request.get<span class="hljs-constructor">Session()</span>;
+        String checkcode_server = (String) session.get<span class="hljs-constructor">Attribute(<span class="hljs-string">"CHECKCODE_SERVER"</span>)</span>;
+        session.remove<span class="hljs-constructor">Attribute(<span class="hljs-string">"CHECKCODE_SERVER"</span>)</span>;<span class="hljs-comment">//为了保证验证码只能使用一次</span>
+        <span class="hljs-comment">//比较</span>
+        <span class="hljs-keyword">if</span>(checkcode_server<span class="hljs-operator"> == </span>null<span class="hljs-operator"> || </span>!checkcode_server.equals<span class="hljs-constructor">IgnoreCase(<span class="hljs-params">check</span>)</span>)&#123;
+            <span class="hljs-comment">//验证码错误</span>
+            ResultInfo info = <span class="hljs-keyword">new</span> <span class="hljs-constructor">ResultInfo()</span>;
+            <span class="hljs-comment">//注册失败</span>
+            info.set<span class="hljs-constructor">Flag(<span class="hljs-params">false</span>)</span>;
+            info.set<span class="hljs-constructor">ErrorMsg(<span class="hljs-string">"验证码错误"</span>)</span>;
+            <span class="hljs-comment">//将info对象序列化为json</span>
+            ObjectMapper mapper = <span class="hljs-keyword">new</span> <span class="hljs-constructor">ObjectMapper()</span>;
+            String json = mapper.write<span class="hljs-constructor">ValueAsString(<span class="hljs-params">info</span>)</span>;
+            response.set<span class="hljs-constructor">ContentType(<span class="hljs-string">"application/json;charset=utf-8"</span>)</span>;
+            response.get<span class="hljs-constructor">Writer()</span>.write(json);
+            return;
+        &#125;
+
+        <span class="hljs-comment">//1.获取数据</span>
+        Map&lt;String, String<span class="hljs-literal">[]</span>&gt; map = request.get<span class="hljs-constructor">ParameterMap()</span>;
+
+        <span class="hljs-comment">//2.封装对象</span>
+        User user = <span class="hljs-keyword">new</span> <span class="hljs-constructor">User()</span>;
+        <span class="hljs-keyword">try</span> &#123;
+            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">BeanUtils</span>.</span></span>populate(user,map);
+        &#125; catch (IllegalAccessException e) &#123;
+            e.print<span class="hljs-constructor">StackTrace()</span>;
+        &#125; catch (InvocationTargetException e) &#123;
+            e.print<span class="hljs-constructor">StackTrace()</span>;
+        &#125;
+
+        <span class="hljs-comment">//3.调用service完成注册</span>
+        UserService service = <span class="hljs-keyword">new</span> <span class="hljs-constructor">UserServiceImpl()</span>;
+        boolean flag = service.regist(user);
+        ResultInfo info = <span class="hljs-keyword">new</span> <span class="hljs-constructor">ResultInfo()</span>;
+        <span class="hljs-comment">//4.响应结果</span>
+        <span class="hljs-keyword">if</span>(flag)&#123;
+            <span class="hljs-comment">//注册成功</span>
+            info.set<span class="hljs-constructor">Flag(<span class="hljs-params">true</span>)</span>;
+        &#125;<span class="hljs-keyword">else</span>&#123;
+            <span class="hljs-comment">//注册失败</span>
+            info.set<span class="hljs-constructor">Flag(<span class="hljs-params">false</span>)</span>;
+            info.set<span class="hljs-constructor">ErrorMsg(<span class="hljs-string">"注册失败!"</span>)</span>;
+        &#125;
+
+        <span class="hljs-comment">//将info对象序列化为json</span>
+        ObjectMapper mapper = <span class="hljs-keyword">new</span> <span class="hljs-constructor">ObjectMapper()</span>;
+        String json = mapper.write<span class="hljs-constructor">ValueAsString(<span class="hljs-params">info</span>)</span>;
+
+        <span class="hljs-comment">//将json数据写回客户端</span>
+        <span class="hljs-comment">//设置content-type</span>
+        response.set<span class="hljs-constructor">ContentType(<span class="hljs-string">"application/json;charset=utf-8"</span>)</span>;
+        response.get<span class="hljs-constructor">Writer()</span>.write(json);
+
+
+    &#125;
+
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Get(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span> 
+    									throws ServletException, IOException &#123;
+        this.<span class="hljs-keyword">do</span><span class="hljs-constructor">Post(<span class="hljs-params">request</span>, <span class="hljs-params">response</span>)</span>;
+    &#125;
+&#125;</code></pre></div>
+
+<ul>
+<li>UserService</li>
+</ul>
+<div class="hljs"><pre><code class="hljs routeros">public<span class="hljs-built_in"> interface </span>UserService &#123;
+    boolean regist(User user);
+
+    boolean active(String code);
+
+   <span class="hljs-built_in"> User </span>login(User user);
+&#125;</code></pre></div>
+
+<ul>
+<li>UserServiceImpl</li>
+</ul>
+<div class="hljs"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">UserService</span> </span>&#123;
+
+    <span class="hljs-keyword">private</span> UserDao userDao = <span class="hljs-keyword">new</span> UserDaoImpl();
+    <span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 注册用户</span>
+<span class="hljs-comment">     * <span class="hljs-doctag">@param</span> user</span>
+<span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span>
+<span class="hljs-comment">     */</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">regist</span><span class="hljs-params">(User user)</span> </span>&#123;
+        <span class="hljs-comment">//1.根据用户名查询用户对象</span>
+        User u = userDao.findByUsername(user.getUsername());
+        <span class="hljs-comment">//判断u是否为null</span>
+        <span class="hljs-keyword">if</span> (u != <span class="hljs-keyword">null</span>)&#123;
+            <span class="hljs-comment">//用户名存在，注册失败</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        &#125;
+
+        <span class="hljs-comment">//2.保存用户信息</span>
+        <span class="hljs-comment">//2.1设置激活码，唯一字符串</span>
+        user.setCode(UuidUtil.getUuid());
+        <span class="hljs-comment">//2.2设置激活状态</span>
+        user.setStatus(<span class="hljs-string">"N"</span>);
+        userDao.save(user);
+
+        <span class="hljs-comment">//3.激活邮件发送，邮件正文？</span>
+        <span class="hljs-comment">//String content = "&lt;a href='http://localhost/travel/activeUserServlet?code='"</span>
+        							<span class="hljs-comment">//+user.getCode()+"&gt;点击激活【旅游网】&lt;/a&gt;";</span>
+        String content=<span class="hljs-string">"&lt;a href='http://localhost/travel/activeUserServlet?code="</span>
+        							+user.getCode()+<span class="hljs-string">"'&gt;点击激活【旅游网】&lt;/a&gt;"</span>;
+
+        MailUtils.sendMail(user.getEmail(),content,<span class="hljs-string">"激活邮件"</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    &#125;
+
+    <span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 激活用户</span>
+<span class="hljs-comment">     * <span class="hljs-doctag">@param</span> code</span>
+<span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span>
+<span class="hljs-comment">     */</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">active</span><span class="hljs-params">(String code)</span> </span>&#123;
+        <span class="hljs-comment">//1.根据激活码查询用户对象</span>
+        User user = userDao.findByCode(code);
+        <span class="hljs-keyword">if</span> (user != <span class="hljs-keyword">null</span>)&#123;
+            <span class="hljs-comment">//2.调用dao的修改激活状态的方法</span>
+            userDao.updateStatus(user);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        &#125;<span class="hljs-keyword">else</span> &#123;
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        &#125;
+
+    &#125;
+
+    <span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 登陆方法</span>
+<span class="hljs-comment">     * <span class="hljs-doctag">@param</span> user</span>
+<span class="hljs-comment">     * <span class="hljs-doctag">@returnnull</span></span>
+<span class="hljs-comment">     */</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> User <span class="hljs-title">login</span><span class="hljs-params">(User user)</span> </span>&#123;
+        <span class="hljs-keyword">return</span> userDao.findByUsernameAndPassword(user.getUsername(),user.getPassword());
+    &#125;
+&#125;</code></pre></div>
+
+<ul>
+<li>UserDao</li>
+</ul>
+<div class="hljs"><pre><code class="hljs crmsh">public interface UserDao &#123;
+    /**
+     * 根据用户名查询用户信息
+     * @param username
+     * @return
+     */
+    public <span class="hljs-keyword">User</span> <span class="hljs-title">findByUsername</span>(<span class="hljs-keyword">String</span> username);
+
+    /**
+     * 用户保存
+     * @param user
+     */
+    public void save (<span class="hljs-keyword">User</span> <span class="hljs-title">user</span>);
+
+    <span class="hljs-keyword">User</span> <span class="hljs-title">findByCode</span>(<span class="hljs-keyword">String</span> code);
+
+    void updateStatus(<span class="hljs-keyword">User</span> <span class="hljs-title">user</span>);
+
+    <span class="hljs-keyword">User</span> <span class="hljs-title">findByUsernameAndPassword</span>(<span class="hljs-keyword">String</span> username, <span class="hljs-keyword">String</span> password);
+&#125;</code></pre></div>
+
+<ul>
+<li>UserDaoImpl</li>
+</ul>
+<div class="hljs"><pre><code class="hljs pgsql"><span class="hljs-built_in">public</span> <span class="hljs-keyword">class</span> UserDaoImpl implements UserDao &#123;
+
+    private JdbcTemplate template = <span class="hljs-built_in">new</span> JdbcTemplate(JDBCUtils.getDataSource());
+
+    @Override
+    <span class="hljs-built_in">public</span> <span class="hljs-keyword">User</span> findByUsername(String username) &#123;
+        //<span class="hljs-number">1.</span>定义<span class="hljs-keyword">sql</span>语句
+        <span class="hljs-keyword">User</span> <span class="hljs-keyword">user</span> = <span class="hljs-keyword">null</span>;
+        try &#123;  //防止第一次注册时，会直接报错误
+            String <span class="hljs-keyword">sql</span> = "select * from tab_user where username = ?";
+            //<span class="hljs-number">2.</span>执行<span class="hljs-keyword">sql</span>
+            <span class="hljs-keyword">user</span> = <span class="hljs-keyword">template</span>.queryForObject(<span class="hljs-keyword">sql</span>, 
+            					<span class="hljs-built_in">new</span> BeanPropertyRowMapper&lt;<span class="hljs-keyword">User</span>&gt;(<span class="hljs-keyword">User</span>.<span class="hljs-keyword">class</span>), username);
+        &#125; catch (<span class="hljs-keyword">Exception</span> e) &#123;
+
+        &#125;
+
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">user</span>;
+    &#125;
+
+    @Override
+    <span class="hljs-built_in">public</span> <span class="hljs-type">void</span> save(<span class="hljs-keyword">User</span> <span class="hljs-keyword">user</span>) &#123;
+        //<span class="hljs-number">1.</span>定义<span class="hljs-keyword">sql</span>
+        //注意：这里添加了status和code才会在数据库保存了激活状态和激活码
+        String <span class="hljs-keyword">sql</span> = "insert into tab_user(username,password,name,birthday,sex,
+        					telephone,email,status,code) values(?,?,?,?,?,?,?,?,?)";
+        //<span class="hljs-number">2.</span>执行<span class="hljs-keyword">sql</span>
+        //注意：这里添加了status和code才会在数据库保存了激活状态和激活码
+        <span class="hljs-keyword">template</span>.<span class="hljs-keyword">update</span>(<span class="hljs-keyword">sql</span>, <span class="hljs-keyword">user</span>.getUsername(),
+                <span class="hljs-keyword">user</span>.getPassword(),
+                <span class="hljs-keyword">user</span>.getName(),
+                <span class="hljs-keyword">user</span>.getBirthday(),
+                <span class="hljs-keyword">user</span>.getSex(),
+                <span class="hljs-keyword">user</span>.getTelephone(),
+                <span class="hljs-keyword">user</span>.getEmail(),
+                <span class="hljs-keyword">user</span>.getStatus(),
+                <span class="hljs-keyword">user</span>.getCode()
+        );
+    &#125;
+
+    <span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 根据激活码查询用户对象</span>
+<span class="hljs-comment">     * @param code</span>
+<span class="hljs-comment">     * @return</span>
+<span class="hljs-comment">     */</span>
+    @Override
+    <span class="hljs-built_in">public</span> <span class="hljs-keyword">User</span> findByCode(String code) &#123;
+        <span class="hljs-keyword">User</span> <span class="hljs-keyword">user</span> = <span class="hljs-keyword">null</span>;
+        try &#123;
+            String <span class="hljs-keyword">sql</span> = "select * from tab_user where code = ?";
+            <span class="hljs-keyword">user</span> = <span class="hljs-keyword">template</span>.queryForObject(<span class="hljs-keyword">sql</span>, 
+            					<span class="hljs-built_in">new</span> BeanPropertyRowMapper&lt;<span class="hljs-keyword">User</span>&gt;(<span class="hljs-keyword">User</span>.<span class="hljs-keyword">class</span>), code);
+        &#125; catch (DataAccessException e) &#123;
+            e.printStackTrace();
+        &#125;
+        //注意：未修改导致结果出现 “激活失败，请联系管理员”
+        //<span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">user</span>;
+    &#125;
+
+    <span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 修改指定用户激活状态</span>
+<span class="hljs-comment">     * @param user</span>
+<span class="hljs-comment">     */</span>
+    @Override
+    <span class="hljs-built_in">public</span> <span class="hljs-type">void</span> updateStatus(<span class="hljs-keyword">User</span> <span class="hljs-keyword">user</span>) &#123;
+        //注意：这里是tab_user和uid而不是<span class="hljs-keyword">user</span>和id
+        String <span class="hljs-keyword">sql</span> = "update tab_user set status = 'Y' where uid = ?";
+        <span class="hljs-keyword">template</span>.<span class="hljs-keyword">update</span>(<span class="hljs-keyword">sql</span>,<span class="hljs-keyword">user</span>.getUid());
+    &#125;
+
+    <span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 根据用户名和密码查询的方法</span>
+<span class="hljs-comment">     * @param username</span>
+<span class="hljs-comment">     * @param password</span>
+<span class="hljs-comment">     * @return</span>
+<span class="hljs-comment">     */</span>
+    @Override
+    <span class="hljs-built_in">public</span> <span class="hljs-keyword">User</span> findByUsernameAndPassword(String username, String <span class="hljs-keyword">password</span>) &#123;
+        //<span class="hljs-number">1.</span>定义<span class="hljs-keyword">sql</span>语句
+        <span class="hljs-keyword">User</span> <span class="hljs-keyword">user</span> = <span class="hljs-keyword">null</span>;
+        try &#123;  //防止第一次注册时，会直接报错误
+            String <span class="hljs-keyword">sql</span> = "select * from tab_user where username = ? and password = ?";
+            //<span class="hljs-number">2.</span>执行<span class="hljs-keyword">sql</span>
+            <span class="hljs-keyword">user</span> = <span class="hljs-keyword">template</span>.queryForObject(<span class="hljs-keyword">sql</span>, 
+            			<span class="hljs-built_in">new</span> BeanPropertyRowMapper&lt;<span class="hljs-keyword">User</span>&gt;(<span class="hljs-keyword">User</span>.<span class="hljs-keyword">class</span>), username, <span class="hljs-keyword">password</span>);
+        &#125; catch (<span class="hljs-keyword">Exception</span> e) &#123;
+
+        &#125;
+
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">user</span>;
+    &#125;
+&#125;</code></pre></div>
+</li>
+<li><p>报错</p>
+<ul>
+<li>错误1：java.lang.IllegalArgumentException: Property ‘dataSource’ is required</li>
+<li>解决</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/15.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li><p>错误2：java:程序包XXX不存在</p>
+<p>Idea版本为2020.1，maven版本为3.6.3，jar包的确已经下载到自定义本地库</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/16.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li><p>解决</p>
+<p>此处改bug历时整整一天还要多些！QWQ…具体事况发展如下…</p>
+<ul>
+<li>无数次点击右上角Maven工程里的的Reimport All Maven Projects。失败！</li>
+<li>close、import工程 。失败！</li>
+<li>删除掉本地库（自定义的本地库）的所有包，重新import工程。失败！</li>
+<li>将conf/setting.xml文件里的自定义本地库删除，使用默认；修改IDEA中的设置，设置的是自定义的本地库，重新import工程。失败！</li>
+<li>在IDEA的Terminal-local界面中执行<code>mvn clean</code>、<code>mvn install</code>，然后点击右上角Maven工程里的的Reimport All Maven Projects。成功！</li>
+</ul>
+<p>在这里执行<code>mvn install</code> 时，download了很多依赖；执行结束后是下图的样子 — 打包后的文件被放在了默认的本地库里，于是赶忙去默认的本地库位置查看了一下，果然刚刚download的依赖也在这里。但是，明明已经在IDEA中修改了设置 — 本地库使用自定义，结果却下载、打包都放在了默认仓库中。</p>
+<p>很是疑惑(・∀・(・∀・(・∀・*)还有待搞清楚具体原因QWQ</p>
+<ul>
+<li>难道Terminal窗口的命令和cmd窗口是一样的？（也就是说配置根据conf/setting.xml，而不是IDEA中的设置）</li>
+<li>为什么明明已经设置了自定义本地库，但是只有依赖在默认仓库里时，IDEA的项目启动后才会被识别？</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/17.png" srcset="/img/loading.gif" alt=""></p>
+<p>附参考链接：<a href="https://www.pianshen.com/article/63891191152/" target="_blank" rel="noopener">点击跳转</a></p>
+</li>
+<li><p>错误3：javax.mail.AuthenticationFailedException: 535 Login Fail. Please enter your authorization code to login</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/18.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+<li><p>解决：修改prop.put中的参数为163.com</p>
+<p>附参考链接：<a href="https://blog.csdn.net/weixin_38465623/article/details/80789793" target="_blank" rel="noopener">点击跳转</a></p>
+</li>
+<li><p>错误4：点击激活邮件中的激活链接后，跳转的网址中code无值</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/20.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>解决：跳转链接的href属性值写错了</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/21.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>错误5：错误1已经解决的情况下，code有了值，但是页面显示“激活失败，请联系管理员”</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/22.png" srcset="/img/loading.gif" alt=""></p>
+<ul>
+<li>解决：code值成功传到地址栏，成功跳转到对应的servlet，但是findByCode方法return null，所以返回user为空，出现了错误。这里应该将user返回</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/23.png" srcset="/img/loading.gif" alt=""></p>
+</li>
+</ol>
+<h1 id="六、登录功能"><a href="#六、登录功能" class="headerlink" title="六、登录功能"></a>六、登录功能</h1><p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/14.png" srcset="/img/loading.gif" alt=""></p>
+<h2 id="1、登录页"><a href="#1、登录页" class="headerlink" title="1、登录页"></a>1、登录页</h2><ol>
+<li><p>实现</p>
+<ul>
+<li>按钮设置id</li>
+</ul>
+<div class="hljs"><pre><code class="hljs routeros">&lt;button <span class="hljs-attribute">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attribute">id</span>=<span class="hljs-string">"btn_sub"</span>&gt;登录&lt;/button&gt;</code></pre></div>
+
+<ul>
+<li>提交事件</li>
+</ul>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+<span class="javascript">		$(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="actionscript">			<span class="hljs-comment">//1.给登录按钮绑定单击事件</span></span>
+<span class="javascript">			$(<span class="hljs-string">"#btn_sub"</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="actionscript">				<span class="hljs-comment">//2.发送ajax请求，提交表单数据</span></span>
+<span class="javascript">				$.post(<span class="hljs-string">"loginServlet"</span>,$(<span class="hljs-string">"#loginForm"</span>).serialize(),<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>&#123;</span>
+<span class="actionscript">					<span class="hljs-comment">//data : &#123;flag:false,errorMsg:''&#125;</span></span>
+					if (data.flag)&#123;
+<span class="actionscript">						<span class="hljs-comment">//登陆成功</span></span>
+<span class="actionscript">						location.href=<span class="hljs-string">"index.html"</span>;</span>
+<span class="actionscript">					&#125;<span class="hljs-keyword">else</span> &#123;</span>
+<span class="actionscript">						<span class="hljs-comment">//登陆失败</span></span>
+<span class="javascript">						$(<span class="hljs-string">"#errorMsg"</span>).html(data.errorMsg);</span>
+
+					&#125;
+				&#125;);
+			&#125;);
+
+		&#125;)
+	<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+
+
+
+</li>
+</ol>
+<h2 id="2、登陆成功姓名提示"><a href="#2、登陆成功姓名提示" class="headerlink" title="2、登陆成功姓名提示"></a>2、登陆成功姓名提示</h2><ol>
+<li><p>异步交互：html页面不能通过el表达式，通过session获得用户信息，需要通过异步交互获取，ajax请求</p>
+</li>
+<li><p>实现</p>
+<ul>
+<li>页面显示部分（header.html）</li>
+</ul>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+<span class="javascript">    $(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="javascript">        $.<span class="hljs-keyword">get</span>("findUserServlet",&#123;&#125;,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>&#123;</span>
+<span class="actionscript">            <span class="hljs-comment">//&#123;uid:1,name:'李四'&#125;</span></span>
+<span class="actionscript">            <span class="hljs-keyword">var</span> msg = <span class="hljs-string">"欢迎回来，"</span>+data.name;</span>
+<span class="javascript">            $(<span class="hljs-string">"#span_username"</span>).html(msg);</span>
+        &#125;);
+    &#125;);
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+
+<ul>
+<li>取出数据（FindUserServlet）</li>
+</ul>
+<div class="hljs"><pre><code class="hljs reasonml">@<span class="hljs-constructor">WebServlet(<span class="hljs-string">"/findUserServlet"</span>)</span>
+public <span class="hljs-keyword">class</span> FindUserServlet extends HttpServlet &#123;
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Post(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span> 
+    					throws ServletException, IOException &#123;
+        <span class="hljs-comment">//从session中获取登录用户</span>
+        Object user = request.get<span class="hljs-constructor">Session()</span>.get<span class="hljs-constructor">Attribute(<span class="hljs-string">"user"</span>)</span>;
+        <span class="hljs-comment">//将user写回客户端</span>
+        ObjectMapper mapper = <span class="hljs-keyword">new</span> <span class="hljs-constructor">ObjectMapper()</span>;
+        response.set<span class="hljs-constructor">ContentType(<span class="hljs-string">"application/json;charset=utf-8"</span>)</span>;
+        mapper.write<span class="hljs-constructor">Value(<span class="hljs-params">response</span>.<span class="hljs-params">getOutputStream</span>()</span>,user);
+    &#125;
+
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Get(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span> 
+    					throws ServletException, IOException &#123;
+        this.<span class="hljs-keyword">do</span><span class="hljs-constructor">Post(<span class="hljs-params">request</span>,<span class="hljs-params">response</span>)</span>;
+    &#125;
+&#125;</code></pre></div>
+
+</li>
+</ol>
+<h2 id="3、servlet、service、dao-1"><a href="#3、servlet、service、dao-1" class="headerlink" title="3、servlet、service、dao"></a>3、servlet、service、dao</h2><ol>
+<li><p>完成登录功能</p>
+</li>
+<li><p>实现</p>
+<ul>
+<li>LoginServlet</li>
+</ul>
+<div class="hljs"><pre><code class="hljs reasonml">@<span class="hljs-constructor">WebServlet(<span class="hljs-string">"/loginServlet"</span>)</span>
+public <span class="hljs-keyword">class</span> LoginServlet extends HttpServlet &#123;
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Post(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span> 
+    							throws ServletException, IOException &#123;
+        <span class="hljs-comment">//1.获取用户名和密码数据</span>
+        Map&lt;String, String<span class="hljs-literal">[]</span>&gt; map = request.get<span class="hljs-constructor">ParameterMap()</span>;
+        <span class="hljs-comment">//2.封装User对象</span>
+        User user = <span class="hljs-keyword">new</span> <span class="hljs-constructor">User()</span>;
+
+        <span class="hljs-keyword">try</span> &#123;
+            <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">BeanUtils</span>.</span></span>populate(user,map);
+        &#125; catch (IllegalAccessException e) &#123;
+            e.print<span class="hljs-constructor">StackTrace()</span>;
+        &#125; catch (InvocationTargetException e) &#123;
+            e.print<span class="hljs-constructor">StackTrace()</span>;
+        &#125;
+        <span class="hljs-comment">//3.调用service查询</span>
+        UserService service = <span class="hljs-keyword">new</span> <span class="hljs-constructor">UserServiceImpl()</span>;
+        User u = service.login(user);
+
+
+
+        ResultInfo info = <span class="hljs-keyword">new</span> <span class="hljs-constructor">ResultInfo()</span>;
+
+        <span class="hljs-comment">//4.判断用户对象是否为null</span>
+        <span class="hljs-keyword">if</span> (u<span class="hljs-operator"> == </span>null)&#123;
+            <span class="hljs-comment">//用户名或密码错误</span>
+            info.set<span class="hljs-constructor">Flag(<span class="hljs-params">false</span>)</span>;
+            info.set<span class="hljs-constructor">ErrorMsg(<span class="hljs-string">"用户名或密码错误"</span>)</span>;
+        &#125;
+        <span class="hljs-comment">//5.判断用户是否激活</span>
+        <span class="hljs-keyword">if</span> (u != null<span class="hljs-operator"> &amp;&amp; </span>!<span class="hljs-string">"Y"</span>.equals(u.get<span class="hljs-constructor">Status()</span>))&#123;
+            <span class="hljs-comment">//用户尚未激活</span>
+            info.set<span class="hljs-constructor">Flag(<span class="hljs-params">false</span>)</span>;
+            info.set<span class="hljs-constructor">ErrorMsg(<span class="hljs-string">"您尚未激活，待激活"</span>)</span>;
+        &#125;
+
+        <span class="hljs-comment">//6.判断登陆成功</span>
+        <span class="hljs-keyword">if</span> (u != null<span class="hljs-operator"> &amp;&amp; </span><span class="hljs-string">"Y"</span>.equals(u.get<span class="hljs-constructor">Status()</span>))&#123;
+            <span class="hljs-comment">//登陆成功</span>
+            info.set<span class="hljs-constructor">Flag(<span class="hljs-params">true</span>)</span>;
+        &#125;
+
+        <span class="hljs-comment">//存入session</span>
+        request.get<span class="hljs-constructor">Session()</span>.set<span class="hljs-constructor">Attribute(<span class="hljs-string">"user"</span>,<span class="hljs-params">u</span>)</span>;
+
+        <span class="hljs-comment">//响应数据</span>
+        ObjectMapper mapper = <span class="hljs-keyword">new</span> <span class="hljs-constructor">ObjectMapper()</span>;
+
+        response.set<span class="hljs-constructor">ContentType(<span class="hljs-string">"application/json;charset=utf-8"</span>)</span>;
+        mapper.write<span class="hljs-constructor">Value(<span class="hljs-params">response</span>.<span class="hljs-params">getOutputStream</span>()</span>,info);
+
+
+
+    &#125;
+
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Get(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span> 
+    								throws ServletException, IOException &#123;
+        this.<span class="hljs-keyword">do</span><span class="hljs-constructor">Post(<span class="hljs-params">request</span>,<span class="hljs-params">response</span>)</span>;
+    &#125;
+&#125;</code></pre></div>
+
+<ul>
+<li>UserService</li>
+</ul>
+<p>注册功能代码段中的下面这行代码</p>
+<div class="hljs"><pre><code class="hljs crmsh"><span class="hljs-keyword">User</span> <span class="hljs-title">login</span>(<span class="hljs-keyword">User</span> <span class="hljs-title">user</span>);</code></pre></div>
+
+<ul>
+<li>UserServiceImpl</li>
+</ul>
+<p>注册功能代码段中的下面这行代码</p>
+<div class="hljs"><pre><code class="hljs crmsh">/**
+ * 登陆方法
+ * @param user
+ * @returnnull
+ */
+@Override
+public <span class="hljs-keyword">User</span> <span class="hljs-title">login</span>(<span class="hljs-keyword">User</span> <span class="hljs-title">user</span>) &#123;
+   
+    return userDao.findByUsernameAndPassword(user.getUsername(),user.getPassword());
+&#125;</code></pre></div>
+
+<ul>
+<li>UserDao</li>
+</ul>
+<p>注册功能代码段中的下面这行代码</p>
+<div class="hljs"><pre><code class="hljs crmsh"><span class="hljs-keyword">User</span> <span class="hljs-title">findByUsernameAndPassword</span>(<span class="hljs-keyword">String</span> username, <span class="hljs-keyword">String</span> password);</code></pre></div>
+
+<ul>
+<li>UserDaoImpl</li>
+</ul>
+<p>注册功能代码段中的下面这行代码</p>
+<div class="hljs"><pre><code class="hljs pgsql"><span class="hljs-comment">/**</span>
+<span class="hljs-comment">     * 根据用户名和密码查询的方法</span>
+<span class="hljs-comment">     * @param username</span>
+<span class="hljs-comment">     * @param password</span>
+<span class="hljs-comment">     * @return</span>
+<span class="hljs-comment">     */</span>
+    @Override
+    <span class="hljs-built_in">public</span> <span class="hljs-keyword">User</span> findByUsernameAndPassword(String username, String <span class="hljs-keyword">password</span>) &#123;
+        //<span class="hljs-number">1.</span>定义<span class="hljs-keyword">sql</span>语句
+        <span class="hljs-keyword">User</span> <span class="hljs-keyword">user</span> = <span class="hljs-keyword">null</span>;
+        try &#123;  //防止第一次注册时，会直接报错误
+            String <span class="hljs-keyword">sql</span> = "select * from tab_user where username = ? and password = ?";
+            //<span class="hljs-number">2.</span>执行<span class="hljs-keyword">sql</span>
+            <span class="hljs-keyword">user</span> = <span class="hljs-keyword">template</span>.queryForObject(<span class="hljs-keyword">sql</span>, 
+            			<span class="hljs-built_in">new</span> BeanPropertyRowMapper&lt;<span class="hljs-keyword">User</span>&gt;(<span class="hljs-keyword">User</span>.<span class="hljs-keyword">class</span>), username, <span class="hljs-keyword">password</span>);
+        &#125; catch (<span class="hljs-keyword">Exception</span> e) &#123;
+
+        &#125;
+
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">user</span>;
+    &#125;</code></pre></div>
+
+</li>
+</ol>
+<h1 id="七、退出登录"><a href="#七、退出登录" class="headerlink" title="七、退出登录"></a>七、退出登录</h1><ol>
+<li><p>session中有user对象即为登录</p>
+<ul>
+<li>实现步骤<ol>
+<li>访问servlet，将session销毁</li>
+<li>跳转到登录页面</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>实现</p>
+<ul>
+<li>点击退出访问exitServlet（header.html）</li>
+</ul>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"javascript:location.href='exitServlet';"</span>&gt;</span>退出<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre></div>
+
+<ul>
+<li>创建ExitServlet</li>
+</ul>
+<div class="hljs"><pre><code class="hljs reasonml">@<span class="hljs-constructor">WebServlet(<span class="hljs-string">"/exitServlet"</span>)</span>
+public <span class="hljs-keyword">class</span> ExitServlet extends HttpServlet &#123;
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Post(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span>
+   									 throws ServletException, IOException &#123;
+        <span class="hljs-comment">//1.销毁session</span>
+        request.get<span class="hljs-constructor">Session()</span>.invalidate<span class="hljs-literal">()</span>;
+
+        <span class="hljs-comment">//2.跳转登陆页面（重定向</span>
+        response.send<span class="hljs-constructor">Redirect(<span class="hljs-params">request</span>.<span class="hljs-params">getContextPath</span>()</span>+<span class="hljs-string">"/login.html"</span>);
+    &#125;
+
+    protected void <span class="hljs-keyword">do</span><span class="hljs-constructor">Get(HttpServletRequest <span class="hljs-params">request</span>, HttpServletResponse <span class="hljs-params">response</span>)</span> 
+  									  throws ServletException, IOException &#123;
+        <span class="hljs-keyword">do</span><span class="hljs-constructor">Post(<span class="hljs-params">request</span>,<span class="hljs-params">response</span>)</span>;
+    &#125;
+&#125;</code></pre></div>
+
+
+</li>
+</ol>
+<h1 id="八、优化Servlet"><a href="#八、优化Servlet" class="headerlink" title="八、优化Servlet"></a>八、优化Servlet</h1><p>减少servlet的数量，现在是一个功能一个servlet，将其优化成为一个模块一个servlet，相当于在数据库中一张表对应一个servlet，在servlet中提供不同的方法，完成用户的请求</p>
+<p>BaseServlet的抽取：</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/35.png" srcset="/img/loading.gif" alt=""></p>
+<h1 id="九、分类菜单"><a href="#九、分类菜单" class="headerlink" title="九、分类菜单"></a>九、分类菜单</h1><p>分类菜单的分类从数据库取出：</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/36.png" srcset="/img/loading.gif" alt=""></p>
+<p>要启动redis服务器才能成功显示分类菜单</p>
+<h1 id="十、分页展示"><a href="#十、分页展示" class="headerlink" title="十、分页展示"></a>十、分页展示</h1><p>点击分类菜单，对应显示的页面从数据库取出：</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_08/37.png" srcset="/img/loading.gif" alt=""></p>
+<p>视频内容是31p-39p</p>
+<p>其中，31p缺少route_list.html的编写，缺少的是如下代码（获取cid）：</p>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+<span class="javascript">	$(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="actionscript">		<span class="hljs-keyword">var</span> search = location.search;</span>
+<span class="actionscript">		<span class="hljs-comment">//alert(search);  //?id = 5</span></span>
+<span class="actionscript">		<span class="hljs-comment">//切割字符串，拿到第二个值</span></span>
+<span class="actionscript">		<span class="hljs-keyword">var</span> cid = search.split(<span class="hljs-string">"="</span>)[<span class="hljs-number">1</span>];</span>
+	&#125;)
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+
+
+
+<p>32p缺少domain目录下PageBean的编写</p>
+<p>33p还没有结束RouteServlet的编写，缺少的是如下代码：</p>
+<div class="hljs"><pre><code class="hljs reasonml"><span class="hljs-comment">//3. 调用service查询PageBean对象</span>
+PageBean&lt;Route&gt; pb = routeService.page<span class="hljs-constructor">Query(<span class="hljs-params">cid</span>, <span class="hljs-params">currentPage</span>, <span class="hljs-params">pageSize</span>)</span>;
+
+<span class="hljs-comment">//4. 将pageBean对象序列化为json，返回</span>
+write<span class="hljs-constructor">Value(<span class="hljs-params">pb</span>,<span class="hljs-params">response</span>)</span>;</code></pre></div>
+
+<p>还缺少了service、serviceImpl的创建</p>
+<p>json数据：</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_09/001.png" srcset="/img/loading.gif" alt=""></p>
+<h1 id="十一、搜索栏"><a href="#十一、搜索栏" class="headerlink" title="十一、搜索栏"></a>十一、搜索栏</h1><p>报错：PreparedStatementCallback; SQL [select count(*) from tab_route where 1=1 ]; Parameter index out of range (1 &gt; number of parameters, which is 0).;</p>
+<p>解决：</p>
+<h1 id="十二、查看详情"><a href="#十二、查看详情" class="headerlink" title="十二、查看详情"></a>十二、查看详情</h1><p>后台分析：</p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_09/002.png" srcset="/img/loading.gif" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Rainbow0526/PictureGithub/master/2020_09/003.png" srcset="/img/loading.gif" alt=""></p>
+<p>前台分析：</p>
+<p>Route_detail.html中加载后</p>
+<ol>
+<li>获取rid</li>
+<li>发送ajax请求，获取route对象</li>
+<li>解析对象的数据</li>
+</ol>
+<h1 id="十三、线路收藏"><a href="#十三、线路收藏" class="headerlink" title="十三、线路收藏"></a>十三、线路收藏</h1>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Javaweb/">Javaweb</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/08/12/Javaweb/%E6%97%85%E6%B8%B8%E7%BD%91/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Javaweb/旅游网&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

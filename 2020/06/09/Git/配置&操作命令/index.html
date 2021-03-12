@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/avatar01.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#f9cdad">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <title>Git/配置&amp;操作命令 | 鱼干の客栈</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/solarized-light.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>鱼干の客栈</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/timeAxis/">
+                <i class="iconfont icon-pen"></i>
+                时光轴
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/backgroundArtical.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-09 00:00">
+      2020年6月9日 
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      即将有 2.2k 位文字酱陪伴你~o(≧∇≦)o 
+    </span>
+  
+
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-post-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        这里已经有 <span id="leancloud-post-views"></span> 个脚印辣~ o(^▽^)o
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一、Git和GitHub的设置"><a href="#一、Git和GitHub的设置" class="headerlink" title="一、Git和GitHub的设置"></a>一、Git和GitHub的设置</h1><p>官网下载git，git的环境变量会随着下载安装自动添加</p>
+<h2 id="1-设置用户名和邮件地址"><a href="#1-设置用户名和邮件地址" class="headerlink" title="1.设置用户名和邮件地址"></a>1.设置用户名和邮件地址</h2><div class="hljs"><pre><code class="hljs shell">git config --global  user.name "这里换上你的用户名"
+git config --global user.email "这里换上你的邮箱"
+
+查看当前用户名和邮箱：
+git config --global  --list</code></pre></div>
+
+<ul>
+<li>在此处设置用户名和邮件地址时，如果使用了 <code>--global</code> 选项，那么该命令只需要运行一次，因为之后无论你在该系统上做任何事情， Git 都会使用那些信息。</li>
+<li>想针对特定项目使用不同的用户名称与邮件地址，可以在那个项目目录下运行没有 <code>--global</code> 选项的命令来配置。</li>
+</ul>
+<h2 id="2-与GitHub设置ssh配对"><a href="#2-与GitHub设置ssh配对" class="headerlink" title="2.与GitHub设置ssh配对"></a>2.与GitHub设置ssh配对</h2><p>首先，需要生成ssh公钥。键入</p>
+<div class="hljs"><pre><code class="hljs shell">ssh-keygen -t rsa -C "这里换上你的邮箱"</code></pre></div>
+
+<p>  然后，就会出现等待你的三次输入，内容分别是：</p>
+<ul>
+<li>确认秘钥的保存路径（如果不需要改路径则直接回车）；</li>
+<li>如果上一步置顶的保存路径下已经有秘钥文件，则需要确认是否覆盖（如果之前的秘钥不再需要则直接回车覆盖，如需要则手动拷贝到其他目录后再覆盖）；</li>
+<li>创建密码（如果不需要密码则直接回车）</li>
+</ul>
+<p>最后，在上述指定的保存路径下(默认C:\Users\Administrator.ssh)会生成名为<code>id_rsa</code>和<code>id_rsa.pub</code>的文件。将生成的<code>id_rsa.pub</code>文件中的内容拷贝到GitHub中的key（其名称通常是用来区分不同主机），然后保存。</p>
+<blockquote>
+<ul>
+<li><p>C:\Users\Administrator.ssh该路径下的.ssh文件夹如果存在，可以直接删除，按上述重新生成ssh文件夹</p>
+</li>
+<li><p>注意：秘钥对：<code>id_rsa</code>是私钥，不能泄露出去，<code>id_rsa.pub</code>是公钥，可以放心地告诉任何人。</p>
+</li>
+</ul>
+</blockquote>
+<div class="hljs"><pre><code class="hljs shell">查看当前本地与GitHub的连接情况：
+ssh -T git@github.com</code></pre></div>
+
+<h1 id="二、本地库操作"><a href="#二、本地库操作" class="headerlink" title="二、本地库操作"></a>二、本地库操作</h1><h2 id="1-创建版本库"><a href="#1-创建版本库" class="headerlink" title="1.创建版本库"></a>1.创建版本库</h2><p>1.创建空目录（这里目录名为learngit）</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> mkdir learngit</span></code></pre></div>
+
+<p>2.进入目录</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">cd</span> learngit</span></code></pre></div>
+
+<p>3.显示当前目录</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">pwd</span></span></code></pre></div>
+
+<p>4.将当前目录变为Git可以管理的仓库</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git init</span></code></pre></div>
+
+<p>　<code>.git</code>目录是Git来跟踪管理版本库的，要放到Git仓库的文件要放在该目录或者其子目录下</p>
+<h2 id="2-把文件添加到版本库"><a href="#2-把文件添加到版本库" class="headerlink" title="2.把文件添加到版本库"></a>2.把文件添加到版本库</h2><p>1.在分支中新建文件（这里文件为readme.txt）</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> touch readme.txt</span></code></pre></div>
+
+<p>2.vim编辑文件</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> vi readme.txt</span></code></pre></div>
+
+<p>按 “i” 进入编辑，按 “esc” “:wq”保存并推出</p>
+<p>3.把文件添加到仓库</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git add readme.txt</span></code></pre></div>
+
+<p>4.把文件提交到仓库</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git commit -m <span class="hljs-string">"wrote a readme file"</span></span></code></pre></div>
+
+<p><code>commit</code>可以一次提交很多文件，所以你可以多次<code>add</code>不同的文件</p>
+<p>Git告诉我们当前没有需要提交的修改（<code>nothing to commit</code>），而且，工作目录是干净（working tree clean）的。</p>
+<h2 id="3-修改文件、查看修改"><a href="#3-修改文件、查看修改" class="headerlink" title="3.修改文件、查看修改"></a>3.修改文件、查看修改</h2><p>1.查看仓库当前的状态（如：是否修改了文件、修改是否已提交、删除了什么文件、冲突的文件等）</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git status</span></code></pre></div>
+
+<p>2.查看具体修改了什么内容</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git diff readme.txt</span></code></pre></div>
+
+<h2 id="4-版本回退"><a href="#4-版本回退" class="headerlink" title="4.版本回退"></a>4.版本回退</h2><p>每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为<code>commit</code>。一旦你把文件改乱了，或者误删了文件，还可以从最近的一个<code>commit</code>恢复，然后继续工作，而不是把几个月的工作成果全部丢失。</p>
+<p>1.查看提交日志的历史记录</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">log</span></span></code></pre></div>
+
+<p>简略版</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">log</span> --pretty=oneline</span></code></pre></div>
+
+<p>一大串类似<code>1094adb...</code>的是<code>commit id</code>（版本号）</p>
+<p>在Git中，用<code>HEAD</code>表示当前版本，最新的提交上一个版本是<code>HEAD^``，</code>上上一个版本就是<code>HEAD^^</code></p>
+<p>2.回退到上一个版本</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git reset --hard HEAD^</span></code></pre></div>
+
+<p>3.指定回到未来的某个版本</p>
+<p>（1）只要上面的命令行窗口还没有被关掉，你就可以顺着往上找，找到那个未来版本的<code>commit id，这里</code>是<code>1094adb...</code></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git reset --hard 1094a</span></code></pre></div>
+
+<p>（2）已经关闭了命令行，想恢复到新版本</p>
+<ul>
+<li>查看命令日志的历史记录（为了找commit id）</li>
+</ul>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git reflog</span></code></pre></div>
+
+<ul>
+<li>找到待恢复版本的commit id，用$ git reset –hard 1094a回到新版本</li>
+</ul>
+<h2 id="5-撤销修改"><a href="#5-撤销修改" class="headerlink" title="5.撤销修改"></a>5.撤销修改</h2><p>1.丢弃工作区的修改</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git checkout -- readme.txt</span></code></pre></div>
+
+<p>自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态</p>
+<p><code>git checkout -- file</code>命令中的<code>--</code>很重要，没有<code>--</code>，就变成了“切换到另一个分支”的命令</p>
+<p>2.修改后已经<code>git add</code>到暂存区，但是还没有提交</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git reset HEAD readme.txt</span></code></pre></div>
+
+<p><strong><code>git reset</code>命令既可以回退版本，也可以把暂存区的修改回退到工作区</strong>。当我们用<code>HEAD</code>时，表示最新的版本。</p>
+<p>接下来通过命令<code>$ git checkout -- readme.txt</code>丢弃工作区的修改</p>
+<p>3.已经提交到版本库（前提是没有推送到远程库）</p>
+<p>想要撤销本次提交，参考四.版本回退</p>
+<h2 id="6-删除文件"><a href="#6-删除文件" class="headerlink" title="6.删除文件"></a>6.删除文件</h2><p>1.从工作空间删除文件（和直接在文件管理器删除相同）</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> rm test.txt</span></code></pre></div>
+
+<p>2.从版本库删除文件</p>
+<p>如果该文件已经提交到了版本库，从工作空间删除文件后，那么此时工作区和版本库就不一致了</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git rm test.txt</span>
+然后
+<span class="hljs-meta">$</span><span class="bash"> git commit -m <span class="hljs-string">"remove test.txt"</span></span></code></pre></div>
+
+<p>文件就从版本库中被删除了</p>
+<p>3.从版本库恢复工作空间误删的文件</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git checkout -- test.txt</span></code></pre></div>
+
+<p><strong><code>git checkout</code>其实是用版本库里的版本替换工作区的版本</strong>，无论工作区是修改还是删除，都可以“一键还原”。</p>
+<p>注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！</p>
+<h2 id="7-分支操作"><a href="#7-分支操作" class="headerlink" title="7.分支操作"></a>7.分支操作</h2><p><strong>1.查看分支</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git branch</span></code></pre></div>
+
+<p><strong>2.创建分支（这里分支名为dev）</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git branch dev</span></code></pre></div>
+
+<p><strong>3.切换分支</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git checkout dev</span></code></pre></div>
+
+<p>或者</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git switch dev</span></code></pre></div>
+
+<p>注意：在切换分支时，分支上的文件要及时的add和commit，否则只是保存在工作空间，每个分支都会有共同的文件</p>
+<p><strong>4.创建+切换分支</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git branch -d dev</span></code></pre></div>
+
+<p>或者</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git switch -c dev</span></code></pre></div>
+
+<p><strong>5.合并某分支到当前分支</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git merge dev</span></code></pre></div>
+
+<p><strong>6.删除分支</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git branch -d dev</span></code></pre></div>
+
+<p><strong>7.查看分支合并图</strong></p>
+<p>查看分支的合并情况，包括分支合并图、一行显示、提交校验码缩略显示</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">log</span> --graph --pretty=oneline --abbrev-commit</span></code></pre></div>
+
+<p><strong>8.禁用fast forward的合并</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git merge --no-ff -m <span class="hljs-string">"merge with no-ff"</span> dev</span></code></pre></div>
+
+<p> 因为本次合并要创建一个新的commit，所以加上<code>-m</code>参数，把commit描述写进去。</p>
+<p>通常，合并分支时，如果可能，Git会用<code>Fast forward</code>模式，但这种模式下，删除分支后，会丢掉分支信息。加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
+<h1 id="三、远程库操作"><a href="#三、远程库操作" class="headerlink" title="三、远程库操作"></a>三、远程库操作</h1><p><strong>1.本地仓库与远程库相关联</strong></p>
+<p>在本地的<code>learngit</code>仓库下运行命令</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git remote add origin GitHub仓库地址</span></code></pre></div>
+
+<p>添加后，远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库</p>
+<p><strong>2.本地仓库分支推送到远程库</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git push -u origin master</span></code></pre></div>
+
+<p>把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。</p>
+<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。以后只要本地作了提交，就可以把本地<code>master</code>分支的最新修改推送至GitHub</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git push origin master</span></code></pre></div>
+
+<p><strong>3.克隆仓库</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git <span class="hljs-built_in">clone</span> github仓库地址</span></code></pre></div>
+
+<p><strong>4.本地创建远程库分支并推送（这里本地库名为dev）</strong></p>
+<ul>
+<li>待创建分支名称与本地相同</li>
+</ul>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git push origin dev</span></code></pre></div>
+
+<p>此时GitHub仓库里也会创建一个名为dev的分支，内容和本地库相同</p>
+<ul>
+<li>待创建分支名称与本地不同（这里远程库名为dev1）</li>
+</ul>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git push origin dev:dev1</span></code></pre></div>
+
+<p><strong>5.在本地创建和远程分支对应的分支（这里远程库名为dev）</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git checkout -b dev origin/dev</span></code></pre></div>
+
+<p><strong>6.本地删除远程库分支（这里远程库分支为dev）</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git push origin :dev</span></code></pre></div>
+
+<p><strong>7.查看远程库的信息</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git remote</span></code></pre></div>
+
+<p>更详细的信息</p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git remote -v</span></code></pre></div>
+
+<p><strong>8.指定本地<code>dev</code>分支与远程<code>origin/dev</code>分支的链接</strong></p>
+<div class="hljs"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> git branch --<span class="hljs-built_in">set</span>-upstream-to=origin/dev dev</span></code></pre></div>
+
+<p> 参考资料：<a href="https://www.liaoxuefeng.com/wiki/896043488029600/900002180232448" target="_blank" rel="noopener">廖雪峰老师博客</a></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Git/">Git</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz",
+          app_key: "iDFTtzMR0RGTiwHQ3cpH8ie1",
+          placeholder: "评论区欢迎你~",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    createObserver(loadValine, 'vcomments');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+
+    <!-- 页面底部文字 span p标签是显示的内容 i标签显示❤ -->
+    
+    <div>
+
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener">
+        <span></span>
+        <p>永远不要局限自己</p>
+      </a>
+
+      <i class="iconfont icon-love"></i>
+
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span></span>
+        
+      </a>
+
+    </div>
+
+    
+
+    
+
+    
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer>
+  (function () {
+    // 查询存储的记录
+    function getRecord(Counter, target) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({target})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {target, time: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    }
+
+    // 发起自增请求
+    function increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    }
+
+    // 构建自增请求体
+    function buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "time": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    }
+
+    // 校验是否为有效的 UV
+    function validUV() {
+      var key = 'LeanCloud_UV_Flag';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    }
+
+    function addCount(Counter) {
+      var enableIncr = 'true' === 'true' && window.location.hostname !== 'localhost';
+      var getterArr = [];
+      var incrArr = [];
+
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#leancloud-site-pv-container');
+      if (pvCtn || enableIncr) {
+        var pvGetter = getRecord(Counter, 'site-pv').then((record) => {
+          incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-pv');
+          if (ele) {
+            ele.innerText = record.time + 1;
+            if (pvCtn) {
+              pvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#leancloud-site-uv-container');
+      if (uvCtn || enableIncr) {
+        var uvGetter = getRecord(Counter, 'site-uv').then((record) => {
+          var vuv = validUV();
+          vuv && incrArr.push(buildIncrement(record.objectId))
+          var ele = document.querySelector('#leancloud-site-uv');
+          if (ele) {
+            ele.innerText = record.time + (vuv ? 1 : 0);
+            if (uvCtn) {
+              uvCtn.style.display = 'inline';
+            }
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 如果是文章，请求文章的浏览数，并自增
+      if ('true' === 'true') {
+        var viewCtn = document.querySelector('#leancloud-post-views-container');
+        if (viewCtn || enableIncr) {
+          var target = decodeURI('/2020/06/09/Git/%E9%85%8D%E7%BD%AE&amp;%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/');
+          var viewGetter = getRecord(Counter, target).then((record) => {
+            incrArr.push(buildIncrement(record.objectId))
+            if (viewCtn) {
+              var ele = document.querySelector('#leancloud-post-views');
+              if (ele) {
+                ele.innerText = (record.time || 0) + 1;
+                viewCtn.style.display = 'inline';
+              }
+            }
+          });
+          getterArr.push(viewGetter);
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && increment(Counter, incrArr);
+        })
+      }
+    }
+
+    var app_id = 'o8u7yqqVfYJcPgklfs6JatWk-gzGzoHsz'
+    var app_key = 'iDFTtzMR0RGTiwHQ3cpH8ie1'
+    var server_url = ''
+
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': app_id,
+            'X-LC-Key': app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+
+      addCount(Counter);
+    }
+
+    var api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${ app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(resp => resp.json())
+        .then(({api_server}) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Git/配置&操作命令&nbsp;",
+      ],
+      cursorChar: " ",
+      typeSpeed: 100,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/mermaid/8.5.0/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>
